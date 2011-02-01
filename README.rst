@@ -11,6 +11,12 @@ An Intelligent Knowledge Sharing System for Web Communities
 
 .. contents::
 
+Overview
+========
+
+SPREE is an expert search engine where users ask questions to find other participating users, who are knowledgeable in that area and willing to help.
+
+
 Features
 ========
 
