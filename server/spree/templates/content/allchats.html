@@ -1,0 +1,74 @@
+<div xmlns:py="http://genshi.edgewall.org/">
+	<div  class="content_header">	
+		<div align="right">
+        	<a id="aIMUsersRef" class="actionlink" onclick="setContent('im');" title="Chat with spree user">Users</a>   
+			<a id="aIMHistory" class="actionlink actionlinkSelected" onclick="setContent('chat_overview','',{'chat_type':'all'})" title="Show chat history">History</a>
+      	</div>
+		<div py:if="number_u > 0 or number_e > 0" id="allchats_header">
+			<div style="float:left;">
+				<a class="actionlink" onclick="setContent('chat_overview','',{'chat_type':'all'})" title="All Chats">All(${length})</a>
+				<a class="actionlink" onclick="setContent('chat_overview','',{'chat_type':'user'})" title="Show chats for my questions">My Questions(${number_u})</a>
+				<a class="actionlink" onclick="setContent('chat_overview','',{'chat_type':'expert'})" title="Show my chats as experts">My Answers(${number_e})</a>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<div id="allchatsContent" >
+		<div class="content_body" style="height:360px;">
+			<p py:if="number_u == 0 and number_e == 0" style="margin-top:10px;"><b> No entries. </b></p>
+			<div py:for="entry in queryentries" style="margin:10px 5px 10px 0; border: dashed 1px #ccc; padding: 5px 5px 5px 5px;">
+				<div >
+		        	<h1  onclick="setContent('chat','$entry.query_id')" style="cursor:pointer" title="Show details">$entry.topic</h1>
+					<div >
+						<p style="font-size:11px;">
+			        		<img py:if="entry.is_user" src='${tg.url("/static/images/user_blue_16.gif")}' align="absbottom"/>
+			        		<img py:if="not entry.is_user" src='${tg.url("/static/images/user_green_16.gif")}' align="absbottom"/>					
+							$entry.partner, $entry.created, Rating:
+							  <span py:if="entry.isDirect">-</span>
+							  <span py:if="not entry.isDirect and entry.rating==0">Poor</span>
+							  <span py:if="entry.rating==2">Medium</span>	
+							  <span py:if="entry.rating==3">Good</span>
+							  <span py:if="entry.rating==4">Excellent</span>
+							  <span py:if="entry.rating==5">Expert</span>
+							<a class="actionlink" onclick="setContent('chat','$entry.query_id')" title="Show details">
+								Show details
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+	    </div>
+		<div py:if="no_pages &gt; 1" style="text-align:center">
+			<a py:if="no_pages!=0 and current_page!=1" class="actionlink" onclick="setContent2('chat_overview','',{'current_page':${current_page-1},'chat_type':'${chat_type}'})">Prev</a>
+			<span py:if="no_pages &lt;=10">
+				<span py:for="p in range(1,no_pages+1)">
+					<a py:if="p != current_page" class="actionlink" onclick="setContent2('chat_overview','',{'current_page':${p},'chat_type':'${chat_type}'})">${p}</a>
+					<a py:if="p == current_page and no_pages!=1" class="blog_link">${p}</a>
+				</span>
+			</span>
+			<span py:if="no_pages&gt;10">
+				<span py:if="current_page &gt;10">
+					<span py:for="p in range(current_page-10,min(current_page+10,no_pages+1))">
+						<a py:if="p != current_page" class="actionlink" onclick="setContent2('chat_overview','',{'current_page':${p},'chat_type':'${chat_type}'})">${p}</a>
+						<a py:if="p == current_page" class="blog_link">${p}</a>
+					</span>
+				</span>
+				<span py:if="current_page &lt;=10">
+					<span py:for="p in range(1,min(current_page+10,no_pages+1))">
+						<a py:if="p != current_page" class="actionlink" onclick="setContent2('chat_overview','',{'current_page':${p},'chat_type':'${chat_type}'})">${p}</a>
+						<a py:if="p == current_page" class="blog_link">${p}</a>
+					</span>
+				</span>
+			</span>			
+			<a py:if="no_pages!=0 and current_page!=no_pages" class="actionlink" onclick="setContent2('chat_overview','',{'current_page':${current_page+1},'chat_type':'${chat_type}'})">Next</a>
+		</div>	
+	</div>
+</div>
+
+ 
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:py="http://genshi.edgewall.org/">
+<channel>
+  <title py:if="title" py:content="title">myfeed</title>
+  <link py:if="link" py:content="link">link</link>
+  <description>Spree question feed</description>
+  <lastBuildDate py:if="updated" py:content="updated">lastBuildDate</lastBuildDate>
+  <language py:if="lang" py:content="lang">lang</language>
+  <generator py:if="generator" py:content="generator">generated</generator>
+
+  <item py:for="entry in entries">
+    <title py:if="entry.has_key('title')" py:content="entry['title']">title</title>
+    <guid py:if="entry.has_key('id')" py:content="entry['id']">guid</guid>
+    <link py:if="entry.has_key('link')" py:content="entry['link']">link</link>
+    <pubDate py:if="entry.has_key('acreated')" py:content="entry['acreated']">pubDate</pubDate>
+    <description py:if="entry.has_key('summary')" py:content="entry['summary']">description</description>
+	<author py:if="entry.has_key('author')" py:content="entry['author']">author</author>
+	
+  </item>
+  
+</channel>
+</rss>

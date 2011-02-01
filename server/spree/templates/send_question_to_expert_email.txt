@@ -1,0 +1,12 @@
+Hello %(expertname)s,
+
+%(username)s asks you:
+
+%(question)s
+
+Your expertise is needed! Please help and answer this question at %(address)s.
+
+If you don't find this question in your Inbox it might have been answered by another expert or deleted.
+
+
+If you don't want to receive the "SPREE incoming question" emails anymore please visit %(address)s and change your settings under MyProfile->Settings.

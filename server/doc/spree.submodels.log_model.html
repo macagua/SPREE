@@ -1,0 +1,444 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.submodels.log_model</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.submodels.html"><font color="#ffffff">submodels</font></a>.log_model</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/submodels/log_model.py">c:\studium\spree\opensource\spree\submodels\log_model.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;model&nbsp;provides&nbsp;logging&nbsp;related&nbsp;table&nbsp;wrappers.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+<a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+<a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+<a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+<a href="spree.model.html">spree.model</a><br>
+<a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+<a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+<a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+<a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+<a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="turbogears.html">turbogears</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.submodels.log_model.html#ChatLog">ChatLog</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.submodels.log_model.html#QueryLog">QueryLog</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.submodels.log_model.html#UserLog">UserLog</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ChatLog">class <strong>ChatLog</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Collects&nbsp;information&nbsp;about&nbsp;chat&nbsp;for&nbsp;logging&nbsp;purposes.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.submodels.log_model.html#ChatLog">ChatLog</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ChatLog-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatLog-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatLog-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatLog-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatLog-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatLog-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatLog-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatLog-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatLog-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatLog-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="ChatLog-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatLog-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>chat_ended</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>clog_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>columns</strong> = [Column('chat_ended',DateTime(timezone=False)), Column('clog_id',Integer(),primary_key=True,nullable=False), Column('exp_accepted',DateTime(timezone=False)), Column('expert_id',Integer(),nullable=False), Column('expert_name',String(length=16,convert_unicode=False),nullable=False), Column('query_id',Integer(),nullable=False), Column('user_id',Integer(),nullable=False), Column('user_joined',DateTime(timezone=False)), Column('user_name',String(length=16,convert_unicode=False),nullable=False), Column('who_ended',String(length=16,convert_unicode=False))]</dl>
+
+<dl><dt><strong>exp_accepted</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>expert_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>expert_name</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.submodels.log_model.mapping&gt;</dl>
+
+<dl><dt><strong>query_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>relations</strong> = {}</dl>
+
+<dl><dt><strong>table</strong> = Table('chat_log',DynamicMetaData(),Column('chat_...ng(length=16,convert_unicode=False)),schema=None)</dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_joined</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_name</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>who_ended</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="ChatLog-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="QueryLog">class <strong>QueryLog</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Collects&nbsp;information&nbsp;about&nbsp;query&nbsp;for&nbsp;logging&nbsp;purposes.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.submodels.log_model.html#QueryLog">QueryLog</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="QueryLog-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="QueryLog-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="QueryLog-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="QueryLog-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="QueryLog-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="QueryLog-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="QueryLog-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="QueryLog-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="QueryLog-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="QueryLog-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="QueryLog-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="QueryLog-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>columns</strong> = [Column('created',DateTime(timezone=False),defaul...ilt-in method now of type object at 0x1E194748&gt;)), Column('qlog_id',Integer(),primary_key=True,nullable=False), Column('query_id',Integer()), Column('status',String(length=20,convert_unicode=False),nullable=False), Column('user_id',Integer(),nullable=False), Column('user_name',String(length=16,convert_unicode=False),nullable=False)]</dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.submodels.log_model.mapping&gt;</dl>
+
+<dl><dt><strong>qlog_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>query_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>relations</strong> = {}</dl>
+
+<dl><dt><strong>status</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>table</strong> = Table('query_log',DynamicMetaData(),Column('crea...nvert_unicode=False),nullable=False),schema=None)</dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_name</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="QueryLog-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UserLog">class <strong>UserLog</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Collects&nbsp;information&nbsp;about&nbsp;user&nbsp;for&nbsp;logging&nbsp;purposes.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.submodels.log_model.html#UserLog">UserLog</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="UserLog-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="UserLog-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="UserLog-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="UserLog-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="UserLog-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="UserLog-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="UserLog-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="UserLog-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="UserLog-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="UserLog-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="UserLog-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UserLog-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>columns</strong> = [Column('last_polling',DateTime(timezone=False)), Column('login_time',DateTime(timezone=False),nullable=False), Column('logout_time',DateTime(timezone=False)), Column('ulog_id',Integer(),primary_key=True,nullable=False), Column('user_id',Integer(),nullable=False), Column('user_name',String(length=16,convert_unicode=False),nullable=False)]</dl>
+
+<dl><dt><strong>last_polling</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>login_time</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>logout_time</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.submodels.log_model.mapping&gt;</dl>
+
+<dl><dt><strong>relations</strong> = {}</dl>
+
+<dl><dt><strong>table</strong> = Table('user_log',DynamicMetaData(),Column('last_...nvert_unicode=False),nullable=False),schema=None)</dl>
+
+<dl><dt><strong>ulog_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_name</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="UserLog-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-create_report_tables"><strong>create_report_tables</strong></a>()</dt><dd><tt>Creates&nbsp;the&nbsp;appropriate&nbsp;database&nbsp;tables.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()<br>
+<strong>metadata</strong> = DynamicMetaData()<br>
+<strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;</td></tr></table>
+</body></html>

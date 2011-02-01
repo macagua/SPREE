@@ -1,0 +1,193 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.submodels.ontologytree_slim</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.submodels.html"><font color="#ffffff">submodels</font></a>.ontologytree_slim</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/submodels/ontologytree_slim.py">c:\studium\spree\opensource\spree\submodels\ontologytree_slim.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;module&nbsp;provides&nbsp;the&nbsp;<a href="#Node">Node</a>&nbsp;and&nbsp;<a href="#OntologyTree">OntologyTree</a>&nbsp;classes.&nbsp;Both&nbsp;classes&nbsp;are&nbsp;needed&nbsp;for&nbsp;<br>
+the&nbsp;classification&nbsp;of&nbsp;questions/experts&nbsp;and&nbsp;the&nbsp;visualization&nbsp;of&nbsp;the&nbsp;knowledge&nbsp;taxonomy.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="cPickle.html">cPickle</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+<a href="spree.util.matching.distances.html">spree.util.matching.distances</a><br>
+<a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+<a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+<a href="spree.util.text.extractor.html">spree.util.text.extractor</a><br>
+<a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+<a href="math.html">math</a><br>
+<a href="sqlalchemy.databases.mysql.html">sqlalchemy.databases.mysql</a><br>
+<a href="spree.util.matching.normalization.html">spree.util.matching.normalization</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+<a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+<a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+<a href="shelve.html">shelve</a><br>
+<a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+<a href="time.html">time</a><br>
+<a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="turbogears.html">turbogears</a><br>
+<a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.submodels.ontologytree_slim.html#OntologyTree">OntologyTree</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="spree.submodels.ontologytree_slim.html#Node">Node</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Node">class <strong>Node</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Definition&nbsp;extension.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Node-__init__"><strong>__init__</strong></a>(self, row<font color="#909090">=None</font>)</dt><dd><tt>Initializes&nbsp;the&nbsp;node.<br>
+&nbsp;<br>
+@param&nbsp;row:&nbsp;contains&nbsp;fields&nbsp;for&nbsp;node&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(database&nbsp;row).</tt></dd></dl>
+
+<dl><dt><a name="Node-addChild"><strong>addChild</strong></a>(self, newChildNode)</dt><dd><tt>Adds&nbsp;a&nbsp;new&nbsp;child&nbsp;to&nbsp;node.<br>
+&nbsp;<br>
+@param&nbsp;newChildNode:&nbsp;new&nbsp;child&nbsp;that&nbsp;will&nbsp;be&nbsp;appended&nbsp;to&nbsp;the&nbsp;list&nbsp;of&nbsp;children</tt></dd></dl>
+
+<dl><dt><a name="Node-deleteNode"><strong>deleteNode</strong></a>(self)</dt><dd><tt>Deletes&nbsp;node.</tt></dd></dl>
+
+<dl><dt><a name="Node-getBranch"><strong>getBranch</strong></a>(self)</dt><dd><tt>@return:&nbsp;branch&nbsp;for&nbsp;a&nbsp;given&nbsp;node&nbsp;(as&nbsp;a&nbsp;list),&nbsp;starting&nbsp;from&nbsp;that&nbsp;node&nbsp;and&nbsp;finishing<br>
+at&nbsp;a&nbsp;level&nbsp;just&nbsp;before&nbsp;root&nbsp;node</tt></dd></dl>
+
+<dl><dt><a name="Node-getFullPath"><strong>getFullPath</strong></a>(self)</dt><dd><tt>@return:&nbsp;branch&nbsp;for&nbsp;a&nbsp;given&nbsp;node&nbsp;(as&nbsp;a&nbsp;string),&nbsp;starting&nbsp;from&nbsp;root&nbsp;(i.e.&nbsp;"\Computers\Software")</tt></dd></dl>
+
+<dl><dt><a name="Node-isLeaf"><strong>isLeaf</strong></a>(self)</dt><dd><tt>@return:&nbsp;true&nbsp;if&nbsp;node&nbsp;is&nbsp;a&nbsp;leaf</tt></dd></dl>
+
+<dl><dt><a name="Node-isRoot"><strong>isRoot</strong></a>(self)</dt><dd><tt>@return:&nbsp;true&nbsp;if&nbsp;node&nbsp;is&nbsp;root</tt></dd></dl>
+
+<dl><dt><a name="Node-printNode"><strong>printNode</strong></a>(self)</dt><dd><tt>Prints&nbsp;out&nbsp;some&nbsp;data&nbsp;about&nbsp;the&nbsp;node&nbsp;for&nbsp;check&nbsp;up&nbsp;purposes.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OntologyTree">class <strong>OntologyTree</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Models&nbsp;the&nbsp;hierarchy&nbsp;of&nbsp;knowledge&nbsp;categories.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="OntologyTree-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initializes&nbsp;the&nbsp;tree&nbsp;by&nbsp;adding&nbsp;the&nbsp;root&nbsp;node.</tt></dd></dl>
+
+<dl><dt><a name="OntologyTree-addTreeDict"><strong>addTreeDict</strong></a>(self, node<font color="#909090">=None</font>)</dt><dd><tt>Forms&nbsp;a&nbsp;dictionary&nbsp;representation&nbsp;of&nbsp;a&nbsp;tree.&nbsp;({'node_id':node,...})<br>
+&nbsp;<br>
+@param&nbsp;node:&nbsp;starting&nbsp;node</tt></dd></dl>
+
+<dl><dt><a name="OntologyTree-choosePath"><strong>choosePath</strong></a>(self, node, sel_nodes, alpha)</dt><dd><tt>Finds&nbsp;a&nbsp;subtree.&nbsp;Choses&nbsp;the&nbsp;right&nbsp;path&nbsp;recursively.<br>
+&nbsp;<br>
+@param&nbsp;node:&nbsp;node&nbsp;that&nbsp;is&nbsp;being&nbsp;examined&nbsp;for&nbsp;further&nbsp;branching<br>
+@param&nbsp;sel_nodes:&nbsp;list&nbsp;of&nbsp;selected&nbsp;nodes<br>
+@param&nbsp;alpha:&nbsp;factor&nbsp;that&nbsp;regulates&nbsp;branching</tt></dd></dl>
+
+<dl><dt><a name="OntologyTree-choosePathPreWeighted"><strong>choosePathPreWeighted</strong></a>(self, node, weighted_nodes, alpha<font color="#909090">=1000</font>)</dt><dd><tt>Uses&nbsp;pre-weighted&nbsp;nodes&nbsp;to&nbsp;find&nbsp;a&nbsp;subgraph&nbsp;of&nbsp;the&nbsp;tree.<br>
+Path&nbsp;is&nbsp;found&nbsp;by&nbsp;following&nbsp;formula:&nbsp;mean&nbsp;+&nbsp;alpha*variance<br>
+&nbsp;<br>
+@param&nbsp;node:&nbsp;Starting&nbsp;point&nbsp;for&nbsp;the&nbsp;path<br>
+@param&nbsp;weighted_nodes:&nbsp;List&nbsp;of&nbsp;nodes&nbsp;weighted&nbsp;by&nbsp;their&nbsp;similarity&nbsp;to&nbsp;the&nbsp;desired&nbsp;bag&nbsp;of&nbsp;words<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(which&nbsp;can&nbsp;be&nbsp;a&nbsp;query&nbsp;or&nbsp;a&nbsp;blog&nbsp;etc.)<br>
+@return:&nbsp;A&nbsp;list&nbsp;of&nbsp;node&nbsp;instances&nbsp;representing&nbsp;a&nbsp;subgraph&nbsp;of&nbsp;the&nbsp;tree</tt></dd></dl>
+
+<dl><dt><a name="OntologyTree-classify"><strong>classify</strong></a>(self, words, alpha<font color="#909090">=30</font>)</dt><dd><tt>Finds&nbsp;a&nbsp;subtree&nbsp;for&nbsp;given&nbsp;words.<br>
+&nbsp;<br>
+@param&nbsp;words:&nbsp;list&nbsp;of&nbsp;words&nbsp;filtered&nbsp;out&nbsp;from&nbsp;the&nbsp;query<br>
+@param&nbsp;alpha:&nbsp;the&nbsp;branching&nbsp;factor<br>
+@return:&nbsp;list&nbsp;of&nbsp;nodes&nbsp;contained&nbsp;in&nbsp;subtree</tt></dd></dl>
+
+<dl><dt><a name="OntologyTree-classifyPreWeighted"><strong>classifyPreWeighted</strong></a>(self, weighted_nodes, alpha)</dt><dd><tt>Returns&nbsp;the&nbsp;result&nbsp;of&nbsp;<a href="#OntologyTree-choosePathPreWeighted">choosePathPreWeighted</a>()&nbsp;starting&nbsp;from&nbsp;root<br>
+as&nbsp;a&nbsp;list&nbsp;of&nbsp;node&nbsp;ID's</tt></dd></dl>
+
+<dl><dt><a name="OntologyTree-classifyToNodes"><strong>classifyToNodes</strong></a>(self, words, alpha<font color="#909090">=0</font>)</dt><dd><tt>Find&nbsp;a&nbsp;subtree&nbsp;for&nbsp;a&nbsp;given&nbsp;bag&nbsp;of&nbsp;words&nbsp;returning&nbsp;node-objects<br>
+&nbsp;<br>
+@param&nbsp;words:&nbsp;The&nbsp;bag&nbsp;of&nbsp;words&nbsp;as&nbsp;a&nbsp;list<br>
+@param&nbsp;aplha:&nbsp;The&nbsp;branching&nbsp;factor<br>
+@return:&nbsp;A&nbsp;list&nbsp;of&nbsp;node&nbsp;instances&nbsp;representing&nbsp;a&nbsp;subgraph&nbsp;of&nbsp;the&nbsp;tree</tt></dd></dl>
+
+<dl><dt><a name="OntologyTree-findNode"><strong>findNode</strong></a>(self, n_id)</dt><dd><tt>Finds&nbsp;node&nbsp;according&nbsp;to&nbsp;it's&nbsp;id.<br>
+&nbsp;<br>
+@param&nbsp;n_id:&nbsp;identifies&nbsp;node<br>
+@return:&nbsp;a&nbsp;node&nbsp;<a href="__builtin__.html#object">object</a></tt></dd></dl>
+
+<dl><dt><a name="OntologyTree-formTree"><strong>formTree</strong></a>(self, table<font color="#909090">=&lt;sqlalchemy.sql.Alias object&gt;</font>)</dt><dd><tt>Takes&nbsp;data&nbsp;from&nbsp;db&nbsp;and&nbsp;creates&nbsp;tree&nbsp;structure&nbsp;out&nbsp;of&nbsp;it.<br>
+&nbsp;<br>
+@param&nbsp;table:&nbsp;the&nbsp;table&nbsp;that&nbsp;contains&nbsp;all&nbsp;the&nbsp;categories&nbsp;of&nbsp;the&nbsp;tree</tt></dd></dl>
+
+<dl><dt><a name="OntologyTree-getFullSubtree"><strong>getFullSubtree</strong></a>(self, list_of_node_ids)</dt><dd><tt>Finds&nbsp;full&nbsp;tree&nbsp;for&nbsp;a&nbsp;given&nbsp;list&nbsp;of&nbsp;node&nbsp;ids.<br>
+&nbsp;<br>
+@param&nbsp;list_of_node_ids:&nbsp;list&nbsp;of&nbsp;node&nbsp;ids<br>
+@return:&nbsp;list&nbsp;of&nbsp;node&nbsp;objects&nbsp;contained&nbsp;in&nbsp;a&nbsp;subtree</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'OntologyTree' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-mean"><strong>mean</strong></a>(a)</dt><dd><tt>Calculates&nbsp;mean&nbsp;for&nbsp;a&nbsp;list&nbsp;of&nbsp;numbers.<br>
+&nbsp;<br>
+@param&nbsp;a:&nbsp;list&nbsp;of&nbsp;numbers<br>
+@return:&nbsp;mean</tt></dd></dl>
+ <dl><dt><a name="-sigma"><strong>sigma</strong></a>(a)</dt><dd><tt>Calculates&nbsp;sigma&nbsp;for&nbsp;a&nbsp;list&nbsp;of&nbsp;numbers.<br>
+&nbsp;<br>
+@param&nbsp;a:&nbsp;list&nbsp;of&nbsp;numbers<br>
+@return:&nbsp;sigma&nbsp;value</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()<br>
+<strong>dictionary</strong> = Table('dictionary',DynamicMetaData(),Column('ter...t(0.0)),Column('nodes',MSLongText()),schema=None)<br>
+<strong>dictionary_file</strong> = 'spree/data/ontology/terms.cpkl'<br>
+<strong>dictionary_file_prod</strong> = 'spree/data/ontology/terms_prod.cpkl'<br>
+<strong>division</strong> = _Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)<br>
+<strong>metadata</strong> = DynamicMetaData()<br>
+<strong>nodemapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;<br>
+<strong>ontologynode</strong> = Table('ontologynode',DynamicMetaData(),Column('n...'rightIdx',Integer(),nullable=False),schema=None)<br>
+<strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;<br>
+<strong>tree</strong> = None<br>
+<strong>tree_file</strong> = 'spree/data/ontology/nodes.cpkl'<br>
+<strong>tree_file_prod</strong> = 'spree/data/ontology/nodes_prod.cpkl'</td></tr></table>
+</body></html>

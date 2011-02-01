@@ -1,0 +1,21 @@
+<div id="preferencesContent" style="overflow:visible;" 
+		xmlns:xi="http://www.w3.org/2001/XInclude">
+	<xi:include href="preferencesHead.html"/>
+	<div class="content_body">
+    	<h1 class="content_title">Edit ${display_name}'s Information</h1>
+		${ET(form1.display(form_values1,action=action1,submit_text=u'Save',message=message1))}
+		<button class="btn btnRegNext" id="button_send" type="button" value="" title="Save your changes" onclick="preferences.submitPersonal(1);">
+			<div class="btn">
+				<p class="btn">Save</p>
+			</div>
+		</button>
+		<br/><br/><br/>
+		<h1 class="content_title">Change Password</h1>
+		${ET(form2.display(form_values2,action=action2,submit_text=u'Change Password',message=message2))}
+		<button class="btn btnRegNext" id="button_send" type="button" value="" title="Save your changes" onclick="preferences.submitPersonal(2);">
+			<div class="btn">
+				<p class="btn">Save</p>
+			</div>
+		</button>
+	</div>
+</div>

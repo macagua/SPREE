@@ -1,0 +1,171 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.subcontrollers.blog_controller</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.subcontrollers.html"><font color="#ffffff">subcontrollers</font></a>.blog_controller</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/subcontrollers/blog_controller.py">c:\studium\spree\opensource\spree\subcontrollers\blog_controller.py</a></font></td></tr></table>
+    <p><tt>The&nbsp;controller&nbsp;for&nbsp;the&nbsp;chat&nbsp;content&nbsp;box</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="cPickle.html">cPickle</a><br>
+<a href="turbogears.config.html">turbogears.config</a><br>
+<a href="spree.constants.html">spree.constants</a><br>
+<a href="turbogears.controllers.html">turbogears.controllers</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+<a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+<a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+<a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+<a href="spree.util.helpers.html">spree.util.helpers</a><br>
+<a href="turbogears.identity.html">turbogears.identity</a><br>
+<a href="spree.json.html">spree.json</a><br>
+<a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+</td><td width="25%" valign=top><a href="spree.spree_model.html">spree.spree_model</a><br>
+<a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+<a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+<a href="spree.register_model.html">spree.register_model</a><br>
+<a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+<a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+<a href="string.html">string</a><br>
+<a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="spree.submodels.tree_model.html">spree.submodels.tree_model</a><br>
+<a href="turbogears.html">turbogears</a><br>
+<a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.blog_controller.html#BlogController">BlogController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.blog_controller.html#BlogController">BlogController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BlogController">class <strong>BlogController</strong></a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Does&nbsp;all&nbsp;the&nbsp;necessary&nbsp;handling&nbsp;of&nbsp;the&nbsp;note&nbsp;entries.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.subcontrollers.blog_controller.html#BlogController">BlogController</a></dd>
+<dd><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a></dd>
+<dd><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BlogController-deleteBlogEntry"><strong>deleteBlogEntry</strong></a>(self, blogentry_id, *_decorator__varargs, **kwargs)</dt><dd><tt>Deletes&nbsp;note&nbsp;and&nbsp;it's&nbsp;count.<br>
+&nbsp;<br>
+@param&nbsp;blogentry_id:&nbsp;needed&nbsp;to&nbsp;identify&nbsp;note</tt></dd></dl>
+
+<dl><dt><a name="BlogController-doBlogRating"><strong>doBlogRating</strong></a>(self, blogentry_id, rate, *args, **kwargs)</dt><dd><tt>Calculates&nbsp;blog&nbsp;rating.&nbsp;Updates&nbsp;note's&nbsp;score,&nbsp;score&nbsp;of&nbsp;the&nbsp;user&nbsp;who&nbsp;created&nbsp;<br>
+it&nbsp;and&nbsp;keeps&nbsp;track&nbsp;of&nbsp;who&nbsp;rated&nbsp;which&nbsp;note&nbsp;(this&nbsp;way&nbsp;user&nbsp;can&nbsp;rate&nbsp;note&nbsp;only&nbsp;once).<br>
+&nbsp;<br>
+@param&nbsp;blogentry_id:&nbsp;identifies&nbsp;note<br>
+@param&nbsp;rate:&nbsp;&nbsp;points&nbsp;given</tt></dd></dl>
+
+<dl><dt><a name="BlogController-do_BlogPost"><strong>do_BlogPost</strong></a>(self, *args, **kwargs)</dt><dd><tt>Creates&nbsp;new&nbsp;note&nbsp;entry.<br>
+&nbsp;<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;blogentry_id,text&nbsp;and&nbsp;title&nbsp;of&nbsp;the&nbsp;note,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;information&nbsp;weather&nbsp;the&nbsp;note&nbsp;is&nbsp;private</tt></dd></dl>
+
+<dl><dt><a name="BlogController-getBlogEditContent"><strong>getBlogEditContent</strong></a>(self, blogentry_id, query_id<font color="#909090">=''</font>, query_topic<font color="#909090">=''</font>, *args, **kwargs)</dt><dd><tt>Enables&nbsp;user&nbsp;to&nbsp;edit&nbsp;note&nbsp;entries.&nbsp;Used&nbsp;in&nbsp;three&nbsp;cases:&nbsp;when&nbsp;note&nbsp;is&nbsp;created&nbsp;from&nbsp;a&nbsp;chat,<br>
+when&nbsp;new&nbsp;note&nbsp;is&nbsp;created&nbsp;from&nbsp;scratch&nbsp;and&nbsp;when&nbsp;note&nbsp;is&nbsp;edited.<br>
+&nbsp;<br>
+@param&nbsp;blogentry_id:&nbsp;identifies&nbsp;the&nbsp;note<br>
+@param&nbsp;query_id:&nbsp;needed&nbsp;when&nbsp;note&nbsp;is&nbsp;made&nbsp;from&nbsp;chat&nbsp;(links&nbsp;it&nbsp;to&nbsp;query)<br>
+@param&nbsp;query_topic:&nbsp;needed&nbsp;when&nbsp;note&nbsp;is&nbsp;made&nbsp;from&nbsp;chat&nbsp;(takes&nbsp;the&nbsp;query&nbsp;topic)<br>
+@return:&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="BlogController-getBlogEntryContent"><strong>getBlogEntryContent</strong></a>(self, blogentry_id, for_query, query_id, *args, **kwargs)</dt><dd><tt>Fetches&nbsp;complete&nbsp;content&nbsp;of&nbsp;the&nbsp;note.<br>
+&nbsp;<br>
+@param&nbsp;blogentry_id:&nbsp;needed&nbsp;to&nbsp;identify&nbsp;note<br>
+@param&nbsp;for_query:&nbsp;if&nbsp;the&nbsp;note&nbsp;was&nbsp;created&nbsp;from&nbsp;the&nbsp;query&nbsp;the&nbsp;relation&nbsp;exists<br>
+@param&nbsp;query_id:&nbsp;?<br>
+@return:&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="BlogController-getBlogSubtree"><strong>getBlogSubtree</strong></a>(self, topic, text)</dt><dd><tt>Classifies&nbsp;the&nbsp;note,&nbsp;according&nbsp;to&nbsp;it's&nbsp;text.<br>
+&nbsp;<br>
+@param&nbsp;topic:&nbsp;should&nbsp;be&nbsp;used<br>
+@param&nbsp;text:&nbsp;needed&nbsp;for&nbsp;classification<br>
+@todo:&nbsp;add&nbsp;topic&nbsp;to&nbsp;text&nbsp;when&nbsp;classifying<br>
+@return:&nbsp;subtree&nbsp;that&nbsp;holds&nbsp;note&nbsp;classification&nbsp;results</tt></dd></dl>
+
+<dl><dt><a name="BlogController-getBlogsContent"><strong>getBlogsContent</strong></a>(self, query_id, *args, **kwargs)</dt><dd><tt>Fetches&nbsp;all&nbsp;notes&nbsp;of&nbsp;a&nbsp;current&nbsp;user.&nbsp;Takes&nbsp;care&nbsp;of&nbsp;paginate,&nbsp;too.<br>
+Does&nbsp;something&nbsp;else,&nbsp;but&nbsp;don't&nbsp;know&nbsp;what!!!&nbsp;<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;identifies&nbsp;the&nbsp;query&nbsp;<br>
+@param&nbsp;*kwargs:&nbsp;contains&nbsp;current_page,&nbsp;needed&nbsp;for&nbsp;paginate.<br>
+@return:&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="BlogController-updateBlogCategories"><strong>updateBlogCategories</strong></a>(self, blogentry_id, *_decorator__varargs, **kwargs)</dt><dd><tt>Updates&nbsp;note&nbsp;category.<br>
+&nbsp;<br>
+@param&nbsp;blogentry_id:&nbsp;needed&nbsp;to&nbsp;identify&nbsp;note<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;catIDs&nbsp;&nbsp;?</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>require</strong> = &lt;turbogears.identity.conditions.not_anonymous object&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Controller' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>:<br>
+<dl><dt><a name="BlogController-__getattribute__"><strong>__getattribute__</strong></a>(self, name)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-mod"><strong>mod</strong></a>(...)</dt><dd><tt><a href="#-mod">mod</a>(a,&nbsp;b)&nbsp;--&nbsp;Same&nbsp;as&nbsp;a&nbsp;%&nbsp;b.</tt></dd></dl>
+ <dl><dt><a name="-truediv"><strong>truediv</strong></a>(...)</dt><dd><tt><a href="#-truediv">truediv</a>(a,&nbsp;b)&nbsp;--&nbsp;Same&nbsp;as&nbsp;a&nbsp;/&nbsp;b&nbsp;when&nbsp;__future__.division&nbsp;is&nbsp;in&nbsp;effect.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()<br>
+<strong>division</strong> = _Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)<br>
+<strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;<br>
+<strong>user_blog</strong> = Table('user_blog',DynamicMetaData(),Column('user... now of type object at 0x1E194748&gt;)),schema=None)</td></tr></table>
+</body></html>

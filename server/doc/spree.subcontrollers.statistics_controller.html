@@ -1,0 +1,150 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.subcontrollers.statistics_controller</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.subcontrollers.html"><font color="#ffffff">subcontrollers</font></a>.statistics_controller</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/subcontrollers/statistics_controller.py">c:\studium\spree\opensource\spree\subcontrollers\statistics_controller.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="cPickle.html">cPickle</a><br>
+<a href="turbogears.config.html">turbogears.config</a><br>
+<a href="spree.constants.html">spree.constants</a><br>
+<a href="turbogears.controllers.html">turbogears.controllers</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+<a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+<a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+<a href="spree.util.helpers.html">spree.util.helpers</a><br>
+<a href="turbogears.identity.html">turbogears.identity</a><br>
+<a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+<a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+<a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+<a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+<a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="turbogears.html">turbogears</a><br>
+<a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.statistics_controller.html#StatisticsController">StatisticsController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.statistics_controller.html#StatisticsController">StatisticsController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="StatisticsController">class <strong>StatisticsController</strong></a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Handles&nbsp;statistical&nbsp;contents.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.subcontrollers.statistics_controller.html#StatisticsController">StatisticsController</a></dd>
+<dd><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a></dd>
+<dd><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="StatisticsController-getHighscoreList"><strong>getHighscoreList</strong></a>(self, *args, **kwargs)</dt><dd><tt>@return:&nbsp;list&nbsp;of&nbsp;high&nbsp;scored&nbsp;users&nbsp;(current&nbsp;user&nbsp;position&nbsp;is&nbsp;also&nbsp;shown)</tt></dd></dl>
+
+<dl><dt><a name="StatisticsController-getTagStatistics"><strong>getTagStatistics</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="StatisticsController-getTagStatisticsXML"><strong>getTagStatisticsXML</strong></a>(self, *args, **kwargs)</dt><dd><tt>a&nbsp;tag&nbsp;statistic&nbsp;as&nbsp;xml</tt></dd></dl>
+
+<dl><dt><a name="StatisticsController-getUserDetailsForTooltip"><strong>getUserDetailsForTooltip</strong></a>(self, user_id, *args, **kwargs)</dt><dd><tt>Fetches&nbsp;details&nbsp;for&nbsp;a&nbsp;selected&nbsp;user&nbsp;for&nbsp;the&nbsp;tool&nbsp;tip.<br>
+&nbsp;<br>
+@param&nbsp;user_id:&nbsp;identifies&nbsp;the&nbsp;user<br>
+@return:&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="StatisticsController-getUserDetailsIM"><strong>getUserDetailsIM</strong></a>(self, user_id, *args, **kwargs)</dt><dd><tt>Fetches&nbsp;details&nbsp;for&nbsp;a&nbsp;selected&nbsp;user&nbsp;in&nbsp;the&nbsp;Instant&nbsp;Massinger&nbsp;tab<br>
+&nbsp;<br>
+@param&nbsp;user_id:&nbsp;identifies&nbsp;the&nbsp;user<br>
+@return:&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="StatisticsController-getUserDetailsSub"><strong>getUserDetailsSub</strong></a>(self, user_id)</dt><dd><tt>Serves&nbsp;user&nbsp;details.&nbsp;<br>
+&nbsp;<br>
+@param&nbsp;user_id:&nbsp;identifies&nbsp;the&nbsp;user<br>
+@return:&nbsp;needed&nbsp;information&nbsp;about&nbsp;the&nbsp;user</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Controller' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>:<br>
+<dl><dt><a name="StatisticsController-__getattribute__"><strong>__getattribute__</strong></a>(self, name)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-addNodeWeights"><strong>addNodeWeights</strong></a>(node, weights)</dt><dd><tt>gives&nbsp;a&nbsp;weight&nbsp;to&nbsp;a&nbsp;node&nbsp;and&nbsp;all&nbsp;its&nbsp;children<br>
+&nbsp;<br>
+@param&nbsp;node:&nbsp;the&nbsp;node<br>
+@param&nbsp;weights:&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;nodeIds-&gt;Weights</tt></dd></dl>
+ <dl><dt><a name="-cmpNodes"><strong>cmpNodes</strong></a>(node1, node2)</dt><dd><tt>Compares&nbsp;two&nbsp;nodes&nbsp;by&nbsp;their&nbsp;name<br>
+&nbsp;<br>
+@param&nbsp;node1:&nbsp;first&nbsp;node<br>
+@param&nbsp;node2:&nbsp;second&nbsp;node<br>
+@return:&nbsp;0&nbsp;if&nbsp;true,&nbsp;-1&nbsp;if&nbsp;false</tt></dd></dl>
+ <dl><dt><a name="-toDict"><strong>toDict</strong></a>(node)</dt><dd><tt>Converts&nbsp;a&nbsp;node&nbsp;and&nbsp;its&nbsp;children&nbsp;to&nbsp;a&nbsp;dict&nbsp;object.<br>
+&nbsp;<br>
+@param&nbsp;node:&nbsp;starting&nbsp;position&nbsp;for&nbsp;conversion&nbsp;<br>
+@return:&nbsp;dictionary&nbsp;filed&nbsp;with&nbsp;information&nbsp;about&nbsp;nodes&nbsp;from&nbsp;the&nbsp;subtree</tt></dd></dl>
+ <dl><dt><a name="-toXML"><strong>toXML</strong></a>(node)</dt><dd><tt>convert&nbsp;a&nbsp;node&nbsp;and&nbsp;all&nbsp;its&nbsp;children&nbsp;to&nbsp;xml<br>
+&nbsp;<br>
+@param&nbsp;node:&nbsp;the&nbsp;node<br>
+@return:&nbsp;the&nbsp;xml&nbsp;representation&nbsp;as&nbsp;string</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()<br>
+<strong>division</strong> = _Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)<br>
+<strong>metadata</strong> = DynamicMetaData()<br>
+<strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;<br>
+<strong>template_branch</strong> = '&lt;branch name="%s" value="%d"&gt;<font color="#c040c0">\n</font>%s<font color="#c040c0">\n</font>&lt;/branch&gt;<font color="#c040c0">\n</font>'<br>
+<strong>template_leaf</strong> = '&lt;leaf name="%s" value="%d"/&gt;<font color="#c040c0">\n</font>'</td></tr></table>
+</body></html>

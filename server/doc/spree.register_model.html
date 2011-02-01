@@ -1,0 +1,508 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.register_model</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.register_model</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/register_model.py">c:\studium\spree\opensource\spree\register_model.py</a></font></td></tr></table>
+    <p><tt>Provides&nbsp;registration&nbsp;related&nbsp;classes&nbsp;and&nbsp;functions,&nbsp;especially<br>
+a&nbsp;python&nbsp;representation&nbsp;of&nbsp;the&nbsp;database&nbsp;tables&nbsp;used&nbsp;for&nbsp;the&nbsp;<br>
+registration&nbsp;process</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="turbogears.config.html">turbogears.config</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+<a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+<a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+<a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+<a href="spree.model.html">spree.model</a><br>
+<a href="sqlalchemy.databases.mysql.html">sqlalchemy.databases.mysql</a><br>
+<a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+<a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+<a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+<a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="turbogears.html">turbogears</a><br>
+<a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.register_model.html#RegistrationSQLAlchemyBase">RegistrationSQLAlchemyBase</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.register_model.html#RegistrationPendingUser">RegistrationPendingUser</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_model.html#RegistrationUserEmailChange">RegistrationUserEmailChange</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="spree.register_model.html#UserClassFinder">UserClassFinder</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.register_model.html#RegistrationPendingProfile">RegistrationPendingProfile</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RegistrationPendingProfile">class <strong>RegistrationPendingProfile</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Table&nbsp;for&nbsp;temporary&nbsp;storing&nbsp;profile&nbsp;while&nbsp;user&nbsp;is&nbsp;in&nbsp;pending&nbsp;state<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_model.html#RegistrationPendingProfile">RegistrationPendingProfile</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RegistrationPendingProfile-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="RegistrationPendingProfile-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingProfile-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>columns</strong> = [Column('expertise',PickleType(protocol=2,pickler=&lt;module 'cPickle' (built-in)&gt;,mutable=True)), Column('keywords',MSText(),default=ColumnDefault('')), Column('pending_user_id',Integer(),ForeignKey('r...ending_user.id'),primary_key=True,nullable=False), Column('websites',MSText(),default=ColumnDefault(''))]</dl>
+
+<dl><dt><strong>expertise</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>keywords</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.register_model.mapping&gt;</dl>
+
+<dl><dt><strong>pending_user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>relations</strong> = {}</dl>
+
+<dl><dt><strong>table</strong> = Table('registration_pending_profile',DynamicMeta...,MSText(),default=ColumnDefault('')),schema=None)</dl>
+
+<dl><dt><strong>websites</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="RegistrationPendingProfile-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RegistrationPendingUser">class <strong>RegistrationPendingUser</strong></a>(<a href="spree.register_model.html#RegistrationSQLAlchemyBase">RegistrationSQLAlchemyBase</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;information&nbsp;about&nbsp;user&nbsp;who&nbsp;is&nbsp;trying&nbsp;to&nbsp;registrate.&nbsp;This&nbsp;is&nbsp;temporary&nbsp;storage<br>
+of&nbsp;a&nbsp;user,&nbsp;until&nbsp;his&nbsp;data&nbsp;is&nbsp;validated&nbsp;and&nbsp;promoted&nbsp;to&nbsp;permanent&nbsp;user.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_model.html#RegistrationPendingUser">RegistrationPendingUser</a></dd>
+<dd><a href="spree.register_model.html#RegistrationSQLAlchemyBase">RegistrationSQLAlchemyBase</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RegistrationPendingUser-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Constructor</tt></dd></dl>
+
+<dl><dt><a name="RegistrationPendingUser-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="RegistrationPendingUser-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-get_by_email_address"><strong>get_by_email_address</strong></a>(cls, email_address)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt><dd><tt>Returns&nbsp;a&nbsp;user&nbsp;identified&nbsp;by&nbsp;email_address<br>
+&nbsp;<br>
+@param&nbsp;cls:&nbsp;The&nbsp;user&nbsp;class<br>
+@param&nbsp;email_address:&nbsp;Email&nbsp;identifying&nbsp;the&nbsp;user<br>
+@return:&nbsp;User&nbsp;identified&nbsp;by&nbsp;email_address</tt></dd></dl>
+
+<dl><dt><a name="RegistrationPendingUser-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-new"><strong>new</strong></a>(cls, user_name, email_address, display_name, password, validation_key)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt><dd><tt>Writes&nbsp;temporary&nbsp;data&nbsp;about&nbsp;the&nbsp;user&nbsp;in&nbsp;a&nbsp;dbb<br>
+&nbsp;<br>
+@param&nbsp;cls:&nbsp;The&nbsp;user&nbsp;class<br>
+@param&nbsp;user_name:&nbsp;The&nbsp;users&nbsp;name<br>
+@param&nbsp;email_address:&nbsp;The&nbsp;users&nbsp;email&nbsp;address<br>
+@param&nbsp;display_name:&nbsp;The&nbsp;users&nbsp;display&nbsp;name<br>
+@param&nbsp;password:&nbsp;The&nbsp;users&nbsp;password<br>
+@param&nbsp;validation_key:&nbsp;The&nbsp;validation&nbsp;key<br>
+@return:&nbsp;The&nbsp;new&nbsp;pending&nbsp;user&nbsp;<a href="__builtin__.html#object">object</a></tt></dd></dl>
+
+<dl><dt><a name="RegistrationPendingUser-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationPendingUser-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>display_name</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>email_address</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>password</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_name</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>validation_key</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="spree.register_model.html#RegistrationSQLAlchemyBase">RegistrationSQLAlchemyBase</a>:<br>
+<dl><dt><a name="RegistrationPendingUser-destroy_self"><strong>destroy_self</strong></a>(self)</dt><dd><tt>Destroys&nbsp;self</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="spree.register_model.html#RegistrationSQLAlchemyBase">RegistrationSQLAlchemyBase</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'RegistrationSQLAlchemyBase' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RegistrationSQLAlchemyBase">class <strong>RegistrationSQLAlchemyBase</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Base&nbsp;class&nbsp;to&nbsp;handle&nbsp;generic&nbsp;creation&nbsp;and&nbsp;destruction.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="RegistrationSQLAlchemyBase-__init__"><strong>__init__</strong></a>(self, **kw)</dt><dd><tt>Constructor</tt></dd></dl>
+
+<dl><dt><a name="RegistrationSQLAlchemyBase-destroy_self"><strong>destroy_self</strong></a>(self)</dt><dd><tt>Destroys&nbsp;self</tt></dd></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="RegistrationSQLAlchemyBase-new"><strong>new</strong></a>(cls, **kw)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt><dd><tt>Factory&nbsp;method&nbsp;creates&nbsp;a&nbsp;new&nbsp;instance&nbsp;of&nbsp;this&nbsp;class&nbsp;(both&nbsp;in&nbsp;python&nbsp;and&nbsp;in&nbsp;the&nbsp;db).</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'RegistrationSQLAlchemyBase' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RegistrationUserEmailChange">class <strong>RegistrationUserEmailChange</strong></a>(<a href="spree.register_model.html#RegistrationSQLAlchemyBase">RegistrationSQLAlchemyBase</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;information&nbsp;about&nbsp;a&nbsp;user&nbsp;who&nbsp;wants&nbsp;to&nbsp;change&nbsp;the&nbsp;email&nbsp;address<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_model.html#RegistrationUserEmailChange">RegistrationUserEmailChange</a></dd>
+<dd><a href="spree.register_model.html#RegistrationSQLAlchemyBase">RegistrationSQLAlchemyBase</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="RegistrationUserEmailChange-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>Constructor</tt></dd></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="RegistrationUserEmailChange-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-get_by_new_email"><strong>get_by_new_email</strong></a>(cls, new_email_address)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt><dd><tt>Returns&nbsp;an&nbsp;existing&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;using&nbsp;new_email_address&nbsp;as&nbsp;the&nbsp;lookup&nbsp;item.</tt></dd></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-new"><strong>new</strong></a>(cls, user, new_email_address, validation_key)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt><dd><tt>Factory&nbsp;method&nbsp;creates&nbsp;a&nbsp;new&nbsp;instance&nbsp;of&nbsp;this&nbsp;class&nbsp;(both&nbsp;in&nbsp;python&nbsp;and&nbsp;in&nbsp;the&nbsp;db).<br>
+&nbsp;<br>
+@param&nbsp;cls:&nbsp;The&nbsp;user&nbsp;class<br>
+@param&nbsp;user:&nbsp;An&nbsp;identity&nbsp;user&nbsp;<a href="__builtin__.html#object">object</a><br>
+@param&nbsp;new_email_address:&nbsp;The&nbsp;new&nbsp;email<br>
+@param&nbsp;validation_key:&nbsp;The&nbsp;generated&nbsp;validation&nbsp;key</tt></dd></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="RegistrationUserEmailChange-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<hr>
+Properties defined here:<br>
+<dl><dt><strong>user</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _user(self)</dt><dd><tt>Returns&nbsp;the&nbsp;User&nbsp;associated&nbsp;with&nbsp;the&nbsp;email&nbsp;change.</tt></dd></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>new_email_address</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>validation_key</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="spree.register_model.html#RegistrationSQLAlchemyBase">RegistrationSQLAlchemyBase</a>:<br>
+<dl><dt><a name="RegistrationUserEmailChange-destroy_self"><strong>destroy_self</strong></a>(self)</dt><dd><tt>Destroys&nbsp;self</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="spree.register_model.html#RegistrationSQLAlchemyBase">RegistrationSQLAlchemyBase</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'RegistrationSQLAlchemyBase' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UserClassFinder">class <strong>UserClassFinder</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Utility&nbsp;class&nbsp;to&nbsp;find&nbsp;and&nbsp;store&nbsp;the&nbsp;main&nbsp;User&nbsp;model.<br>
+&nbsp;<br>
+There&nbsp;are&nbsp;two&nbsp;properties&nbsp;intended&nbsp;for&nbsp;public&nbsp;use:<br>
+&nbsp;<br>
+user_class&nbsp;-&nbsp;Returns&nbsp;the&nbsp;main&nbsp;user&nbsp;class&nbsp;(which&nbsp;can&nbsp;be&nbsp;instantiated)<br>
+user_class_name&nbsp;-&nbsp;Returns&nbsp;a&nbsp;string&nbsp;of&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;user&nbsp;class.&nbsp;This<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can&nbsp;be&nbsp;useful&nbsp;for&nbsp;SQLObject<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="UserClassFinder-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Constructor</tt></dd></dl>
+
+<hr>
+Properties defined here:<br>
+<dl><dt><strong>user_class</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _user_class(self)</dt><dd><tt>@return&nbsp;User&nbsp;class</tt></dd></dl>
+</dd>
+</dl>
+<dl><dt><strong>user_class_name</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _user_class_name(self)</dt><dd><tt>@return&nbsp;User&nbsp;class&nbsp;name</tt></dd></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'UserClassFinder' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-create_registration_tables"><strong>create_registration_tables</strong></a>()</dt><dd><tt>Create&nbsp;the&nbsp;appropriate&nbsp;database&nbsp;tables.</tt></dd></dl>
+ <dl><dt><a name="-email_is_unique"><strong>email_is_unique</strong></a>(email)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;email&nbsp;is&nbsp;not&nbsp;yet&nbsp;in&nbsp;the&nbsp;database.</tt></dd></dl>
+ <dl><dt><a name="-user_name_is_unique"><strong>user_name_is_unique</strong></a>(user_name)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;user_name&nbsp;is&nbsp;not&nbsp;yet&nbsp;in&nbsp;the&nbsp;database.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()<br>
+<strong>email_change_table</strong> = Table('registration_user_email_change',DynamicMe... now of type object at 0x1E194748&gt;)),schema=None)<br>
+<strong>metadata</strong> = DynamicMetaData()<br>
+<strong>registration_pending_user_table</strong> = Table('registration_pending_user',DynamicMetaDat...ng(length=40,convert_unicode=False)),schema=None)<br>
+<strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;<br>
+<strong>user_class_finder</strong> = &lt;spree.register_model.UserClassFinder object&gt;</td></tr></table>
+</body></html>

@@ -1,0 +1,15 @@
+<div id="registerNew">
+	<div class="content_body">
+		<h1>New User Registration</h1>
+		<span id="regError">$message</span>
+		${ET(form.display(form.value,message=message))}
+		<div>
+			<input id="ckbConditions" type="checkbox"/> I have read, understood and agree with the <a href='${tg.url("/static/html/conditions.html")}' target="_blank">terms and conditions</a> 
+		</div>
+		<button class="btn btnRegNext" onclick="javascript:personal2docs();" type="button" value="" name="login">
+				<div class="btn">
+				<p class="btn">Next</p>
+				</div>
+		</button>
+	</div>
+</div>

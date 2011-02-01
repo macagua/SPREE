@@ -1,0 +1,398 @@
+/*
+	Copyright (C) 2008  Deutsche Telekom Laboratories
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	
+	Date: 22-01-2008
+	
+*/
+
+/*
+	Styles for the boxes to the left and to the right of the main content
+
+*/
+
+/* boxes for content */
+
+#content .graybox{
+	border: 1px solid #ccc;
+}
+
+#content .graybox .header{
+	background-color:#ccc;
+	font-size: 12px;
+	font-weight: bold;
+	/*padding: 5px 5px 5px 5px;*/
+	line-height:18px;
+	padding-left:5px;
+	color:#003C73;
+}
+
+#content .graybox .body{
+	font-size: 11px;
+	padding: 5px 5px 5px 5px;
+	overflow: auto;
+}
+
+/* boxes for incoming and outgoing queries */
+
+.iobox{
+	width: 221px;
+	margin-bottom: 10px;
+}
+
+.iobox_header{
+	height:24px;
+	background: url(../images/roundbar.gif) no-repeat;
+}
+
+.iobox_header h1{
+	text-transform: none;
+	color: white;
+	margin: 0 0 0 10px;
+	padding-top: 3px;
+	font-weight: bold;
+}
+
+.iobox_bottom{
+	height:20px;
+	background: url(../images/roundbottom.gif) no-repeat;
+}
+
+.iobox_items{
+	list-style-type: none;
+	border: 1px solid #23375F;
+	/*border-bottom: none;*/
+	margin: 0px;
+	background-color: #FFF;
+}
+
+.iobox li{
+		list-style-type: none;
+		cursor:pointer; 
+		color: #000; 
+		/*padding: 3px 3px 3px 3px;*/
+		
+		margin-right: 0px;
+		clear: both;
+		min-height:35px;
+		height:auto !important; /* IE 6 hack */
+  		height:40px; /* IE 6 hack */
+		
+		overflow:hidden;
+		border-bottom:1px #ccc solid;
+}
+
+.iobox li:hover {
+	background-color:#ddd;
+	cursor:pointer;
+}
+
+.iobox .iobox_statusimg{
+	width: 34px;
+	height: 34px;
+	margin: 0px 3px 5px 2px;
+	padding: 0;
+	/*border: 1px solid #000;*/
+	float: left;
+}
+
+.iobox .iobox_text{
+	padding: 2px 3px 0 0;
+	/*border: 1px solid #000;*/
+	display:inline;
+}
+
+.iobox li p  
+{
+	display:inline;
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.iobox li h3 
+{
+	font-weight: bold;
+	color: #000;
+	display:inline;
+	font-size: 10px;
+}
+	
+.iobox .hidden {
+	display: none;
+}
+
+.in_new_online .iobox_statusimg{
+	background: url(../images/newquery_online.gif) no-repeat ;
+}
+
+.in_new_offline .iobox_statusimg{
+	background: url(../images/newquery_offline.gif) no-repeat ;
+}
+
+.in_myTurn_online .iobox_statusimg{
+	background: url(../images/open_chat_online.gif) no-repeat;
+}
+
+.in_myTurn_offline .iobox_statusimg{
+	background: url(../images/open_chat_offline.gif) no-repeat;
+}
+
+.in_notMyTurn_online .iobox_statusimg{
+	background: url(../images/chatpartner_online.gif) no-repeat;
+}
+
+.in_notMyTurn_offline .iobox_statusimg{
+	background: url(../images/chatpartner_offline.gif) no-repeat;
+}
+
+.out_myTurn_online .iobox_statusimg{
+	background: url(../images/open_chat_online.gif) no-repeat;
+}
+
+.out_myTurn_offline .iobox_statusimg{
+	background: url(../images/open_chat_offline.gif) no-repeat;
+}
+
+.out_notMyTurn_online .iobox_statusimg{
+	background: url(../images/chatpartner_online.gif) no-repeat;
+}
+
+.out_notMyTurn_offline .iobox_statusimg{
+	background: url(../images/chatpartner_offline.gif) no-repeat;
+}
+
+.out_new_online .iobox_statusimg{
+	background: url(../images/search_expert.gif) no-repeat ;
+}
+
+.out_finished_online .iobox_statusimg{
+	background: url(../images/rate_chat.gif) no-repeat;
+}
+
+.out_finished_offline .iobox_statusimg{
+	background: url(../images/rate_chat.gif) no-repeat;
+}
+
+.selected .arrow_up{
+	position: absolute;
+	left: 195px;
+	margin-top: 5px;
+	width: 60px;
+	height: 60px;
+	margin-left: 20px;
+	padding: 0;
+	/*border: 1px solid #000;*/
+	background: url(../images/trianglemirrored.gif) no-repeat;
+	z-index: 5;
+}
+
+.selected .arrow_down{
+	position: absolute;
+	left: 195px;
+	margin-top: -15px;
+	width: 60px;
+	height: 60px;
+	margin-left: 20px;
+	padding: 0;
+	/*border: 1px solid #000;*/
+	background: url(../images/triangle.gif) no-repeat;
+	z-index: 5;
+}
+
+
+.iobox .noEntries {
+	height: 20px;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000;
+	padding: 5px 5px 5px 5px;
+}
+.iobox .noEntries:hover{
+	cursor: default;
+}
+
+.box_right {
+
+	overflow:visible;
+	margin: 20px 3px 3px 20px;
+	/* margin-bottom: 10px; */	
+}
+
+.box_right h1 {
+	color: #FFFFFF;
+	/*float: left;
+	margin: 3px 0px 0px 0px;*/
+	/* text-decoration: underline; */
+	
+}
+
+.box_right li {
+	clear: both;  
+}
+
+.box_login {margin-left:2px;}
+.box_login form {
+	clear:both; 
+	margin: 0 0 5px 0;
+}
+.box_login input {margin: 0 0 5px 0; padding:0;}
+
+.box_login li {
+	list-style:none;
+	text-decoration: underline;
+	margin: 2px;
+	color: #000000;
+}
+.box_login li:hover {
+	/* color: #239FDF; */
+	color: #AAA;  
+}
+.box_login p {
+	vertical-align:30%; 
+	display:inline; 
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	text-transform: none;
+}
+
+.box_login .btn p {
+	vertical-align:0%; 
+	display:block; 
+}
+
+/* statistics box */
+
+.statistics_box{
+	width: 130px;
+	font-size: 10px;
+}
+
+.statistics_box_header{
+	height:24px;
+	background: url(../images/roundbar130.gif) no-repeat;
+}
+
+.statistics_box_header h1{
+	text-transform: none;
+	color: white;
+	margin: 0 0 0 10px;
+	padding-top: 3px;
+	font-weight: bold;
+}
+
+.statistics_box_items{
+	border: 1px solid #23375F;
+	background-color:#FFF;
+	padding:5px 5px 5px 5px;
+	height: 110px;
+}
+
+.statistics_box .username{
+	background-color:#ccc;
+	font-weight:bold; 
+	padding: 2px 2px 2px 2px; 
+	-moz-border-radius : 5px;
+}
+
+.statistics_box .username p{
+	text-align: center;
+}
+
+.statistics_box .label{
+	float:left;
+	width: 60px;
+
+}
+
+.statistics_box .data{
+	float:right;
+	width:40px;
+	text-align:right;
+	font-weight: bold;
+}
+
+.highscores{
+	list-style-type: none;
+	border: 1px solid #23375F;
+	/*border-bottom: none;*/
+	margin: 0px;
+	background-color: #FFF;
+	padding: 5px 5px 5px 5px;
+	font-size: 10px;
+	height: 80px;
+}
+
+.highscores .header{
+	font-weight: bold;
+}
+.highscores .rank{
+	float: left;
+	width: 25px;
+	height: 12px;
+}
+
+.highscores .user{
+	float: left;
+	width: 60px;
+	height: 12px;
+	overflow: hidden;
+}
+
+.highscores .userlink{
+	cursor:crosshair;
+	text-decoration:underline;	
+}
+
+.highscores .score{
+	float: right;
+	font-weight: bold;
+	width:33px;
+	text-align:right;
+	height: 12px;
+}
+
+.highscores .self{
+	background-color: #84CBEF;
+}
+
+.higscore .new_line{
+	clear:both;
+}
+
+#link_list{
+	margin: 20px 0 0 30px;
+	
+}
+
+#rss_link{
+	width:130px;
+	height:25px;
+	background: url(../images/rss_16x16.gif) no-repeat;
+	cursor:pointer;
+}
+
+#rss_link p{
+	margin: 6px 0 0 20px;
+	font-weight:bold;
+	font-size: 11px;
+	color: #636D73;	
+}
+
+#igoogle_link{
+	width:130px;
+	height:25px;
+	background: url(../images/add-to-google-plus.gif) no-repeat;
+	cursor:pointer;
+}

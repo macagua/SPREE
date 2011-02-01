@@ -1,0 +1,75 @@
+<div xmlns:py="http://genshi.edgewall.org/" >
+	<div class="content_header">
+		<div style="height:15px;">
+			<a py:if="int(for_query) != 1" style="float:left;" class="actionlink" onclick="setContent('blogs','-1')" title="Back to SPREE NOTE" >
+				Back to Notebook
+			</a>
+			<a py:if="int(for_query) == 1" style="float:left;" class="actionlink" onclick="javascript:loadWaitBoxContent(${query_id});" title="Back to Query" >
+				Back to Question
+			</a>
+		</div>
+	</div>
+	<input id="queryId_after_rate" type="hidden" value="${query_id}"/>
+	<div class="content_body">
+		<p py:if="not failure">
+			<div id="blog_entry_${id}" class="graybox" style="margin-top:10px;">
+				<p class="header">${topic}</p>
+				<div class="body">
+					<p><i>by $user,</i> ${created}</p>
+					<p><b>Categories:</b> <font id ="entryCats_${id}">$categories</font></p>
+					<div id="no_rate_blog">
+						<b>Average Rating:</b> 
+						<span py:if="no_ratings == 0 ">(No Rating) </span>
+						<span py:if="no_ratings > 0">
+							<span py:if="average_rating &lt;= 1">${average_rating}/5 (Poor) </span>
+							<span py:if="average_rating &gt; 1 and average_rating &lt;= 2">${average_rating}/5 (Medium) </span>	
+							<span py:if="average_rating &gt; 2 and average_rating &lt;= 3">${average_rating}/5 (Good) </span>
+							<span py:if="average_rating &gt; 3 and average_rating &lt;= 4">${average_rating}/5 (Excellent) </span>
+							<span py:if="average_rating &gt; 4 and average_rating &lt;= 5">${average_rating}/5 (Expert) </span>
+						</span>
+						<b>Votes:</b> ${no_ratings} 
+					</div>
+					<p style="margin-top:10px;">${text}</p>
+				</div>
+			</div>	
+			<div class="buttons_blog">	
+				<p py:if="isMine" align="right">
+					<button id="button_delete" class="btn" type="button" value="" onclick="javascript:deleteBlogEntry(${id});" title="Delete entry">
+							<div class="btn-red">
+							<p class="btn-red">Delete</p>
+							</div>
+					</button>
+					<button id="button_classify" class="btn" type="button" value=""  onclick="blogs_setBackFunction('blogentry','${id}/0/0');blog_modifyCategories${categoriesIDs}" >
+						<div class="btn">
+							<p class="btn">Classify</p>
+						</div>
+					</button>
+					<button id="button_edit" class="btn" type="button" value="" onclick="setContent('blog_content_edit',${id}+'/'+0)" title="Edit entry">
+							<div class="btn">
+							<p class="btn">Edit</p>
+							</div>
+					</button>
+				</p>
+				<p py:if="int(for_query) == 1 and not wasRatedByUser" align="right" id="rate_blog">
+					<button id="button_rate" class="btn" type="button" value=""  onclick="javascript:blog_rate_showDialog(${id});" title="Rate Note">
+							<div class="btn">
+							<p class="btn">Rate Note</p>
+							</div>
+					</button>
+				</p>
+		    </div>
+		</p>
+		<p py:if="failure"><br/>
+			Sorry this note entry was deleted some seconds ago.
+		</p>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+

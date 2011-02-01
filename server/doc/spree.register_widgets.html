@@ -1,0 +1,2284 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.register_widgets</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.register_widgets</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/register_widgets.py">c:\studium\spree\opensource\spree\register_widgets.py</a></font></td></tr></table>
+    <p><tt>Defines&nbsp;some&nbsp;TG&nbsp;widgets&nbsp;used&nbsp;for&nbsp;registration</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="turbogears.identity.html">turbogears.identity</a><br>
+</td><td width="25%" valign=top><a href="spree.register_model.html">spree.register_model</a><br>
+</td><td width="25%" valign=top><a href="turbogears.validators.html">turbogears.validators</a><br>
+</td><td width="25%" valign=top><a href="turbogears.widgets.html">turbogears.widgets</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>(<a href="formencode.api.html#Validator">formencode.api.Validator</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.register_widgets.html#UniqueEmail">UniqueEmail</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_widgets.html#UniqueUsername">UniqueUsername</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_widgets.html#ValidPassword">ValidPassword</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>(<a href="formencode.schema.html#Schema">formencode.schema.Schema</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.register_widgets.html#ExistingUserSchema">ExistingUserSchema</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_widgets.html#ExistingUserSchema1">ExistingUserSchema1</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_widgets.html#ExistingUserSchema2">ExistingUserSchema2</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_widgets.html#NewUserSchema">NewUserSchema</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.register_widgets.html#FakeInputWidget">FakeInputWidget</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>(<a href="__builtin__.html#list">__builtin__.list</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.register_widgets.html#ExistingUserFields">ExistingUserFields</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_widgets.html#ExistingUserFields1">ExistingUserFields1</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_widgets.html#ExistingUserFields2">ExistingUserFields2</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_widgets.html#NewUserFields">NewUserFields</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.widgets.forms.html#TableForm">turbogears.widgets.forms.TableForm</a>(<a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.register_widgets.html#RegTableForm">RegTableForm</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_widgets.html#RegTableForm1">RegTableForm1</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.register_widgets.html#RegTableForm2">RegTableForm2</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExistingUserFields">class <strong>ExistingUserFields</strong></a>(<a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>@deprecated&nbsp;Use&nbsp;<a href="#ExistingUserFields1">ExistingUserFields1</a>/2&nbsp;instead<br>
+&nbsp;<br>
+Holds&nbsp;widgets&nbsp;for&nbsp;each&nbsp;edit&nbsp;user&nbsp;form&nbsp;field<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#ExistingUserFields">ExistingUserFields</a></dd>
+<dd><a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a></dd>
+<dd><a href="__builtin__.html#list">__builtin__.list</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>declared_widgets</strong> = [FakeInputWidget(name='user_name', field_class=None, css_classes=[]), TextField(name='email', convert=True, field_class='textfield', attrs={}, css_classes=[]), PasswordField(name='old_password', convert=True,..._class='passwordfield', attrs={}, css_classes=[]), PasswordField(name='password1', convert=True, field_class='passwordfield', attrs={}, css_classes=[]), PasswordField(name='password2', convert=True, field_class='passwordfield', attrs={}, css_classes=[])]</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>:<br>
+<dl><dt><a name="ExistingUserFields-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'turbogears.widgets.base.MetaWidgetsList'&gt;<dd><tt>Metaclass&nbsp;for&nbsp;WidgetLists.&nbsp;Takes&nbsp;care&nbsp;that&nbsp;the&nbsp;resulting&nbsp;WidgetList<br>
+has&nbsp;all&nbsp;widgets&nbsp;in&nbsp;the&nbsp;same&nbsp;order&nbsp;as&nbsp;they&nbsp;were&nbsp;declared.</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'WidgetsList' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><a name="ExistingUserFields-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__delitem__"><strong>__delitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__delitem__">__delitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__delslice__"><strong>__delslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__delslice__">__delslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__iadd__"><strong>__iadd__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__iadd__">__iadd__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__imul__"><strong>__imul__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__imul__">__imul__</a>(y)&nbsp;&lt;==&gt;&nbsp;x*=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__setitem__"><strong>__setitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__setitem__">__setitem__</a>(i,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i]=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-__setslice__"><strong>__setslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields-__setslice__">__setslice__</a>(i,&nbsp;j,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i:j]=y<br>
+&nbsp;<br>
+Use&nbsp;&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-append"><strong>append</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields-append">append</a>(object)&nbsp;--&nbsp;append&nbsp;object&nbsp;to&nbsp;end</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-count"><strong>count</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-extend"><strong>extend</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields-extend">extend</a>(iterable)&nbsp;--&nbsp;extend&nbsp;list&nbsp;by&nbsp;appending&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-index"><strong>index</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-insert"><strong>insert</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-pop"><strong>pop</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields-pop">pop</a>([index])&nbsp;-&gt;&nbsp;item&nbsp;--&nbsp;remove&nbsp;and&nbsp;return&nbsp;item&nbsp;at&nbsp;index&nbsp;(default&nbsp;last)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-remove"><strong>remove</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields-sort"><strong>sort</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields-sort">sort</a>(cmp=None,&nbsp;key=None,&nbsp;reverse=False)&nbsp;--&nbsp;stable&nbsp;sort&nbsp;*IN&nbsp;PLACE*;<br>
+cmp(x,&nbsp;y)&nbsp;-&gt;&nbsp;-1,&nbsp;0,&nbsp;1</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#ExistingUserFields-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExistingUserFields1">class <strong>ExistingUserFields1</strong></a>(<a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;widgets&nbsp;for&nbsp;each&nbsp;change&nbsp;email&nbsp;form&nbsp;field<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#ExistingUserFields1">ExistingUserFields1</a></dd>
+<dd><a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a></dd>
+<dd><a href="__builtin__.html#list">__builtin__.list</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>declared_widgets</strong> = [FakeInputWidget(name='user_name', field_class=None, css_classes=[]), TextField(name='email', convert=True, field_class='textfield', attrs={}, css_classes=[])]</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>:<br>
+<dl><dt><a name="ExistingUserFields1-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'turbogears.widgets.base.MetaWidgetsList'&gt;<dd><tt>Metaclass&nbsp;for&nbsp;WidgetLists.&nbsp;Takes&nbsp;care&nbsp;that&nbsp;the&nbsp;resulting&nbsp;WidgetList<br>
+has&nbsp;all&nbsp;widgets&nbsp;in&nbsp;the&nbsp;same&nbsp;order&nbsp;as&nbsp;they&nbsp;were&nbsp;declared.</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'WidgetsList' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><a name="ExistingUserFields1-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__delitem__"><strong>__delitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__delitem__">__delitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__delslice__"><strong>__delslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__delslice__">__delslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__iadd__"><strong>__iadd__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__iadd__">__iadd__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__imul__"><strong>__imul__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__imul__">__imul__</a>(y)&nbsp;&lt;==&gt;&nbsp;x*=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields1-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__setitem__"><strong>__setitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__setitem__">__setitem__</a>(i,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i]=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-__setslice__"><strong>__setslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields1-__setslice__">__setslice__</a>(i,&nbsp;j,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i:j]=y<br>
+&nbsp;<br>
+Use&nbsp;&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-append"><strong>append</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields1-append">append</a>(object)&nbsp;--&nbsp;append&nbsp;object&nbsp;to&nbsp;end</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-count"><strong>count</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields1-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-extend"><strong>extend</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields1-extend">extend</a>(iterable)&nbsp;--&nbsp;extend&nbsp;list&nbsp;by&nbsp;appending&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-index"><strong>index</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields1-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-insert"><strong>insert</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields1-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-pop"><strong>pop</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields1-pop">pop</a>([index])&nbsp;-&gt;&nbsp;item&nbsp;--&nbsp;remove&nbsp;and&nbsp;return&nbsp;item&nbsp;at&nbsp;index&nbsp;(default&nbsp;last)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-remove"><strong>remove</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields1-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields1-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields1-sort"><strong>sort</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields1-sort">sort</a>(cmp=None,&nbsp;key=None,&nbsp;reverse=False)&nbsp;--&nbsp;stable&nbsp;sort&nbsp;*IN&nbsp;PLACE*;<br>
+cmp(x,&nbsp;y)&nbsp;-&gt;&nbsp;-1,&nbsp;0,&nbsp;1</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#ExistingUserFields1-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExistingUserFields2">class <strong>ExistingUserFields2</strong></a>(<a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;widgets&nbsp;for&nbsp;each&nbsp;change&nbsp;password&nbsp;form&nbsp;field<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#ExistingUserFields2">ExistingUserFields2</a></dd>
+<dd><a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a></dd>
+<dd><a href="__builtin__.html#list">__builtin__.list</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>declared_widgets</strong> = [PasswordField(name='old_password', convert=True,..._class='passwordfield', attrs={}, css_classes=[]), PasswordField(name='password1', convert=True, field_class='passwordfield', attrs={}, css_classes=[]), PasswordField(name='password2', convert=True, field_class='passwordfield', attrs={}, css_classes=[])]</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>:<br>
+<dl><dt><a name="ExistingUserFields2-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'turbogears.widgets.base.MetaWidgetsList'&gt;<dd><tt>Metaclass&nbsp;for&nbsp;WidgetLists.&nbsp;Takes&nbsp;care&nbsp;that&nbsp;the&nbsp;resulting&nbsp;WidgetList<br>
+has&nbsp;all&nbsp;widgets&nbsp;in&nbsp;the&nbsp;same&nbsp;order&nbsp;as&nbsp;they&nbsp;were&nbsp;declared.</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'WidgetsList' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><a name="ExistingUserFields2-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__delitem__"><strong>__delitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__delitem__">__delitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__delslice__"><strong>__delslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__delslice__">__delslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__iadd__"><strong>__iadd__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__iadd__">__iadd__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__imul__"><strong>__imul__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__imul__">__imul__</a>(y)&nbsp;&lt;==&gt;&nbsp;x*=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields2-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__setitem__"><strong>__setitem__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__setitem__">__setitem__</a>(i,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i]=y</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-__setslice__"><strong>__setslice__</strong></a>(...)</dt><dd><tt>x.<a href="#ExistingUserFields2-__setslice__">__setslice__</a>(i,&nbsp;j,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i:j]=y<br>
+&nbsp;<br>
+Use&nbsp;&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-append"><strong>append</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields2-append">append</a>(object)&nbsp;--&nbsp;append&nbsp;object&nbsp;to&nbsp;end</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-count"><strong>count</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields2-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-extend"><strong>extend</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields2-extend">extend</a>(iterable)&nbsp;--&nbsp;extend&nbsp;list&nbsp;by&nbsp;appending&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-index"><strong>index</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields2-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-insert"><strong>insert</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields2-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-pop"><strong>pop</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields2-pop">pop</a>([index])&nbsp;-&gt;&nbsp;item&nbsp;--&nbsp;remove&nbsp;and&nbsp;return&nbsp;item&nbsp;at&nbsp;index&nbsp;(default&nbsp;last)</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-remove"><strong>remove</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields2-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields2-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserFields2-sort"><strong>sort</strong></a>(...)</dt><dd><tt>L.<a href="#ExistingUserFields2-sort">sort</a>(cmp=None,&nbsp;key=None,&nbsp;reverse=False)&nbsp;--&nbsp;stable&nbsp;sort&nbsp;*IN&nbsp;PLACE*;<br>
+cmp(x,&nbsp;y)&nbsp;-&gt;&nbsp;-1,&nbsp;0,&nbsp;1</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#ExistingUserFields2-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExistingUserSchema">class <strong>ExistingUserSchema</strong></a>(<a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>@deprecated&nbsp;Use&nbsp;<a href="#ExistingUserSchema1">ExistingUserSchema1</a>/2&nbsp;instead<br>
+&nbsp;<br>
+**Messages**<br>
+&nbsp;<br>
+``badType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;a&nbsp;``%(type)s``:&nbsp;``%(value)r``)<br>
+&nbsp;<br>
+``empty``:<br>
+&nbsp;&nbsp;Please&nbsp;enter&nbsp;a&nbsp;value<br>
+&nbsp;<br>
+``missingValue``:<br>
+&nbsp;&nbsp;Missing&nbsp;value<br>
+&nbsp;<br>
+``noneType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;None)<br>
+&nbsp;<br>
+``notExpected``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;field&nbsp;``%(name)s``&nbsp;was&nbsp;not&nbsp;expected.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#ExistingUserSchema">ExistingUserSchema</a></dd>
+<dd><a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a></dd>
+<dd><a href="formencode.schema.html#Schema">formencode.schema.Schema</a></dd>
+<dd><a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a></dd>
+<dd><a href="formencode.api.html#Validator">formencode.api.Validator</a></dd>
+<dd><a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__slotnames__</strong> = []</dl>
+
+<dl><dt><strong>chained_validators</strong> = [&lt;FieldsMatch object 126 field_names=('password1', 'password2')&gt;]</dl>
+
+<dl><dt><strong>declarative_count</strong> = 127</dl>
+
+<dl><dt><strong>fields</strong> = {'email': &lt;All [&lt;Email object 118 max=255 not_empty=True&gt;, &lt;UniqueEmail object 119&gt;]&gt;, 'old_password': &lt;All [&lt;UnicodeString object 121 inputEncoding='u...utEncoding='utf-8'&gt;, &lt;ValidPassword object 122&gt;]&gt;, 'password1': &lt;UnicodeString object 124 inputEncoding='utf-8' max=40 outputEncoding='utf-8'&gt;, 'password2': &lt;UnicodeString object 125 inputEncoding='utf-8' max=40 outputEncoding='utf-8'&gt;}</dl>
+
+<dl><dt><strong>pre_validators</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>:<br>
+<dl><dt><a name="ExistingUserSchema-from_python"><strong>from_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>:<br>
+<dl><dt><strong>allow_extra_fields</strong> = True</dl>
+
+<dl><dt><strong>filter_extra_fields</strong> = True</dl>
+
+<dl><dt><strong>if_key_missing</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><a name="ExistingUserSchema-__initargs__"><strong>__initargs__</strong></a>(self, new_attrs)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema-subvalidators"><strong>subvalidators</strong></a>(self)</dt></dl>
+
+<hr>
+Static methods inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><a name="ExistingUserSchema-__classinit__"><strong>__classinit__</strong></a>(cls, new_attrs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><strong>__mutableattributes__</strong> = ('fields', 'chained_validators', 'pre_validators')</dl>
+
+<dl><dt><strong>add_chained_validator</strong> = &lt;bound class method ExistingUserSchema.add_chained_validator&gt;</dl>
+
+<dl><dt><strong>add_field</strong> = &lt;bound class method ExistingUserSchema.add_field&gt;</dl>
+
+<dl><dt><strong>add_pre_validator</strong> = &lt;bound class method ExistingUserSchema.add_pre_validator&gt;</dl>
+
+<dl><dt><strong>compound</strong> = True</dl>
+
+<dl><dt><strong>ignore_key_missing</strong> = False</dl>
+
+<dl><dt><strong>order</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><a name="ExistingUserSchema-assert_string"><strong>assert_string</strong></a>(self, value, state)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema-base64encode"><strong>base64encode</strong></a>(self, value)</dt><dd><tt>Encode&nbsp;a&nbsp;string&nbsp;in&nbsp;base64,&nbsp;stripping&nbsp;whitespace&nbsp;and&nbsp;removing<br>
+newlines.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserSchema-empty_value"><strong>empty_value</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema-is_empty"><strong>is_empty</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema-to_python"><strong>to_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><strong>accept_python</strong> = True</dl>
+
+<dl><dt><strong>if_empty</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid_python</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>not_empty</strong> = False</dl>
+
+<dl><dt><strong>strip</strong> = False</dl>
+
+<dl><dt><strong>validate_other</strong> = None</dl>
+
+<dl><dt><strong>validate_python</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><a name="ExistingUserSchema-__init__"><strong>__init__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema-all_messages"><strong>all_messages</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;all&nbsp;the&nbsp;messages&nbsp;of&nbsp;this&nbsp;validator,&nbsp;and<br>
+any&nbsp;subvalidators&nbsp;if&nbsp;present.&nbsp;&nbsp;Keys&nbsp;are&nbsp;message&nbsp;names,&nbsp;values<br>
+may&nbsp;be&nbsp;a&nbsp;message&nbsp;or&nbsp;list&nbsp;of&nbsp;messages.&nbsp;&nbsp;This&nbsp;is&nbsp;really&nbsp;just<br>
+intended&nbsp;for&nbsp;documentation&nbsp;purposes,&nbsp;to&nbsp;show&nbsp;someone&nbsp;all&nbsp;the<br>
+messages&nbsp;that&nbsp;a&nbsp;validator&nbsp;or&nbsp;compound&nbsp;validator&nbsp;(like&nbsp;Schemas)<br>
+can&nbsp;produce.<br>
+&nbsp;<br>
+@@:&nbsp;Should&nbsp;this&nbsp;produce&nbsp;a&nbsp;more&nbsp;structured&nbsp;set&nbsp;of&nbsp;messages,&nbsp;so<br>
+that&nbsp;messages&nbsp;could&nbsp;be&nbsp;unpacked&nbsp;into&nbsp;a&nbsp;rendered&nbsp;form&nbsp;to&nbsp;see<br>
+the&nbsp;placement&nbsp;of&nbsp;all&nbsp;the&nbsp;messages?&nbsp;&nbsp;Well,&nbsp;probably&nbsp;so.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserSchema-message"><strong>message</strong></a>(self, msgName, state, **kw)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><strong>__singletonmethods__</strong> = ('to_python', 'from_python')</dl>
+
+<dl><dt><strong>if_missing</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>repeating</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="ExistingUserSchema-__call__"><strong>__call__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema-__sourcerepr__"><strong>__sourcerepr__</strong></a>(self, source, binding<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="ExistingUserSchema-__classsourcerepr__"><strong>__classsourcerepr__</strong></a>(cls, source, binding<font color="#909090">=None</font>)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ExistingUserSchema-singleton"><strong>singleton</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'formencode.declarative.DeclarativeMeta'&gt;</dl>
+
+<dl><dt><strong>__repr__</strong> = &lt;bound class method ExistingUserSchema.__repr__&gt;</dl>
+
+<dl><dt><strong>__unpackargs__</strong> = ()</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Declarative' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExistingUserSchema1">class <strong>ExistingUserSchema1</strong></a>(<a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;widgets&nbsp;for&nbsp;each&nbsp;change&nbsp;email&nbsp;form&nbsp;field<br>
+&nbsp;<br>
+**Messages**<br>
+&nbsp;<br>
+``badType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;a&nbsp;``%(type)s``:&nbsp;``%(value)r``)<br>
+&nbsp;<br>
+``empty``:<br>
+&nbsp;&nbsp;Please&nbsp;enter&nbsp;a&nbsp;value<br>
+&nbsp;<br>
+``missingValue``:<br>
+&nbsp;&nbsp;Missing&nbsp;value<br>
+&nbsp;<br>
+``noneType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;None)<br>
+&nbsp;<br>
+``notExpected``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;field&nbsp;``%(name)s``&nbsp;was&nbsp;not&nbsp;expected.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#ExistingUserSchema1">ExistingUserSchema1</a></dd>
+<dd><a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a></dd>
+<dd><a href="formencode.schema.html#Schema">formencode.schema.Schema</a></dd>
+<dd><a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a></dd>
+<dd><a href="formencode.api.html#Validator">formencode.api.Validator</a></dd>
+<dd><a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__slotnames__</strong> = []</dl>
+
+<dl><dt><strong>chained_validators</strong> = []</dl>
+
+<dl><dt><strong>declarative_count</strong> = 131</dl>
+
+<dl><dt><strong>fields</strong> = {'email': &lt;All [&lt;Email object 128 max=255 not_empty=True&gt;, &lt;UniqueEmail object 129&gt;]&gt;}</dl>
+
+<dl><dt><strong>pre_validators</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>:<br>
+<dl><dt><a name="ExistingUserSchema1-from_python"><strong>from_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>:<br>
+<dl><dt><strong>allow_extra_fields</strong> = True</dl>
+
+<dl><dt><strong>filter_extra_fields</strong> = True</dl>
+
+<dl><dt><strong>if_key_missing</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><a name="ExistingUserSchema1-__initargs__"><strong>__initargs__</strong></a>(self, new_attrs)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema1-subvalidators"><strong>subvalidators</strong></a>(self)</dt></dl>
+
+<hr>
+Static methods inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><a name="ExistingUserSchema1-__classinit__"><strong>__classinit__</strong></a>(cls, new_attrs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><strong>__mutableattributes__</strong> = ('fields', 'chained_validators', 'pre_validators')</dl>
+
+<dl><dt><strong>add_chained_validator</strong> = &lt;bound class method ExistingUserSchema1.add_chained_validator&gt;</dl>
+
+<dl><dt><strong>add_field</strong> = &lt;bound class method ExistingUserSchema1.add_field&gt;</dl>
+
+<dl><dt><strong>add_pre_validator</strong> = &lt;bound class method ExistingUserSchema1.add_pre_validator&gt;</dl>
+
+<dl><dt><strong>compound</strong> = True</dl>
+
+<dl><dt><strong>ignore_key_missing</strong> = False</dl>
+
+<dl><dt><strong>order</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><a name="ExistingUserSchema1-assert_string"><strong>assert_string</strong></a>(self, value, state)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema1-base64encode"><strong>base64encode</strong></a>(self, value)</dt><dd><tt>Encode&nbsp;a&nbsp;string&nbsp;in&nbsp;base64,&nbsp;stripping&nbsp;whitespace&nbsp;and&nbsp;removing<br>
+newlines.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserSchema1-empty_value"><strong>empty_value</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema1-is_empty"><strong>is_empty</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema1-to_python"><strong>to_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><strong>accept_python</strong> = True</dl>
+
+<dl><dt><strong>if_empty</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid_python</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>not_empty</strong> = False</dl>
+
+<dl><dt><strong>strip</strong> = False</dl>
+
+<dl><dt><strong>validate_other</strong> = None</dl>
+
+<dl><dt><strong>validate_python</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><a name="ExistingUserSchema1-__init__"><strong>__init__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema1-all_messages"><strong>all_messages</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;all&nbsp;the&nbsp;messages&nbsp;of&nbsp;this&nbsp;validator,&nbsp;and<br>
+any&nbsp;subvalidators&nbsp;if&nbsp;present.&nbsp;&nbsp;Keys&nbsp;are&nbsp;message&nbsp;names,&nbsp;values<br>
+may&nbsp;be&nbsp;a&nbsp;message&nbsp;or&nbsp;list&nbsp;of&nbsp;messages.&nbsp;&nbsp;This&nbsp;is&nbsp;really&nbsp;just<br>
+intended&nbsp;for&nbsp;documentation&nbsp;purposes,&nbsp;to&nbsp;show&nbsp;someone&nbsp;all&nbsp;the<br>
+messages&nbsp;that&nbsp;a&nbsp;validator&nbsp;or&nbsp;compound&nbsp;validator&nbsp;(like&nbsp;Schemas)<br>
+can&nbsp;produce.<br>
+&nbsp;<br>
+@@:&nbsp;Should&nbsp;this&nbsp;produce&nbsp;a&nbsp;more&nbsp;structured&nbsp;set&nbsp;of&nbsp;messages,&nbsp;so<br>
+that&nbsp;messages&nbsp;could&nbsp;be&nbsp;unpacked&nbsp;into&nbsp;a&nbsp;rendered&nbsp;form&nbsp;to&nbsp;see<br>
+the&nbsp;placement&nbsp;of&nbsp;all&nbsp;the&nbsp;messages?&nbsp;&nbsp;Well,&nbsp;probably&nbsp;so.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserSchema1-message"><strong>message</strong></a>(self, msgName, state, **kw)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><strong>__singletonmethods__</strong> = ('to_python', 'from_python')</dl>
+
+<dl><dt><strong>if_missing</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>repeating</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="ExistingUserSchema1-__call__"><strong>__call__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema1-__sourcerepr__"><strong>__sourcerepr__</strong></a>(self, source, binding<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="ExistingUserSchema1-__classsourcerepr__"><strong>__classsourcerepr__</strong></a>(cls, source, binding<font color="#909090">=None</font>)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ExistingUserSchema1-singleton"><strong>singleton</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'formencode.declarative.DeclarativeMeta'&gt;</dl>
+
+<dl><dt><strong>__repr__</strong> = &lt;bound class method ExistingUserSchema1.__repr__&gt;</dl>
+
+<dl><dt><strong>__unpackargs__</strong> = ()</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Declarative' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ExistingUserSchema2">class <strong>ExistingUserSchema2</strong></a>(<a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;widgets&nbsp;for&nbsp;each&nbsp;change&nbsp;password&nbsp;form&nbsp;field<br>
+&nbsp;<br>
+**Messages**<br>
+&nbsp;<br>
+``badType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;a&nbsp;``%(type)s``:&nbsp;``%(value)r``)<br>
+&nbsp;<br>
+``empty``:<br>
+&nbsp;&nbsp;Please&nbsp;enter&nbsp;a&nbsp;value<br>
+&nbsp;<br>
+``missingValue``:<br>
+&nbsp;&nbsp;Missing&nbsp;value<br>
+&nbsp;<br>
+``noneType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;None)<br>
+&nbsp;<br>
+``notExpected``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;field&nbsp;``%(name)s``&nbsp;was&nbsp;not&nbsp;expected.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#ExistingUserSchema2">ExistingUserSchema2</a></dd>
+<dd><a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a></dd>
+<dd><a href="formencode.schema.html#Schema">formencode.schema.Schema</a></dd>
+<dd><a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a></dd>
+<dd><a href="formencode.api.html#Validator">formencode.api.Validator</a></dd>
+<dd><a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__slotnames__</strong> = []</dl>
+
+<dl><dt><strong>chained_validators</strong> = [&lt;FieldsMatch object 137 field_names=('password1', 'password2')&gt;]</dl>
+
+<dl><dt><strong>declarative_count</strong> = 138</dl>
+
+<dl><dt><strong>fields</strong> = {'old_password': &lt;All [&lt;UnicodeString object 132 inputEncoding='u...utEncoding='utf-8'&gt;, &lt;ValidPassword object 133&gt;]&gt;, 'password1': &lt;UnicodeString object 135 inputEncoding='utf-8' max=40 not_empty=True outputEncoding='utf-8'&gt;, 'password2': &lt;UnicodeString object 136 inputEncoding='utf-8' max=40 outputEncoding='utf-8'&gt;}</dl>
+
+<dl><dt><strong>pre_validators</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>:<br>
+<dl><dt><a name="ExistingUserSchema2-from_python"><strong>from_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>:<br>
+<dl><dt><strong>allow_extra_fields</strong> = True</dl>
+
+<dl><dt><strong>filter_extra_fields</strong> = True</dl>
+
+<dl><dt><strong>if_key_missing</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><a name="ExistingUserSchema2-__initargs__"><strong>__initargs__</strong></a>(self, new_attrs)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema2-subvalidators"><strong>subvalidators</strong></a>(self)</dt></dl>
+
+<hr>
+Static methods inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><a name="ExistingUserSchema2-__classinit__"><strong>__classinit__</strong></a>(cls, new_attrs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><strong>__mutableattributes__</strong> = ('fields', 'chained_validators', 'pre_validators')</dl>
+
+<dl><dt><strong>add_chained_validator</strong> = &lt;bound class method ExistingUserSchema2.add_chained_validator&gt;</dl>
+
+<dl><dt><strong>add_field</strong> = &lt;bound class method ExistingUserSchema2.add_field&gt;</dl>
+
+<dl><dt><strong>add_pre_validator</strong> = &lt;bound class method ExistingUserSchema2.add_pre_validator&gt;</dl>
+
+<dl><dt><strong>compound</strong> = True</dl>
+
+<dl><dt><strong>ignore_key_missing</strong> = False</dl>
+
+<dl><dt><strong>order</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><a name="ExistingUserSchema2-assert_string"><strong>assert_string</strong></a>(self, value, state)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema2-base64encode"><strong>base64encode</strong></a>(self, value)</dt><dd><tt>Encode&nbsp;a&nbsp;string&nbsp;in&nbsp;base64,&nbsp;stripping&nbsp;whitespace&nbsp;and&nbsp;removing<br>
+newlines.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserSchema2-empty_value"><strong>empty_value</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema2-is_empty"><strong>is_empty</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema2-to_python"><strong>to_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><strong>accept_python</strong> = True</dl>
+
+<dl><dt><strong>if_empty</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid_python</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>not_empty</strong> = False</dl>
+
+<dl><dt><strong>strip</strong> = False</dl>
+
+<dl><dt><strong>validate_other</strong> = None</dl>
+
+<dl><dt><strong>validate_python</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><a name="ExistingUserSchema2-__init__"><strong>__init__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema2-all_messages"><strong>all_messages</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;all&nbsp;the&nbsp;messages&nbsp;of&nbsp;this&nbsp;validator,&nbsp;and<br>
+any&nbsp;subvalidators&nbsp;if&nbsp;present.&nbsp;&nbsp;Keys&nbsp;are&nbsp;message&nbsp;names,&nbsp;values<br>
+may&nbsp;be&nbsp;a&nbsp;message&nbsp;or&nbsp;list&nbsp;of&nbsp;messages.&nbsp;&nbsp;This&nbsp;is&nbsp;really&nbsp;just<br>
+intended&nbsp;for&nbsp;documentation&nbsp;purposes,&nbsp;to&nbsp;show&nbsp;someone&nbsp;all&nbsp;the<br>
+messages&nbsp;that&nbsp;a&nbsp;validator&nbsp;or&nbsp;compound&nbsp;validator&nbsp;(like&nbsp;Schemas)<br>
+can&nbsp;produce.<br>
+&nbsp;<br>
+@@:&nbsp;Should&nbsp;this&nbsp;produce&nbsp;a&nbsp;more&nbsp;structured&nbsp;set&nbsp;of&nbsp;messages,&nbsp;so<br>
+that&nbsp;messages&nbsp;could&nbsp;be&nbsp;unpacked&nbsp;into&nbsp;a&nbsp;rendered&nbsp;form&nbsp;to&nbsp;see<br>
+the&nbsp;placement&nbsp;of&nbsp;all&nbsp;the&nbsp;messages?&nbsp;&nbsp;Well,&nbsp;probably&nbsp;so.</tt></dd></dl>
+
+<dl><dt><a name="ExistingUserSchema2-message"><strong>message</strong></a>(self, msgName, state, **kw)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><strong>__singletonmethods__</strong> = ('to_python', 'from_python')</dl>
+
+<dl><dt><strong>if_missing</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>repeating</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="ExistingUserSchema2-__call__"><strong>__call__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="ExistingUserSchema2-__sourcerepr__"><strong>__sourcerepr__</strong></a>(self, source, binding<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="ExistingUserSchema2-__classsourcerepr__"><strong>__classsourcerepr__</strong></a>(cls, source, binding<font color="#909090">=None</font>)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ExistingUserSchema2-singleton"><strong>singleton</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'formencode.declarative.DeclarativeMeta'&gt;</dl>
+
+<dl><dt><strong>__repr__</strong> = &lt;bound class method ExistingUserSchema2.__repr__&gt;</dl>
+
+<dl><dt><strong>__unpackargs__</strong> = ()</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Declarative' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FakeInputWidget">class <strong>FakeInputWidget</strong></a>(<a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Simple&nbsp;widget&nbsp;that&nbsp;allows&nbsp;displaying&nbsp;its&nbsp;value&nbsp;in&nbsp;a&nbsp;span.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#FakeInputWidget">FakeInputWidget</a></dd>
+<dd><a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="FakeInputWidget-__init__"><strong>__init__</strong></a> = widget_init(self, *args, **kw)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>css_classes</strong> = []<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>field_class</strong> = None<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>params</strong> = ['field_class', 'css_classes']</dl>
+
+<dl><dt><strong>params_doc</strong> = {'css_classes': 'List of extra CSS classes for the field', 'field_class': 'CSS class for the field'}</dl>
+
+<dl><dt><strong>template</strong> = '<font color="#c040c0">\n</font>        &lt;span xmlns:py="http://purl.org/kid/ns#...ass}" <font color="#c040c0">\n</font>            py:content="value" /&gt;<font color="#c040c0">\n</font>        '</dl>
+
+<dl><dt><strong>template_c</strong> = &lt;class 'spree.register_widgets.FakeInputWidget.Template.Template'&gt;</dl>
+
+<dl><dt><strong>template_vars</strong> = ['field_class', 'css_classes']</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><a name="FakeInputWidget-__call__"><strong>__call__</strong></a>(self, *args, **params)</dt><dd><tt>Delegate&nbsp;to&nbsp;display.&nbsp;Used&nbsp;as&nbsp;an&nbsp;alias&nbsp;to&nbsp;avoid&nbsp;tiresome&nbsp;typing</tt></dd></dl>
+
+<dl><dt><a name="FakeInputWidget-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FakeInputWidget-__setattr__"><strong>__setattr__</strong></a>(self, key, value)</dt></dl>
+
+<dl><dt><a name="FakeInputWidget-adjust_value"><strong>adjust_value</strong></a>(self, value, **params)</dt><dd><tt>Adjusts&nbsp;the&nbsp;value&nbsp;sent&nbsp;to&nbsp;the&nbsp;template&nbsp;on&nbsp;display.</tt></dd></dl>
+
+<dl><dt><a name="FakeInputWidget-display"><strong>display</strong></a>(self, value<font color="#909090">=None</font>, **params)</dt><dd><tt>Display&nbsp;the&nbsp;widget&nbsp;in&nbsp;a&nbsp;Kid&nbsp;template.&nbsp;Returns&nbsp;an&nbsp;elementtree&nbsp;node&nbsp;<br>
+instance.&nbsp;If&nbsp;you&nbsp;need&nbsp;serialized&nbsp;output&nbsp;in&nbsp;a&nbsp;string&nbsp;call&nbsp;'render'<br>
+instead.<br>
+Probably&nbsp;you&nbsp;will&nbsp;not&nbsp;need&nbsp;to&nbsp;override&nbsp;or&nbsp;extend&nbsp;if&nbsp;inhertitting&nbsp;from<br>
+<a href="turbogears.widgets.base.html#Widget">Widget</a>.<br>
+&nbsp;<br>
+@params:<br>
+&nbsp;<br>
+value&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;The&nbsp;value&nbsp;to&nbsp;display&nbsp;in&nbsp;the&nbsp;widget.<br>
+**params&nbsp;:&nbsp;Extra&nbsp;parameters&nbsp;specific&nbsp;to&nbsp;the&nbsp;widget.&nbsp;All&nbsp;keyword&nbsp;params<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;supplied&nbsp;will&nbsp;pass&nbsp;through&nbsp;the&nbsp;update_params&nbsp;method&nbsp;which&nbsp;will&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;have&nbsp;a&nbsp;last&nbsp;chance&nbsp;to&nbsp;modify&nbsp;them&nbsp;before&nbsp;reaching&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;template.</tt></dd></dl>
+
+<dl><dt><a name="FakeInputWidget-render"><strong>render</strong></a>(self, value<font color="#909090">=None</font>, format<font color="#909090">='html'</font>, **params)</dt><dd><tt>Exactly&nbsp;the&nbsp;same&nbsp;as&nbsp;<a href="#FakeInputWidget-display">display</a>()&nbsp;but&nbsp;return&nbsp;serialized&nbsp;output&nbsp;instead.<br>
+Useful&nbsp;for&nbsp;debugging&nbsp;or&nbsp;to&nbsp;display&nbsp;the&nbsp;widget&nbsp;in&nbsp;a&nbsp;non-Kid&nbsp;template&nbsp;like<br>
+Cheetah,&nbsp;STAN,&nbsp;...</tt></dd></dl>
+
+<dl><dt><a name="FakeInputWidget-retrieve_css"><strong>retrieve_css</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;setlike&nbsp;instance&nbsp;with&nbsp;all&nbsp;the&nbsp;CSSLinks&nbsp;and&nbsp;CSSSources&nbsp;the<br>
+widget&nbsp;needs.</tt></dd></dl>
+
+<dl><dt><a name="FakeInputWidget-retrieve_javascript"><strong>retrieve_javascript</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;setlike&nbsp;instance&nbsp;with&nbsp;all&nbsp;the&nbsp;JSLinks&nbsp;and&nbsp;JSSources&nbsp;the<br>
+widget&nbsp;needs.</tt></dd></dl>
+
+<dl><dt><a name="FakeInputWidget-update_data"><strong>update_data</strong></a> = update_params(self, params)</dt><dd><tt>This&nbsp;method&nbsp;will&nbsp;have&nbsp;the&nbsp;last&nbsp;chance&nbsp;to&nbsp;update&nbsp;the&nbsp;variables&nbsp;sent&nbsp;to&nbsp;<br>
+the&nbsp;template&nbsp;for&nbsp;the&nbsp;specific&nbsp;request.&nbsp;All&nbsp;parameters&nbsp;listed&nbsp;at&nbsp;class&nbsp;<br>
+attribute&nbsp;'params'&nbsp;will&nbsp;be&nbsp;available&nbsp;at&nbsp;the&nbsp;'params'&nbsp;dict&nbsp;this&nbsp;method&nbsp;<br>
+receives.<br>
+&nbsp;<br>
+*Must*&nbsp;call&nbsp;super(MyWidget,&nbsp;self).<a href="#FakeInputWidget-update_params">update_params</a>(params)&nbsp;cooperatively,<br>
+unless,&nbsp;of&nbsp;course,&nbsp;your&nbsp;know&nbsp;what&nbsp;you're&nbsp;doing.&nbsp;Preferably&nbsp;this&nbsp;should<br>
+be&nbsp;done&nbsp;before&nbsp;any&nbsp;actual&nbsp;work&nbsp;is&nbsp;done&nbsp;in&nbsp;the&nbsp;method.</tt></dd></dl>
+
+<dl><dt><a name="FakeInputWidget-update_params"><strong>update_params</strong></a>(self, params)</dt><dd><tt>This&nbsp;method&nbsp;will&nbsp;have&nbsp;the&nbsp;last&nbsp;chance&nbsp;to&nbsp;update&nbsp;the&nbsp;variables&nbsp;sent&nbsp;to&nbsp;<br>
+the&nbsp;template&nbsp;for&nbsp;the&nbsp;specific&nbsp;request.&nbsp;All&nbsp;parameters&nbsp;listed&nbsp;at&nbsp;class&nbsp;<br>
+attribute&nbsp;'params'&nbsp;will&nbsp;be&nbsp;available&nbsp;at&nbsp;the&nbsp;'params'&nbsp;dict&nbsp;this&nbsp;method&nbsp;<br>
+receives.<br>
+&nbsp;<br>
+*Must*&nbsp;call&nbsp;super(MyWidget,&nbsp;self).<a href="#FakeInputWidget-update_params">update_params</a>(params)&nbsp;cooperatively,<br>
+unless,&nbsp;of&nbsp;course,&nbsp;your&nbsp;know&nbsp;what&nbsp;you're&nbsp;doing.&nbsp;Preferably&nbsp;this&nbsp;should<br>
+be&nbsp;done&nbsp;before&nbsp;any&nbsp;actual&nbsp;work&nbsp;is&nbsp;done&nbsp;in&nbsp;the&nbsp;method.</tt></dd></dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><strong>is_named</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_is_named(self)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;widget&nbsp;has&nbsp;overrided&nbsp;it's&nbsp;default&nbsp;name,&nbsp;else&nbsp;False.</tt></dd></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'turbogears.widgets.meta.MetaWidget'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Widget' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>css</strong> = []</dl>
+
+<dl><dt><strong>default</strong> = None</dl>
+
+<dl><dt><strong>javascript</strong> = []</dl>
+
+<dl><dt><strong>name</strong> = 'widget'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NewUserFields">class <strong>NewUserFields</strong></a>(<a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;widgets&nbsp;for&nbsp;each&nbsp;new&nbsp;user&nbsp;form&nbsp;field<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#NewUserFields">NewUserFields</a></dd>
+<dd><a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a></dd>
+<dd><a href="__builtin__.html#list">__builtin__.list</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>declared_widgets</strong> = [TextField(name='user_name', convert=True, field_class='textfield', attrs={}, css_classes=[]), TextField(name='email', convert=True, field_class='textfield', attrs={}, css_classes=[]), TextField(name='email2', convert=True, field_class='textfield', attrs={}, css_classes=[]), PasswordField(name='password1', convert=True, field_class='passwordfield', attrs={}, css_classes=[]), PasswordField(name='password2', convert=True, field_class='passwordfield', attrs={}, css_classes=[])]</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>:<br>
+<dl><dt><a name="NewUserFields-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#WidgetsList">turbogears.widgets.base.WidgetsList</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'turbogears.widgets.base.MetaWidgetsList'&gt;<dd><tt>Metaclass&nbsp;for&nbsp;WidgetLists.&nbsp;Takes&nbsp;care&nbsp;that&nbsp;the&nbsp;resulting&nbsp;WidgetList<br>
+has&nbsp;all&nbsp;widgets&nbsp;in&nbsp;the&nbsp;same&nbsp;order&nbsp;as&nbsp;they&nbsp;were&nbsp;declared.</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'WidgetsList' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><a name="NewUserFields-__add__"><strong>__add__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__add__">__add__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+y</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__contains__">__contains__</a>(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__delitem__"><strong>__delitem__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__delitem__">__delitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__delslice__"><strong>__delslice__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__delslice__">__delslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;del&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__eq__"><strong>__eq__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__eq__">__eq__</a>(y)&nbsp;&lt;==&gt;&nbsp;x==y</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__hash__"><strong>__hash__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__hash__">__hash__</a>()&nbsp;&lt;==&gt;&nbsp;hash(x)</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__iadd__"><strong>__iadd__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__iadd__">__iadd__</a>(y)&nbsp;&lt;==&gt;&nbsp;x+=y</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__imul__"><strong>__imul__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__imul__">__imul__</a>(y)&nbsp;&lt;==&gt;&nbsp;x*=y</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__iter__"><strong>__iter__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__iter__">__iter__</a>()&nbsp;&lt;==&gt;&nbsp;iter(x)</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__mul__"><strong>__mul__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__mul__">__mul__</a>(n)&nbsp;&lt;==&gt;&nbsp;x*n</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__reversed__"><strong>__reversed__</strong></a>(...)</dt><dd><tt>L.<a href="#NewUserFields-__reversed__">__reversed__</a>()&nbsp;--&nbsp;return&nbsp;a&nbsp;reverse&nbsp;iterator&nbsp;over&nbsp;the&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__rmul__"><strong>__rmul__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__rmul__">__rmul__</a>(n)&nbsp;&lt;==&gt;&nbsp;n*x</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__setitem__"><strong>__setitem__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__setitem__">__setitem__</a>(i,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i]=y</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-__setslice__"><strong>__setslice__</strong></a>(...)</dt><dd><tt>x.<a href="#NewUserFields-__setslice__">__setslice__</a>(i,&nbsp;j,&nbsp;y)&nbsp;&lt;==&gt;&nbsp;x[i:j]=y<br>
+&nbsp;<br>
+Use&nbsp;&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-append"><strong>append</strong></a>(...)</dt><dd><tt>L.<a href="#NewUserFields-append">append</a>(object)&nbsp;--&nbsp;append&nbsp;object&nbsp;to&nbsp;end</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-count"><strong>count</strong></a>(...)</dt><dd><tt>L.<a href="#NewUserFields-count">count</a>(value)&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;number&nbsp;of&nbsp;occurrences&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-extend"><strong>extend</strong></a>(...)</dt><dd><tt>L.<a href="#NewUserFields-extend">extend</a>(iterable)&nbsp;--&nbsp;extend&nbsp;list&nbsp;by&nbsp;appending&nbsp;elements&nbsp;from&nbsp;the&nbsp;iterable</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-index"><strong>index</strong></a>(...)</dt><dd><tt>L.<a href="#NewUserFields-index">index</a>(value,&nbsp;[start,&nbsp;[stop]])&nbsp;-&gt;&nbsp;integer&nbsp;--&nbsp;return&nbsp;first&nbsp;index&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-insert"><strong>insert</strong></a>(...)</dt><dd><tt>L.<a href="#NewUserFields-insert">insert</a>(index,&nbsp;object)&nbsp;--&nbsp;insert&nbsp;object&nbsp;before&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-pop"><strong>pop</strong></a>(...)</dt><dd><tt>L.<a href="#NewUserFields-pop">pop</a>([index])&nbsp;-&gt;&nbsp;item&nbsp;--&nbsp;remove&nbsp;and&nbsp;return&nbsp;item&nbsp;at&nbsp;index&nbsp;(default&nbsp;last)</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-remove"><strong>remove</strong></a>(...)</dt><dd><tt>L.<a href="#NewUserFields-remove">remove</a>(value)&nbsp;--&nbsp;remove&nbsp;first&nbsp;occurrence&nbsp;of&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-reverse"><strong>reverse</strong></a>(...)</dt><dd><tt>L.<a href="#NewUserFields-reverse">reverse</a>()&nbsp;--&nbsp;reverse&nbsp;*IN&nbsp;PLACE*</tt></dd></dl>
+
+<dl><dt><a name="NewUserFields-sort"><strong>sort</strong></a>(...)</dt><dd><tt>L.<a href="#NewUserFields-sort">sort</a>(cmp=None,&nbsp;key=None,&nbsp;reverse=False)&nbsp;--&nbsp;stable&nbsp;sort&nbsp;*IN&nbsp;PLACE*;<br>
+cmp(x,&nbsp;y)&nbsp;-&gt;&nbsp;-1,&nbsp;0,&nbsp;1</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#list">__builtin__.list</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#NewUserFields-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NewUserSchema">class <strong>NewUserSchema</strong></a>(<a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;validators&nbsp;for&nbsp;each&nbsp;new&nbsp;user&nbsp;form&nbsp;field<br>
+&nbsp;<br>
+**Messages**<br>
+&nbsp;<br>
+``badType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;a&nbsp;``%(type)s``:&nbsp;``%(value)r``)<br>
+&nbsp;<br>
+``empty``:<br>
+&nbsp;&nbsp;Please&nbsp;enter&nbsp;a&nbsp;value<br>
+&nbsp;<br>
+``missingValue``:<br>
+&nbsp;&nbsp;Missing&nbsp;value<br>
+&nbsp;<br>
+``noneType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;None)<br>
+&nbsp;<br>
+``notExpected``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;field&nbsp;``%(name)s``&nbsp;was&nbsp;not&nbsp;expected.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#NewUserSchema">NewUserSchema</a></dd>
+<dd><a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a></dd>
+<dd><a href="formencode.schema.html#Schema">formencode.schema.Schema</a></dd>
+<dd><a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a></dd>
+<dd><a href="formencode.api.html#Validator">formencode.api.Validator</a></dd>
+<dd><a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__slotnames__</strong> = []</dl>
+
+<dl><dt><strong>chained_validators</strong> = [&lt;FieldsMatch object 115 field_names=('password1', 'password2')&gt;, &lt;FieldsMatch object 116 field_names=('email', 'email2')&gt;]</dl>
+
+<dl><dt><strong>declarative_count</strong> = 117</dl>
+
+<dl><dt><strong>fields</strong> = {'email': &lt;All [&lt;Email object 108 max=255 not_empty=True&gt;, &lt;UniqueEmail object 109&gt;]&gt;, 'email2': &lt;All [&lt;Email object 111 max=255 not_empty=True&gt;]&gt;, 'password1': &lt;UnicodeString object 113 inputEncoding='utf-8' max=40 not_empty=True outputEncoding='utf-8'&gt;, 'password2': &lt;UnicodeString object 114 inputEncoding='utf-8' max=40 not_empty=True outputEncoding='utf-8'&gt;, 'user_name': &lt;All [&lt;UnicodeString object 105 inputEncoding='u...utf-8' strip=True&gt;, &lt;UniqueUsername object 106&gt;]&gt;}</dl>
+
+<dl><dt><strong>pre_validators</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>:<br>
+<dl><dt><a name="NewUserSchema-from_python"><strong>from_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.validators.html#Schema">turbogears.validators.Schema</a>:<br>
+<dl><dt><strong>allow_extra_fields</strong> = True</dl>
+
+<dl><dt><strong>filter_extra_fields</strong> = True</dl>
+
+<dl><dt><strong>if_key_missing</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><a name="NewUserSchema-__initargs__"><strong>__initargs__</strong></a>(self, new_attrs)</dt></dl>
+
+<dl><dt><a name="NewUserSchema-subvalidators"><strong>subvalidators</strong></a>(self)</dt></dl>
+
+<hr>
+Static methods inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><a name="NewUserSchema-__classinit__"><strong>__classinit__</strong></a>(cls, new_attrs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.schema.html#Schema">formencode.schema.Schema</a>:<br>
+<dl><dt><strong>__mutableattributes__</strong> = ('fields', 'chained_validators', 'pre_validators')</dl>
+
+<dl><dt><strong>add_chained_validator</strong> = &lt;bound class method NewUserSchema.add_chained_validator&gt;</dl>
+
+<dl><dt><strong>add_field</strong> = &lt;bound class method NewUserSchema.add_field&gt;</dl>
+
+<dl><dt><strong>add_pre_validator</strong> = &lt;bound class method NewUserSchema.add_pre_validator&gt;</dl>
+
+<dl><dt><strong>compound</strong> = True</dl>
+
+<dl><dt><strong>ignore_key_missing</strong> = False</dl>
+
+<dl><dt><strong>order</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><a name="NewUserSchema-assert_string"><strong>assert_string</strong></a>(self, value, state)</dt></dl>
+
+<dl><dt><a name="NewUserSchema-base64encode"><strong>base64encode</strong></a>(self, value)</dt><dd><tt>Encode&nbsp;a&nbsp;string&nbsp;in&nbsp;base64,&nbsp;stripping&nbsp;whitespace&nbsp;and&nbsp;removing<br>
+newlines.</tt></dd></dl>
+
+<dl><dt><a name="NewUserSchema-empty_value"><strong>empty_value</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="NewUserSchema-is_empty"><strong>is_empty</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="NewUserSchema-to_python"><strong>to_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><strong>accept_python</strong> = True</dl>
+
+<dl><dt><strong>if_empty</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid_python</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>not_empty</strong> = False</dl>
+
+<dl><dt><strong>strip</strong> = False</dl>
+
+<dl><dt><strong>validate_other</strong> = None</dl>
+
+<dl><dt><strong>validate_python</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><a name="NewUserSchema-__init__"><strong>__init__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="NewUserSchema-all_messages"><strong>all_messages</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;all&nbsp;the&nbsp;messages&nbsp;of&nbsp;this&nbsp;validator,&nbsp;and<br>
+any&nbsp;subvalidators&nbsp;if&nbsp;present.&nbsp;&nbsp;Keys&nbsp;are&nbsp;message&nbsp;names,&nbsp;values<br>
+may&nbsp;be&nbsp;a&nbsp;message&nbsp;or&nbsp;list&nbsp;of&nbsp;messages.&nbsp;&nbsp;This&nbsp;is&nbsp;really&nbsp;just<br>
+intended&nbsp;for&nbsp;documentation&nbsp;purposes,&nbsp;to&nbsp;show&nbsp;someone&nbsp;all&nbsp;the<br>
+messages&nbsp;that&nbsp;a&nbsp;validator&nbsp;or&nbsp;compound&nbsp;validator&nbsp;(like&nbsp;Schemas)<br>
+can&nbsp;produce.<br>
+&nbsp;<br>
+@@:&nbsp;Should&nbsp;this&nbsp;produce&nbsp;a&nbsp;more&nbsp;structured&nbsp;set&nbsp;of&nbsp;messages,&nbsp;so<br>
+that&nbsp;messages&nbsp;could&nbsp;be&nbsp;unpacked&nbsp;into&nbsp;a&nbsp;rendered&nbsp;form&nbsp;to&nbsp;see<br>
+the&nbsp;placement&nbsp;of&nbsp;all&nbsp;the&nbsp;messages?&nbsp;&nbsp;Well,&nbsp;probably&nbsp;so.</tt></dd></dl>
+
+<dl><dt><a name="NewUserSchema-message"><strong>message</strong></a>(self, msgName, state, **kw)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><strong>__singletonmethods__</strong> = ('to_python', 'from_python')</dl>
+
+<dl><dt><strong>if_missing</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>repeating</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="NewUserSchema-__call__"><strong>__call__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="NewUserSchema-__sourcerepr__"><strong>__sourcerepr__</strong></a>(self, source, binding<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="NewUserSchema-__classsourcerepr__"><strong>__classsourcerepr__</strong></a>(cls, source, binding<font color="#909090">=None</font>)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="NewUserSchema-singleton"><strong>singleton</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'formencode.declarative.DeclarativeMeta'&gt;</dl>
+
+<dl><dt><strong>__repr__</strong> = &lt;bound class method NewUserSchema.__repr__&gt;</dl>
+
+<dl><dt><strong>__unpackargs__</strong> = ()</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Declarative' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RegTableForm">class <strong>RegTableForm</strong></a>(<a href="turbogears.widgets.forms.html#TableForm">turbogears.widgets.forms.TableForm</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="turbogears.widgets.base.html#Widget">Widget</a>&nbsp;for&nbsp;the&nbsp;registration&nbsp;form<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#RegTableForm">RegTableForm</a></dd>
+<dd><a href="turbogears.widgets.forms.html#TableForm">turbogears.widgets.forms.TableForm</a></dd>
+<dd><a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a></dd>
+<dd><a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a></dd>
+<dd><a href="turbogears.widgets.forms.html#CompoundInputWidget">turbogears.widgets.forms.CompoundInputWidget</a></dd>
+<dd><a href="turbogears.widgets.base.html#CompoundWidget">turbogears.widgets.base.CompoundWidget</a></dd>
+<dd><a href="turbogears.widgets.forms.html#InputWidget">turbogears.widgets.forms.InputWidget</a></dd>
+<dd><a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>member_widgets</strong> = ['fields', 'hidden_fields', 'submit']</dl>
+
+<dl><dt><strong>params</strong> = ['submit_text', 'convert', 'table_attrs', 'form_attrs', 'action', 'disabled_fields', 'method']</dl>
+
+<dl><dt><strong>params_doc</strong> = {'action': 'Url to POST/GET the form data', 'convert': 'Should the value be coerced by the validator at display?', 'disabled_fields': 'List of names of the fields we want to disable', 'form_attrs': 'Extra (X)HTML attributes for the form tag', 'method': 'HTTP request method', 'submit_text': 'Text for the submit button', 'table_attrs': 'Extra (X)HTML attributes for the Table tag'}</dl>
+
+<dl><dt><strong>template</strong> = None</dl>
+
+<dl><dt><strong>template_c</strong> = 'spree.templates.register_tabletemplate'</dl>
+
+<dl><dt><strong>template_vars</strong> = ['submit_text', 'convert', 'table_attrs', 'form_attrs', 'action', 'disabled_fields', 'method']</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#TableForm">turbogears.widgets.forms.TableForm</a>:<br>
+<dl><dt><strong>table_attrs</strong> = {}<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a>:<br>
+<dl><dt><a name="RegTableForm-update_params"><strong>update_params</strong></a>(self, d)</dt></dl>
+
+<dl><dt><a name="RegTableForm-validate"><strong>validate</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a>:<br>
+<dl><dt><strong>errors</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_errors(self)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a>:<br>
+<dl><dt><strong>action</strong> = None<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>form</strong> = True</dl>
+
+<dl><dt><strong>form_attrs</strong> = {}<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>method</strong> = 'post'<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>name</strong> = 'form'</dl>
+
+<dl><dt><strong>submit</strong> = SubmitButton(name='widget', convert=True, css_classes=[], field_class='submitbutton', attrs={})</dl>
+
+<dl><dt><strong>submit_text</strong> = None<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a>:<br>
+<dl><dt><a name="RegTableForm-display_field_for"><strong>display_field_for</strong></a> = _update_path(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="RegTableForm-get_field_by_name"><strong>get_field_by_name</strong></a>(self, name, default<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="RegTableForm-render_field_for"><strong>render_field_for</strong></a> = _update_path(self, *args, **kw)</dt></dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a>:<br>
+<dl><dt><strong>file_upload</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_file_upload(self)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a>:<br>
+<dl><dt><strong>disabled_fields</strong> = set([])<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>fields</strong> = []</dl>
+
+<dl><dt><strong>hidden_fields</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.forms.html#CompoundInputWidget">turbogears.widgets.forms.CompoundInputWidget</a>:<br>
+<dl><dt><a name="RegTableForm-adjust_value"><strong>adjust_value</strong></a>(self, value<font color="#909090">=None</font>, **params)</dt><dd><tt>Adjust&nbsp;a&nbsp;value&nbsp;for&nbsp;displaying&nbsp;in&nbsp;a&nbsp;widget.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm-dictify_value"><strong>dictify_value</strong></a>(self, value)</dt><dd><tt>Converts&nbsp;a&nbsp;value&nbsp;into&nbsp;a&nbsp;dict&nbsp;suitable&nbsp;for&nbsp;propagating&nbsp;values&nbsp;to<br>
+child&nbsp;widgets.&nbsp;If&nbsp;value&nbsp;is&nbsp;a&nbsp;dict&nbsp;it&nbsp;will&nbsp;pass&nbsp;thorugh,&nbsp;if&nbsp;it&nbsp;other<br>
+kind&nbsp;of&nbsp;object,&nbsp;attributes&nbsp;which&nbsp;match&nbsp;child&nbsp;widgets'&nbsp;names&nbsp;will&nbsp;be&nbsp;<br>
+tried&nbsp;to&nbsp;fetch.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm-error_for"><strong>error_for</strong></a>(self, item, suppress_errors<font color="#909090">=False</font>)</dt><dd><tt>Return's&nbsp;the&nbsp;Invalid&nbsp;exception&nbsp;associated&nbsp;to&nbsp;a&nbsp;child&nbsp;widget&nbsp;from&nbsp;<br>
+request&nbsp;local&nbsp;storage.&nbsp;``item``&nbsp;is&nbsp;the&nbsp;child&nbsp;widget&nbsp;instance&nbsp;or&nbsp;it's<br>
+name.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm-params_for"><strong>params_for</strong></a>(self, item, **params)</dt><dd><tt>Return&nbsp;the&nbsp;parameters&nbsp;for&nbsp;a&nbsp;child&nbsp;widget.&nbsp;``item``&nbsp;is&nbsp;the&nbsp;child<br>
+widget&nbsp;instance&nbsp;or&nbsp;it's&nbsp;name,&nbsp;``params``&nbsp;is&nbsp;a&nbsp;dict&nbsp;containing&nbsp;the<br>
+parameters&nbsp;passed&nbsp;to&nbsp;this&nbsp;compound&nbsp;widget.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm-value_for"><strong>value_for</strong></a>(self, item, value)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;for&nbsp;a&nbsp;child&nbsp;widget.&nbsp;``item``&nbsp;is&nbsp;the&nbsp;child<br>
+widget&nbsp;instance&nbsp;or&nbsp;it's&nbsp;name,&nbsp;``value``&nbsp;is&nbsp;a&nbsp;dict&nbsp;containing&nbsp;the<br>
+value&nbsp;for&nbsp;this&nbsp;compound&nbsp;widget.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#CompoundWidget">turbogears.widgets.base.CompoundWidget</a>:<br>
+<dl><dt><a name="RegTableForm-__init__"><strong>__init__</strong></a> = widget_init(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="RegTableForm-display"><strong>display</strong></a>(self, value<font color="#909090">=None</font>, **params)</dt></dl>
+
+<dl><dt><a name="RegTableForm-iter_member_widgets"><strong>iter_member_widgets</strong></a>(self)</dt><dd><tt>Iteratetes&nbsp;over&nbsp;all&nbsp;the&nbsp;widget's&nbsp;children</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm-retrieve_css"><strong>retrieve_css</strong></a>(self)</dt><dd><tt>Retrieve&nbsp;the&nbsp;css&nbsp;for&nbsp;all&nbsp;the&nbsp;member&nbsp;widgets&nbsp;and<br>
+get&nbsp;an&nbsp;ordered&nbsp;union&nbsp;of&nbsp;them.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm-retrieve_javascript"><strong>retrieve_javascript</strong></a>(self)</dt><dd><tt>Retrieve&nbsp;the&nbsp;javascript&nbsp;for&nbsp;all&nbsp;the&nbsp;member&nbsp;widgets&nbsp;and<br>
+get&nbsp;an&nbsp;ordered&nbsp;union&nbsp;of&nbsp;them.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#CompoundWidget">turbogears.widgets.base.CompoundWidget</a>:<br>
+<dl><dt><strong>compound</strong> = True</dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.forms.html#InputWidget">turbogears.widgets.forms.InputWidget</a>:<br>
+<dl><dt><strong>error</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _update_path(self, *args, **kw)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>fq_name</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _update_path(self, *args, **kw)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>is_validated</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_is_validated(self)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>name_path</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_name_path(self)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>path</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _update_path(self, *args, **kw)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#InputWidget">turbogears.widgets.forms.InputWidget</a>:<br>
+<dl><dt><strong>convert</strong> = True<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>validator</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><a name="RegTableForm-__call__"><strong>__call__</strong></a>(self, *args, **params)</dt><dd><tt>Delegate&nbsp;to&nbsp;display.&nbsp;Used&nbsp;as&nbsp;an&nbsp;alias&nbsp;to&nbsp;avoid&nbsp;tiresome&nbsp;typing</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RegTableForm-__setattr__"><strong>__setattr__</strong></a>(self, key, value)</dt></dl>
+
+<dl><dt><a name="RegTableForm-render"><strong>render</strong></a>(self, value<font color="#909090">=None</font>, format<font color="#909090">='html'</font>, **params)</dt><dd><tt>Exactly&nbsp;the&nbsp;same&nbsp;as&nbsp;<a href="#RegTableForm-display">display</a>()&nbsp;but&nbsp;return&nbsp;serialized&nbsp;output&nbsp;instead.<br>
+Useful&nbsp;for&nbsp;debugging&nbsp;or&nbsp;to&nbsp;display&nbsp;the&nbsp;widget&nbsp;in&nbsp;a&nbsp;non-Kid&nbsp;template&nbsp;like<br>
+Cheetah,&nbsp;STAN,&nbsp;...</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm-update_data"><strong>update_data</strong></a> = update_params(self, params)</dt><dd><tt>This&nbsp;method&nbsp;will&nbsp;have&nbsp;the&nbsp;last&nbsp;chance&nbsp;to&nbsp;update&nbsp;the&nbsp;variables&nbsp;sent&nbsp;to&nbsp;<br>
+the&nbsp;template&nbsp;for&nbsp;the&nbsp;specific&nbsp;request.&nbsp;All&nbsp;parameters&nbsp;listed&nbsp;at&nbsp;class&nbsp;<br>
+attribute&nbsp;'params'&nbsp;will&nbsp;be&nbsp;available&nbsp;at&nbsp;the&nbsp;'params'&nbsp;dict&nbsp;this&nbsp;method&nbsp;<br>
+receives.<br>
+&nbsp;<br>
+*Must*&nbsp;call&nbsp;super(MyWidget,&nbsp;self).<a href="#RegTableForm-update_params">update_params</a>(params)&nbsp;cooperatively,<br>
+unless,&nbsp;of&nbsp;course,&nbsp;your&nbsp;know&nbsp;what&nbsp;you're&nbsp;doing.&nbsp;Preferably&nbsp;this&nbsp;should<br>
+be&nbsp;done&nbsp;before&nbsp;any&nbsp;actual&nbsp;work&nbsp;is&nbsp;done&nbsp;in&nbsp;the&nbsp;method.</tt></dd></dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><strong>is_named</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_is_named(self)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;widget&nbsp;has&nbsp;overrided&nbsp;it's&nbsp;default&nbsp;name,&nbsp;else&nbsp;False.</tt></dd></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'turbogears.widgets.meta.MetaWidget'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Widget' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>css</strong> = []</dl>
+
+<dl><dt><strong>default</strong> = None</dl>
+
+<dl><dt><strong>javascript</strong> = []</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RegTableForm1">class <strong>RegTableForm1</strong></a>(<a href="turbogears.widgets.forms.html#TableForm">turbogears.widgets.forms.TableForm</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="turbogears.widgets.base.html#Widget">Widget</a>&nbsp;for&nbsp;the&nbsp;registration&nbsp;form&nbsp;used&nbsp;for&nbsp;edit&nbsp;user(email&nbsp;change)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#RegTableForm1">RegTableForm1</a></dd>
+<dd><a href="turbogears.widgets.forms.html#TableForm">turbogears.widgets.forms.TableForm</a></dd>
+<dd><a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a></dd>
+<dd><a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a></dd>
+<dd><a href="turbogears.widgets.forms.html#CompoundInputWidget">turbogears.widgets.forms.CompoundInputWidget</a></dd>
+<dd><a href="turbogears.widgets.base.html#CompoundWidget">turbogears.widgets.base.CompoundWidget</a></dd>
+<dd><a href="turbogears.widgets.forms.html#InputWidget">turbogears.widgets.forms.InputWidget</a></dd>
+<dd><a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>member_widgets</strong> = ['fields', 'hidden_fields', 'submit']</dl>
+
+<dl><dt><strong>params</strong> = ['submit_text', 'convert', 'table_attrs', 'form_attrs', 'action', 'disabled_fields', 'method']</dl>
+
+<dl><dt><strong>params_doc</strong> = {'action': 'Url to POST/GET the form data', 'convert': 'Should the value be coerced by the validator at display?', 'disabled_fields': 'List of names of the fields we want to disable', 'form_attrs': 'Extra (X)HTML attributes for the form tag', 'method': 'HTTP request method', 'submit_text': 'Text for the submit button', 'table_attrs': 'Extra (X)HTML attributes for the Table tag'}</dl>
+
+<dl><dt><strong>template</strong> = None</dl>
+
+<dl><dt><strong>template_c</strong> = 'spree.templates.register_tabletemplate1'</dl>
+
+<dl><dt><strong>template_vars</strong> = ['submit_text', 'convert', 'table_attrs', 'form_attrs', 'action', 'disabled_fields', 'method']</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#TableForm">turbogears.widgets.forms.TableForm</a>:<br>
+<dl><dt><strong>table_attrs</strong> = {}<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a>:<br>
+<dl><dt><a name="RegTableForm1-update_params"><strong>update_params</strong></a>(self, d)</dt></dl>
+
+<dl><dt><a name="RegTableForm1-validate"><strong>validate</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a>:<br>
+<dl><dt><strong>errors</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_errors(self)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a>:<br>
+<dl><dt><strong>action</strong> = None<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>form</strong> = True</dl>
+
+<dl><dt><strong>form_attrs</strong> = {}<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>method</strong> = 'post'<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>name</strong> = 'form'</dl>
+
+<dl><dt><strong>submit</strong> = SubmitButton(name='widget', convert=True, css_classes=[], field_class='submitbutton', attrs={})</dl>
+
+<dl><dt><strong>submit_text</strong> = None<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a>:<br>
+<dl><dt><a name="RegTableForm1-display_field_for"><strong>display_field_for</strong></a> = _update_path(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="RegTableForm1-get_field_by_name"><strong>get_field_by_name</strong></a>(self, name, default<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="RegTableForm1-render_field_for"><strong>render_field_for</strong></a> = _update_path(self, *args, **kw)</dt></dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a>:<br>
+<dl><dt><strong>file_upload</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_file_upload(self)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a>:<br>
+<dl><dt><strong>disabled_fields</strong> = set([])<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>fields</strong> = []</dl>
+
+<dl><dt><strong>hidden_fields</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.forms.html#CompoundInputWidget">turbogears.widgets.forms.CompoundInputWidget</a>:<br>
+<dl><dt><a name="RegTableForm1-adjust_value"><strong>adjust_value</strong></a>(self, value<font color="#909090">=None</font>, **params)</dt><dd><tt>Adjust&nbsp;a&nbsp;value&nbsp;for&nbsp;displaying&nbsp;in&nbsp;a&nbsp;widget.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm1-dictify_value"><strong>dictify_value</strong></a>(self, value)</dt><dd><tt>Converts&nbsp;a&nbsp;value&nbsp;into&nbsp;a&nbsp;dict&nbsp;suitable&nbsp;for&nbsp;propagating&nbsp;values&nbsp;to<br>
+child&nbsp;widgets.&nbsp;If&nbsp;value&nbsp;is&nbsp;a&nbsp;dict&nbsp;it&nbsp;will&nbsp;pass&nbsp;thorugh,&nbsp;if&nbsp;it&nbsp;other<br>
+kind&nbsp;of&nbsp;object,&nbsp;attributes&nbsp;which&nbsp;match&nbsp;child&nbsp;widgets'&nbsp;names&nbsp;will&nbsp;be&nbsp;<br>
+tried&nbsp;to&nbsp;fetch.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm1-error_for"><strong>error_for</strong></a>(self, item, suppress_errors<font color="#909090">=False</font>)</dt><dd><tt>Return's&nbsp;the&nbsp;Invalid&nbsp;exception&nbsp;associated&nbsp;to&nbsp;a&nbsp;child&nbsp;widget&nbsp;from&nbsp;<br>
+request&nbsp;local&nbsp;storage.&nbsp;``item``&nbsp;is&nbsp;the&nbsp;child&nbsp;widget&nbsp;instance&nbsp;or&nbsp;it's<br>
+name.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm1-params_for"><strong>params_for</strong></a>(self, item, **params)</dt><dd><tt>Return&nbsp;the&nbsp;parameters&nbsp;for&nbsp;a&nbsp;child&nbsp;widget.&nbsp;``item``&nbsp;is&nbsp;the&nbsp;child<br>
+widget&nbsp;instance&nbsp;or&nbsp;it's&nbsp;name,&nbsp;``params``&nbsp;is&nbsp;a&nbsp;dict&nbsp;containing&nbsp;the<br>
+parameters&nbsp;passed&nbsp;to&nbsp;this&nbsp;compound&nbsp;widget.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm1-value_for"><strong>value_for</strong></a>(self, item, value)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;for&nbsp;a&nbsp;child&nbsp;widget.&nbsp;``item``&nbsp;is&nbsp;the&nbsp;child<br>
+widget&nbsp;instance&nbsp;or&nbsp;it's&nbsp;name,&nbsp;``value``&nbsp;is&nbsp;a&nbsp;dict&nbsp;containing&nbsp;the<br>
+value&nbsp;for&nbsp;this&nbsp;compound&nbsp;widget.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#CompoundWidget">turbogears.widgets.base.CompoundWidget</a>:<br>
+<dl><dt><a name="RegTableForm1-__init__"><strong>__init__</strong></a> = widget_init(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="RegTableForm1-display"><strong>display</strong></a>(self, value<font color="#909090">=None</font>, **params)</dt></dl>
+
+<dl><dt><a name="RegTableForm1-iter_member_widgets"><strong>iter_member_widgets</strong></a>(self)</dt><dd><tt>Iteratetes&nbsp;over&nbsp;all&nbsp;the&nbsp;widget's&nbsp;children</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm1-retrieve_css"><strong>retrieve_css</strong></a>(self)</dt><dd><tt>Retrieve&nbsp;the&nbsp;css&nbsp;for&nbsp;all&nbsp;the&nbsp;member&nbsp;widgets&nbsp;and<br>
+get&nbsp;an&nbsp;ordered&nbsp;union&nbsp;of&nbsp;them.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm1-retrieve_javascript"><strong>retrieve_javascript</strong></a>(self)</dt><dd><tt>Retrieve&nbsp;the&nbsp;javascript&nbsp;for&nbsp;all&nbsp;the&nbsp;member&nbsp;widgets&nbsp;and<br>
+get&nbsp;an&nbsp;ordered&nbsp;union&nbsp;of&nbsp;them.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#CompoundWidget">turbogears.widgets.base.CompoundWidget</a>:<br>
+<dl><dt><strong>compound</strong> = True</dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.forms.html#InputWidget">turbogears.widgets.forms.InputWidget</a>:<br>
+<dl><dt><strong>error</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _update_path(self, *args, **kw)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>fq_name</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _update_path(self, *args, **kw)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>is_validated</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_is_validated(self)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>name_path</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_name_path(self)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>path</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _update_path(self, *args, **kw)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#InputWidget">turbogears.widgets.forms.InputWidget</a>:<br>
+<dl><dt><strong>convert</strong> = True<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>validator</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><a name="RegTableForm1-__call__"><strong>__call__</strong></a>(self, *args, **params)</dt><dd><tt>Delegate&nbsp;to&nbsp;display.&nbsp;Used&nbsp;as&nbsp;an&nbsp;alias&nbsp;to&nbsp;avoid&nbsp;tiresome&nbsp;typing</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm1-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RegTableForm1-__setattr__"><strong>__setattr__</strong></a>(self, key, value)</dt></dl>
+
+<dl><dt><a name="RegTableForm1-render"><strong>render</strong></a>(self, value<font color="#909090">=None</font>, format<font color="#909090">='html'</font>, **params)</dt><dd><tt>Exactly&nbsp;the&nbsp;same&nbsp;as&nbsp;<a href="#RegTableForm1-display">display</a>()&nbsp;but&nbsp;return&nbsp;serialized&nbsp;output&nbsp;instead.<br>
+Useful&nbsp;for&nbsp;debugging&nbsp;or&nbsp;to&nbsp;display&nbsp;the&nbsp;widget&nbsp;in&nbsp;a&nbsp;non-Kid&nbsp;template&nbsp;like<br>
+Cheetah,&nbsp;STAN,&nbsp;...</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm1-update_data"><strong>update_data</strong></a> = update_params(self, params)</dt><dd><tt>This&nbsp;method&nbsp;will&nbsp;have&nbsp;the&nbsp;last&nbsp;chance&nbsp;to&nbsp;update&nbsp;the&nbsp;variables&nbsp;sent&nbsp;to&nbsp;<br>
+the&nbsp;template&nbsp;for&nbsp;the&nbsp;specific&nbsp;request.&nbsp;All&nbsp;parameters&nbsp;listed&nbsp;at&nbsp;class&nbsp;<br>
+attribute&nbsp;'params'&nbsp;will&nbsp;be&nbsp;available&nbsp;at&nbsp;the&nbsp;'params'&nbsp;dict&nbsp;this&nbsp;method&nbsp;<br>
+receives.<br>
+&nbsp;<br>
+*Must*&nbsp;call&nbsp;super(MyWidget,&nbsp;self).<a href="#RegTableForm1-update_params">update_params</a>(params)&nbsp;cooperatively,<br>
+unless,&nbsp;of&nbsp;course,&nbsp;your&nbsp;know&nbsp;what&nbsp;you're&nbsp;doing.&nbsp;Preferably&nbsp;this&nbsp;should<br>
+be&nbsp;done&nbsp;before&nbsp;any&nbsp;actual&nbsp;work&nbsp;is&nbsp;done&nbsp;in&nbsp;the&nbsp;method.</tt></dd></dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><strong>is_named</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_is_named(self)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;widget&nbsp;has&nbsp;overrided&nbsp;it's&nbsp;default&nbsp;name,&nbsp;else&nbsp;False.</tt></dd></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'turbogears.widgets.meta.MetaWidget'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Widget' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>css</strong> = []</dl>
+
+<dl><dt><strong>default</strong> = None</dl>
+
+<dl><dt><strong>javascript</strong> = []</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RegTableForm2">class <strong>RegTableForm2</strong></a>(<a href="turbogears.widgets.forms.html#TableForm">turbogears.widgets.forms.TableForm</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="turbogears.widgets.base.html#Widget">Widget</a>&nbsp;for&nbsp;the&nbsp;registration&nbsp;form&nbsp;used&nbsp;for&nbsp;edit&nbsp;user(password&nbsp;change)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#RegTableForm2">RegTableForm2</a></dd>
+<dd><a href="turbogears.widgets.forms.html#TableForm">turbogears.widgets.forms.TableForm</a></dd>
+<dd><a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a></dd>
+<dd><a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a></dd>
+<dd><a href="turbogears.widgets.forms.html#CompoundInputWidget">turbogears.widgets.forms.CompoundInputWidget</a></dd>
+<dd><a href="turbogears.widgets.base.html#CompoundWidget">turbogears.widgets.base.CompoundWidget</a></dd>
+<dd><a href="turbogears.widgets.forms.html#InputWidget">turbogears.widgets.forms.InputWidget</a></dd>
+<dd><a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>member_widgets</strong> = ['fields', 'hidden_fields', 'submit']</dl>
+
+<dl><dt><strong>params</strong> = ['submit_text', 'convert', 'table_attrs', 'form_attrs', 'action', 'disabled_fields', 'method']</dl>
+
+<dl><dt><strong>params_doc</strong> = {'action': 'Url to POST/GET the form data', 'convert': 'Should the value be coerced by the validator at display?', 'disabled_fields': 'List of names of the fields we want to disable', 'form_attrs': 'Extra (X)HTML attributes for the form tag', 'method': 'HTTP request method', 'submit_text': 'Text for the submit button', 'table_attrs': 'Extra (X)HTML attributes for the Table tag'}</dl>
+
+<dl><dt><strong>template</strong> = None</dl>
+
+<dl><dt><strong>template_c</strong> = 'spree.templates.register_tabletemplate2'</dl>
+
+<dl><dt><strong>template_vars</strong> = ['submit_text', 'convert', 'table_attrs', 'form_attrs', 'action', 'disabled_fields', 'method']</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#TableForm">turbogears.widgets.forms.TableForm</a>:<br>
+<dl><dt><strong>table_attrs</strong> = {}<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a>:<br>
+<dl><dt><a name="RegTableForm2-update_params"><strong>update_params</strong></a>(self, d)</dt></dl>
+
+<dl><dt><a name="RegTableForm2-validate"><strong>validate</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a>:<br>
+<dl><dt><strong>errors</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_errors(self)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#Form">turbogears.widgets.forms.Form</a>:<br>
+<dl><dt><strong>action</strong> = None<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>form</strong> = True</dl>
+
+<dl><dt><strong>form_attrs</strong> = {}<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>method</strong> = 'post'<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>name</strong> = 'form'</dl>
+
+<dl><dt><strong>submit</strong> = SubmitButton(name='widget', convert=True, css_classes=[], field_class='submitbutton', attrs={})</dl>
+
+<dl><dt><strong>submit_text</strong> = None<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a>:<br>
+<dl><dt><a name="RegTableForm2-display_field_for"><strong>display_field_for</strong></a> = _update_path(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="RegTableForm2-get_field_by_name"><strong>get_field_by_name</strong></a>(self, name, default<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="RegTableForm2-render_field_for"><strong>render_field_for</strong></a> = _update_path(self, *args, **kw)</dt></dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a>:<br>
+<dl><dt><strong>file_upload</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_file_upload(self)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#FormFieldsContainer">turbogears.widgets.forms.FormFieldsContainer</a>:<br>
+<dl><dt><strong>disabled_fields</strong> = set([])<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>fields</strong> = []</dl>
+
+<dl><dt><strong>hidden_fields</strong> = []</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.forms.html#CompoundInputWidget">turbogears.widgets.forms.CompoundInputWidget</a>:<br>
+<dl><dt><a name="RegTableForm2-adjust_value"><strong>adjust_value</strong></a>(self, value<font color="#909090">=None</font>, **params)</dt><dd><tt>Adjust&nbsp;a&nbsp;value&nbsp;for&nbsp;displaying&nbsp;in&nbsp;a&nbsp;widget.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm2-dictify_value"><strong>dictify_value</strong></a>(self, value)</dt><dd><tt>Converts&nbsp;a&nbsp;value&nbsp;into&nbsp;a&nbsp;dict&nbsp;suitable&nbsp;for&nbsp;propagating&nbsp;values&nbsp;to<br>
+child&nbsp;widgets.&nbsp;If&nbsp;value&nbsp;is&nbsp;a&nbsp;dict&nbsp;it&nbsp;will&nbsp;pass&nbsp;thorugh,&nbsp;if&nbsp;it&nbsp;other<br>
+kind&nbsp;of&nbsp;object,&nbsp;attributes&nbsp;which&nbsp;match&nbsp;child&nbsp;widgets'&nbsp;names&nbsp;will&nbsp;be&nbsp;<br>
+tried&nbsp;to&nbsp;fetch.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm2-error_for"><strong>error_for</strong></a>(self, item, suppress_errors<font color="#909090">=False</font>)</dt><dd><tt>Return's&nbsp;the&nbsp;Invalid&nbsp;exception&nbsp;associated&nbsp;to&nbsp;a&nbsp;child&nbsp;widget&nbsp;from&nbsp;<br>
+request&nbsp;local&nbsp;storage.&nbsp;``item``&nbsp;is&nbsp;the&nbsp;child&nbsp;widget&nbsp;instance&nbsp;or&nbsp;it's<br>
+name.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm2-params_for"><strong>params_for</strong></a>(self, item, **params)</dt><dd><tt>Return&nbsp;the&nbsp;parameters&nbsp;for&nbsp;a&nbsp;child&nbsp;widget.&nbsp;``item``&nbsp;is&nbsp;the&nbsp;child<br>
+widget&nbsp;instance&nbsp;or&nbsp;it's&nbsp;name,&nbsp;``params``&nbsp;is&nbsp;a&nbsp;dict&nbsp;containing&nbsp;the<br>
+parameters&nbsp;passed&nbsp;to&nbsp;this&nbsp;compound&nbsp;widget.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm2-value_for"><strong>value_for</strong></a>(self, item, value)</dt><dd><tt>Return&nbsp;the&nbsp;value&nbsp;for&nbsp;a&nbsp;child&nbsp;widget.&nbsp;``item``&nbsp;is&nbsp;the&nbsp;child<br>
+widget&nbsp;instance&nbsp;or&nbsp;it's&nbsp;name,&nbsp;``value``&nbsp;is&nbsp;a&nbsp;dict&nbsp;containing&nbsp;the<br>
+value&nbsp;for&nbsp;this&nbsp;compound&nbsp;widget.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#CompoundWidget">turbogears.widgets.base.CompoundWidget</a>:<br>
+<dl><dt><a name="RegTableForm2-__init__"><strong>__init__</strong></a> = widget_init(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="RegTableForm2-display"><strong>display</strong></a>(self, value<font color="#909090">=None</font>, **params)</dt></dl>
+
+<dl><dt><a name="RegTableForm2-iter_member_widgets"><strong>iter_member_widgets</strong></a>(self)</dt><dd><tt>Iteratetes&nbsp;over&nbsp;all&nbsp;the&nbsp;widget's&nbsp;children</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm2-retrieve_css"><strong>retrieve_css</strong></a>(self)</dt><dd><tt>Retrieve&nbsp;the&nbsp;css&nbsp;for&nbsp;all&nbsp;the&nbsp;member&nbsp;widgets&nbsp;and<br>
+get&nbsp;an&nbsp;ordered&nbsp;union&nbsp;of&nbsp;them.</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm2-retrieve_javascript"><strong>retrieve_javascript</strong></a>(self)</dt><dd><tt>Retrieve&nbsp;the&nbsp;javascript&nbsp;for&nbsp;all&nbsp;the&nbsp;member&nbsp;widgets&nbsp;and<br>
+get&nbsp;an&nbsp;ordered&nbsp;union&nbsp;of&nbsp;them.</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#CompoundWidget">turbogears.widgets.base.CompoundWidget</a>:<br>
+<dl><dt><strong>compound</strong> = True</dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.forms.html#InputWidget">turbogears.widgets.forms.InputWidget</a>:<br>
+<dl><dt><strong>error</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _update_path(self, *args, **kw)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>fq_name</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _update_path(self, *args, **kw)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>is_validated</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_is_validated(self)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>name_path</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_name_path(self)</dt></dl>
+</dd>
+</dl>
+<dl><dt><strong>path</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _update_path(self, *args, **kw)</dt></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.forms.html#InputWidget">turbogears.widgets.forms.InputWidget</a>:<br>
+<dl><dt><strong>convert</strong> = True<dd><tt>Descriptor&nbsp;to&nbsp;support&nbsp;automatic&nbsp;callable&nbsp;support&nbsp;for&nbsp;widget&nbsp;params.</tt></dl>
+
+<dl><dt><strong>validator</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><a name="RegTableForm2-__call__"><strong>__call__</strong></a>(self, *args, **params)</dt><dd><tt>Delegate&nbsp;to&nbsp;display.&nbsp;Used&nbsp;as&nbsp;an&nbsp;alias&nbsp;to&nbsp;avoid&nbsp;tiresome&nbsp;typing</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm2-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="RegTableForm2-__setattr__"><strong>__setattr__</strong></a>(self, key, value)</dt></dl>
+
+<dl><dt><a name="RegTableForm2-render"><strong>render</strong></a>(self, value<font color="#909090">=None</font>, format<font color="#909090">='html'</font>, **params)</dt><dd><tt>Exactly&nbsp;the&nbsp;same&nbsp;as&nbsp;<a href="#RegTableForm2-display">display</a>()&nbsp;but&nbsp;return&nbsp;serialized&nbsp;output&nbsp;instead.<br>
+Useful&nbsp;for&nbsp;debugging&nbsp;or&nbsp;to&nbsp;display&nbsp;the&nbsp;widget&nbsp;in&nbsp;a&nbsp;non-Kid&nbsp;template&nbsp;like<br>
+Cheetah,&nbsp;STAN,&nbsp;...</tt></dd></dl>
+
+<dl><dt><a name="RegTableForm2-update_data"><strong>update_data</strong></a> = update_params(self, params)</dt><dd><tt>This&nbsp;method&nbsp;will&nbsp;have&nbsp;the&nbsp;last&nbsp;chance&nbsp;to&nbsp;update&nbsp;the&nbsp;variables&nbsp;sent&nbsp;to&nbsp;<br>
+the&nbsp;template&nbsp;for&nbsp;the&nbsp;specific&nbsp;request.&nbsp;All&nbsp;parameters&nbsp;listed&nbsp;at&nbsp;class&nbsp;<br>
+attribute&nbsp;'params'&nbsp;will&nbsp;be&nbsp;available&nbsp;at&nbsp;the&nbsp;'params'&nbsp;dict&nbsp;this&nbsp;method&nbsp;<br>
+receives.<br>
+&nbsp;<br>
+*Must*&nbsp;call&nbsp;super(MyWidget,&nbsp;self).<a href="#RegTableForm2-update_params">update_params</a>(params)&nbsp;cooperatively,<br>
+unless,&nbsp;of&nbsp;course,&nbsp;your&nbsp;know&nbsp;what&nbsp;you're&nbsp;doing.&nbsp;Preferably&nbsp;this&nbsp;should<br>
+be&nbsp;done&nbsp;before&nbsp;any&nbsp;actual&nbsp;work&nbsp;is&nbsp;done&nbsp;in&nbsp;the&nbsp;method.</tt></dd></dl>
+
+<hr>
+Properties inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><strong>is_named</strong></dt>
+<dd><dl><dt><a name="-<em>get</em>"><strong><em>get</em></strong></a> = _get_is_named(self)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;widget&nbsp;has&nbsp;overrided&nbsp;it's&nbsp;default&nbsp;name,&nbsp;else&nbsp;False.</tt></dd></dl>
+</dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="turbogears.widgets.base.html#Widget">turbogears.widgets.base.Widget</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'turbogears.widgets.meta.MetaWidget'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Widget' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>css</strong> = []</dl>
+
+<dl><dt><strong>default</strong> = None</dl>
+
+<dl><dt><strong>javascript</strong> = []</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UniqueEmail">class <strong>UniqueEmail</strong></a>(<a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Validator&nbsp;to&nbsp;confirm&nbsp;a&nbsp;given&nbsp;email&nbsp;address&nbsp;is&nbsp;unique.<br>
+&nbsp;<br>
+**Messages**<br>
+&nbsp;<br>
+``badType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;a&nbsp;``%(type)s``:&nbsp;``%(value)r``)<br>
+&nbsp;<br>
+``empty``:<br>
+&nbsp;&nbsp;Please&nbsp;enter&nbsp;a&nbsp;value<br>
+&nbsp;<br>
+``noneType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;None)<br>
+&nbsp;<br>
+``notUnique``:<br>
+&nbsp;&nbsp;That&nbsp;email&nbsp;address&nbsp;is&nbsp;registered&nbsp;with&nbsp;an&nbsp;existing&nbsp;user.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#UniqueEmail">UniqueEmail</a></dd>
+<dd><a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a></dd>
+<dd><a href="formencode.api.html#Validator">formencode.api.Validator</a></dd>
+<dd><a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__slotnames__</strong> = []</dl>
+
+<dl><dt><strong>declarative_count</strong> = 103</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><a name="UniqueEmail-assert_string"><strong>assert_string</strong></a>(self, value, state)</dt></dl>
+
+<dl><dt><a name="UniqueEmail-base64encode"><strong>base64encode</strong></a>(self, value)</dt><dd><tt>Encode&nbsp;a&nbsp;string&nbsp;in&nbsp;base64,&nbsp;stripping&nbsp;whitespace&nbsp;and&nbsp;removing<br>
+newlines.</tt></dd></dl>
+
+<dl><dt><a name="UniqueEmail-empty_value"><strong>empty_value</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="UniqueEmail-from_python"><strong>from_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="UniqueEmail-is_empty"><strong>is_empty</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="UniqueEmail-to_python"><strong>to_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><strong>accept_python</strong> = True</dl>
+
+<dl><dt><strong>if_empty</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid_python</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>not_empty</strong> = False</dl>
+
+<dl><dt><strong>strip</strong> = False</dl>
+
+<dl><dt><strong>validate_other</strong> = None</dl>
+
+<dl><dt><strong>validate_python</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><a name="UniqueEmail-__init__"><strong>__init__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="UniqueEmail-all_messages"><strong>all_messages</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;all&nbsp;the&nbsp;messages&nbsp;of&nbsp;this&nbsp;validator,&nbsp;and<br>
+any&nbsp;subvalidators&nbsp;if&nbsp;present.&nbsp;&nbsp;Keys&nbsp;are&nbsp;message&nbsp;names,&nbsp;values<br>
+may&nbsp;be&nbsp;a&nbsp;message&nbsp;or&nbsp;list&nbsp;of&nbsp;messages.&nbsp;&nbsp;This&nbsp;is&nbsp;really&nbsp;just<br>
+intended&nbsp;for&nbsp;documentation&nbsp;purposes,&nbsp;to&nbsp;show&nbsp;someone&nbsp;all&nbsp;the<br>
+messages&nbsp;that&nbsp;a&nbsp;validator&nbsp;or&nbsp;compound&nbsp;validator&nbsp;(like&nbsp;Schemas)<br>
+can&nbsp;produce.<br>
+&nbsp;<br>
+@@:&nbsp;Should&nbsp;this&nbsp;produce&nbsp;a&nbsp;more&nbsp;structured&nbsp;set&nbsp;of&nbsp;messages,&nbsp;so<br>
+that&nbsp;messages&nbsp;could&nbsp;be&nbsp;unpacked&nbsp;into&nbsp;a&nbsp;rendered&nbsp;form&nbsp;to&nbsp;see<br>
+the&nbsp;placement&nbsp;of&nbsp;all&nbsp;the&nbsp;messages?&nbsp;&nbsp;Well,&nbsp;probably&nbsp;so.</tt></dd></dl>
+
+<dl><dt><a name="UniqueEmail-message"><strong>message</strong></a>(self, msgName, state, **kw)</dt></dl>
+
+<dl><dt><a name="UniqueEmail-subvalidators"><strong>subvalidators</strong></a>(self)</dt><dd><tt>Return&nbsp;any&nbsp;validators&nbsp;that&nbsp;this&nbsp;validator&nbsp;contains.&nbsp;&nbsp;This&nbsp;is<br>
+not&nbsp;useful&nbsp;for&nbsp;functional,&nbsp;except&nbsp;to&nbsp;inspect&nbsp;what&nbsp;values&nbsp;are<br>
+available.&nbsp;&nbsp;Specifically&nbsp;the&nbsp;``.<a href="#UniqueEmail-all_messages">all_messages</a>()``&nbsp;method&nbsp;uses<br>
+this&nbsp;to&nbsp;accumulate&nbsp;all&nbsp;possible&nbsp;messages.</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><a name="UniqueEmail-__classinit__"><strong>__classinit__</strong></a>(cls, new_attrs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><strong>__singletonmethods__</strong> = ('to_python', 'from_python')</dl>
+
+<dl><dt><strong>compound</strong> = False</dl>
+
+<dl><dt><strong>if_missing</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>repeating</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="UniqueEmail-__call__"><strong>__call__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="UniqueEmail-__initargs__"><strong>__initargs__</strong></a>(self, new_attrs)</dt></dl>
+
+<dl><dt><a name="UniqueEmail-__sourcerepr__"><strong>__sourcerepr__</strong></a>(self, source, binding<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="UniqueEmail-__classsourcerepr__"><strong>__classsourcerepr__</strong></a>(cls, source, binding<font color="#909090">=None</font>)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UniqueEmail-singleton"><strong>singleton</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'formencode.declarative.DeclarativeMeta'&gt;</dl>
+
+<dl><dt><strong>__mutableattributes__</strong> = ()</dl>
+
+<dl><dt><strong>__repr__</strong> = &lt;bound class method UniqueEmail.__repr__&gt;</dl>
+
+<dl><dt><strong>__unpackargs__</strong> = ()</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Declarative' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UniqueUsername">class <strong>UniqueUsername</strong></a>(<a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Validator&nbsp;to&nbsp;confirm&nbsp;that&nbsp;a&nbsp;given&nbsp;user_name&nbsp;is&nbsp;unique.<br>
+&nbsp;<br>
+**Messages**<br>
+&nbsp;<br>
+``badType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;a&nbsp;``%(type)s``:&nbsp;``%(value)r``)<br>
+&nbsp;<br>
+``empty``:<br>
+&nbsp;&nbsp;Please&nbsp;enter&nbsp;a&nbsp;value<br>
+&nbsp;<br>
+``noneType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;None)<br>
+&nbsp;<br>
+``notUnique``:<br>
+&nbsp;&nbsp;That&nbsp;user&nbsp;name&nbsp;is&nbsp;already&nbsp;being&nbsp;used.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#UniqueUsername">UniqueUsername</a></dd>
+<dd><a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a></dd>
+<dd><a href="formencode.api.html#Validator">formencode.api.Validator</a></dd>
+<dd><a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__slotnames__</strong> = []</dl>
+
+<dl><dt><strong>declarative_count</strong> = 102</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><a name="UniqueUsername-assert_string"><strong>assert_string</strong></a>(self, value, state)</dt></dl>
+
+<dl><dt><a name="UniqueUsername-base64encode"><strong>base64encode</strong></a>(self, value)</dt><dd><tt>Encode&nbsp;a&nbsp;string&nbsp;in&nbsp;base64,&nbsp;stripping&nbsp;whitespace&nbsp;and&nbsp;removing<br>
+newlines.</tt></dd></dl>
+
+<dl><dt><a name="UniqueUsername-empty_value"><strong>empty_value</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="UniqueUsername-from_python"><strong>from_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="UniqueUsername-is_empty"><strong>is_empty</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="UniqueUsername-to_python"><strong>to_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><strong>accept_python</strong> = True</dl>
+
+<dl><dt><strong>if_empty</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid_python</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>not_empty</strong> = False</dl>
+
+<dl><dt><strong>strip</strong> = False</dl>
+
+<dl><dt><strong>validate_other</strong> = None</dl>
+
+<dl><dt><strong>validate_python</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><a name="UniqueUsername-__init__"><strong>__init__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="UniqueUsername-all_messages"><strong>all_messages</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;all&nbsp;the&nbsp;messages&nbsp;of&nbsp;this&nbsp;validator,&nbsp;and<br>
+any&nbsp;subvalidators&nbsp;if&nbsp;present.&nbsp;&nbsp;Keys&nbsp;are&nbsp;message&nbsp;names,&nbsp;values<br>
+may&nbsp;be&nbsp;a&nbsp;message&nbsp;or&nbsp;list&nbsp;of&nbsp;messages.&nbsp;&nbsp;This&nbsp;is&nbsp;really&nbsp;just<br>
+intended&nbsp;for&nbsp;documentation&nbsp;purposes,&nbsp;to&nbsp;show&nbsp;someone&nbsp;all&nbsp;the<br>
+messages&nbsp;that&nbsp;a&nbsp;validator&nbsp;or&nbsp;compound&nbsp;validator&nbsp;(like&nbsp;Schemas)<br>
+can&nbsp;produce.<br>
+&nbsp;<br>
+@@:&nbsp;Should&nbsp;this&nbsp;produce&nbsp;a&nbsp;more&nbsp;structured&nbsp;set&nbsp;of&nbsp;messages,&nbsp;so<br>
+that&nbsp;messages&nbsp;could&nbsp;be&nbsp;unpacked&nbsp;into&nbsp;a&nbsp;rendered&nbsp;form&nbsp;to&nbsp;see<br>
+the&nbsp;placement&nbsp;of&nbsp;all&nbsp;the&nbsp;messages?&nbsp;&nbsp;Well,&nbsp;probably&nbsp;so.</tt></dd></dl>
+
+<dl><dt><a name="UniqueUsername-message"><strong>message</strong></a>(self, msgName, state, **kw)</dt></dl>
+
+<dl><dt><a name="UniqueUsername-subvalidators"><strong>subvalidators</strong></a>(self)</dt><dd><tt>Return&nbsp;any&nbsp;validators&nbsp;that&nbsp;this&nbsp;validator&nbsp;contains.&nbsp;&nbsp;This&nbsp;is<br>
+not&nbsp;useful&nbsp;for&nbsp;functional,&nbsp;except&nbsp;to&nbsp;inspect&nbsp;what&nbsp;values&nbsp;are<br>
+available.&nbsp;&nbsp;Specifically&nbsp;the&nbsp;``.<a href="#UniqueUsername-all_messages">all_messages</a>()``&nbsp;method&nbsp;uses<br>
+this&nbsp;to&nbsp;accumulate&nbsp;all&nbsp;possible&nbsp;messages.</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><a name="UniqueUsername-__classinit__"><strong>__classinit__</strong></a>(cls, new_attrs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><strong>__singletonmethods__</strong> = ('to_python', 'from_python')</dl>
+
+<dl><dt><strong>compound</strong> = False</dl>
+
+<dl><dt><strong>if_missing</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>repeating</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="UniqueUsername-__call__"><strong>__call__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="UniqueUsername-__initargs__"><strong>__initargs__</strong></a>(self, new_attrs)</dt></dl>
+
+<dl><dt><a name="UniqueUsername-__sourcerepr__"><strong>__sourcerepr__</strong></a>(self, source, binding<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="UniqueUsername-__classsourcerepr__"><strong>__classsourcerepr__</strong></a>(cls, source, binding<font color="#909090">=None</font>)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="UniqueUsername-singleton"><strong>singleton</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'formencode.declarative.DeclarativeMeta'&gt;</dl>
+
+<dl><dt><strong>__mutableattributes__</strong> = ()</dl>
+
+<dl><dt><strong>__repr__</strong> = &lt;bound class method UniqueUsername.__repr__&gt;</dl>
+
+<dl><dt><strong>__unpackargs__</strong> = ()</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Declarative' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ValidPassword">class <strong>ValidPassword</strong></a>(<a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Validator&nbsp;to&nbsp;test&nbsp;for&nbsp;validity&nbsp;of&nbsp;password.<br>
+&nbsp;<br>
+**Messages**<br>
+&nbsp;<br>
+``badType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;a&nbsp;``%(type)s``:&nbsp;``%(value)r``)<br>
+&nbsp;<br>
+``empty``:<br>
+&nbsp;&nbsp;Please&nbsp;enter&nbsp;a&nbsp;value<br>
+&nbsp;<br>
+``invalid``:<br>
+&nbsp;&nbsp;The&nbsp;password&nbsp;you&nbsp;supplied&nbsp;is&nbsp;invalid.<br>
+&nbsp;<br>
+``noneType``:<br>
+&nbsp;&nbsp;The&nbsp;input&nbsp;must&nbsp;be&nbsp;a&nbsp;string&nbsp;(not&nbsp;None)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.register_widgets.html#ValidPassword">ValidPassword</a></dd>
+<dd><a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a></dd>
+<dd><a href="formencode.api.html#Validator">formencode.api.Validator</a></dd>
+<dd><a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ValidPassword-validate_python"><strong>validate_python</strong></a>(self, value, state)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__slotnames__</strong> = []</dl>
+
+<dl><dt><strong>declarative_count</strong> = 104</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><a name="ValidPassword-assert_string"><strong>assert_string</strong></a>(self, value, state)</dt></dl>
+
+<dl><dt><a name="ValidPassword-base64encode"><strong>base64encode</strong></a>(self, value)</dt><dd><tt>Encode&nbsp;a&nbsp;string&nbsp;in&nbsp;base64,&nbsp;stripping&nbsp;whitespace&nbsp;and&nbsp;removing<br>
+newlines.</tt></dd></dl>
+
+<dl><dt><a name="ValidPassword-empty_value"><strong>empty_value</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="ValidPassword-from_python"><strong>from_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="ValidPassword-is_empty"><strong>is_empty</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="ValidPassword-to_python"><strong>to_python</strong></a>(self, value, state<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#FancyValidator">formencode.api.FancyValidator</a>:<br>
+<dl><dt><strong>accept_python</strong> = True</dl>
+
+<dl><dt><strong>if_empty</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>if_invalid_python</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>not_empty</strong> = False</dl>
+
+<dl><dt><strong>strip</strong> = False</dl>
+
+<dl><dt><strong>validate_other</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><a name="ValidPassword-__init__"><strong>__init__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="ValidPassword-all_messages"><strong>all_messages</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;all&nbsp;the&nbsp;messages&nbsp;of&nbsp;this&nbsp;validator,&nbsp;and<br>
+any&nbsp;subvalidators&nbsp;if&nbsp;present.&nbsp;&nbsp;Keys&nbsp;are&nbsp;message&nbsp;names,&nbsp;values<br>
+may&nbsp;be&nbsp;a&nbsp;message&nbsp;or&nbsp;list&nbsp;of&nbsp;messages.&nbsp;&nbsp;This&nbsp;is&nbsp;really&nbsp;just<br>
+intended&nbsp;for&nbsp;documentation&nbsp;purposes,&nbsp;to&nbsp;show&nbsp;someone&nbsp;all&nbsp;the<br>
+messages&nbsp;that&nbsp;a&nbsp;validator&nbsp;or&nbsp;compound&nbsp;validator&nbsp;(like&nbsp;Schemas)<br>
+can&nbsp;produce.<br>
+&nbsp;<br>
+@@:&nbsp;Should&nbsp;this&nbsp;produce&nbsp;a&nbsp;more&nbsp;structured&nbsp;set&nbsp;of&nbsp;messages,&nbsp;so<br>
+that&nbsp;messages&nbsp;could&nbsp;be&nbsp;unpacked&nbsp;into&nbsp;a&nbsp;rendered&nbsp;form&nbsp;to&nbsp;see<br>
+the&nbsp;placement&nbsp;of&nbsp;all&nbsp;the&nbsp;messages?&nbsp;&nbsp;Well,&nbsp;probably&nbsp;so.</tt></dd></dl>
+
+<dl><dt><a name="ValidPassword-message"><strong>message</strong></a>(self, msgName, state, **kw)</dt></dl>
+
+<dl><dt><a name="ValidPassword-subvalidators"><strong>subvalidators</strong></a>(self)</dt><dd><tt>Return&nbsp;any&nbsp;validators&nbsp;that&nbsp;this&nbsp;validator&nbsp;contains.&nbsp;&nbsp;This&nbsp;is<br>
+not&nbsp;useful&nbsp;for&nbsp;functional,&nbsp;except&nbsp;to&nbsp;inspect&nbsp;what&nbsp;values&nbsp;are<br>
+available.&nbsp;&nbsp;Specifically&nbsp;the&nbsp;``.<a href="#ValidPassword-all_messages">all_messages</a>()``&nbsp;method&nbsp;uses<br>
+this&nbsp;to&nbsp;accumulate&nbsp;all&nbsp;possible&nbsp;messages.</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><a name="ValidPassword-__classinit__"><strong>__classinit__</strong></a>(cls, new_attrs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.api.html#Validator">formencode.api.Validator</a>:<br>
+<dl><dt><strong>__singletonmethods__</strong> = ('to_python', 'from_python')</dl>
+
+<dl><dt><strong>compound</strong> = False</dl>
+
+<dl><dt><strong>if_missing</strong> = &lt;class formencode.api.NoDefault&gt;</dl>
+
+<dl><dt><strong>repeating</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="ValidPassword-__call__"><strong>__call__</strong></a>(self, *args, **kw)</dt></dl>
+
+<dl><dt><a name="ValidPassword-__initargs__"><strong>__initargs__</strong></a>(self, new_attrs)</dt></dl>
+
+<dl><dt><a name="ValidPassword-__sourcerepr__"><strong>__sourcerepr__</strong></a>(self, source, binding<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Class methods inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><a name="ValidPassword-__classsourcerepr__"><strong>__classsourcerepr__</strong></a>(cls, source, binding<font color="#909090">=None</font>)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ValidPassword-singleton"><strong>singleton</strong></a>(cls)<font color="#909090"><font face="helvetica, arial"> from <a href="formencode.declarative.html#DeclarativeMeta">formencode.declarative.DeclarativeMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="formencode.declarative.html#Declarative">formencode.declarative.Declarative</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'formencode.declarative.DeclarativeMeta'&gt;</dl>
+
+<dl><dt><strong>__mutableattributes__</strong> = ()</dl>
+
+<dl><dt><strong>__repr__</strong> = &lt;bound class method ValidPassword.__repr__&gt;</dl>
+
+<dl><dt><strong>__unpackargs__</strong> = ()</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Declarative' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>lost_password_form</strong> = RegTableForm(name='form', submit_text=None, conv...ion=None, disabled_fields=set([]), method='post')</td></tr></table>
+</body></html>

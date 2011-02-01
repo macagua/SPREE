@@ -1,0 +1,50 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.jobs.pack_javascript</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.jobs.html"><font color="#ffffff">jobs</font></a>.pack_javascript</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/jobs/pack_javascript.py">c:\studium\spree\opensource\spree\jobs\pack_javascript.py</a></font></td></tr></table>
+    <p><tt>Pack&nbsp;all&nbsp;*.js&nbsp;files&nbsp;to&nbsp;one&nbsp;file&nbsp;and&nbsp;compress&nbsp;it&nbsp;renaming&nbsp;variables&nbsp;and&nbsp;removing&nbsp;whitespaces.<br>
+&nbsp;<br>
+This&nbsp;way&nbsp;we&nbsp;avoid&nbsp;having&nbsp;HTTP-Requests&nbsp;for&nbsp;each&nbsp;*.js&nbsp;file&nbsp;and&nbsp;the&nbsp;compression&nbsp;decreases&nbsp;the&nbsp;file_size<br>
+by&nbsp;about&nbsp;40%.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-compressJS"><strong>compressJS</strong></a>(filein<font color="#909090">='spree/static/javascript/packed/spree.tmp.js'</font>, fileout<font color="#909090">='spree/static/javascript/packed/spree.js'</font>)</dt><dd><tt>remove&nbsp;comments&nbsp;and&nbsp;whitespaces&nbsp;(~40%&nbsp;reduction&nbsp;in&nbsp;file&nbsp;size)&nbsp;using&nbsp;moz.&nbsp;rhino&nbsp;package</tt></dd></dl>
+ <dl><dt><a name="-loadFiles"><strong>loadFiles</strong></a>(dir<font color="#909090">='spree/static/javascript/'</font>)</dt><dd><tt>get&nbsp;all&nbsp;*.js&nbsp;files&nbsp;and&nbsp;add&nbsp;them&nbsp;to&nbsp;the&nbsp;list</tt></dd></dl>
+ <dl><dt><a name="-packAll"><strong>packAll</strong></a>()</dt><dd><tt>merge&nbsp;all&nbsp;*.js&nbsp;files&nbsp;to&nbsp;one&nbsp;file&nbsp;and&nbsp;remove&nbsp;unnecessary&nbsp;stuff&nbsp;(whitespaces&nbsp;etc)<br>
+&nbsp;<br>
+(only&nbsp;called&nbsp;in&nbsp;development&nbsp;mode&nbsp;!)</tt></dd></dl>
+ <dl><dt><a name="-packJS"><strong>packJS</strong></a>(filename<font color="#909090">='spree/static/javascript/packed/spree.tmp.js'</font>)</dt><dd><tt>merge&nbsp;all&nbsp;*.js&nbsp;files&nbsp;to&nbsp;one&nbsp;file</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>compress_cmd</strong> = 'java -jar spree/jobs/lib/custom_rhino.jar -c %s &gt; %s 2&gt;&amp;1'<br>
+<strong>exclude_dirs</strong> = ['.svn', 'libs', 'layout', 'packed']<br>
+<strong>file_out</strong> = 'packed/spree.js'<br>
+<strong>file_out_tmp</strong> = 'packed/spree.tmp.js'<br>
+<strong>files</strong> = []<br>
+<strong>path_to_js</strong> = 'spree/static/javascript/'</td></tr></table>
+</body></html>

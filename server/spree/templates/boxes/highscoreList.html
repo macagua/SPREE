@@ -1,0 +1,36 @@
+<div xmlns:py="http://genshi.edgewall.org/" id="highscore_list" class="highscores">
+	<p class="rank header">#</p>
+	<p class="user header">User</p>
+	<p class="score header" style="float:left;">Score</p>
+	<div class="new_line"></div>
+	<p  style="clear:both; margin-bottom: 3px; border-bottom:1px solid #aaa;"> </p>
+
+	<div py:for="row in rows">
+		<div py:if="not row.showRow">
+			<div py:if="not row.isMe">
+				<p class="rank">..</p>
+				<p class="user">...</p>
+				<p class="score">...</p>
+				<div class="new_line"></div>
+			</div>
+		</div>
+		<div py:if="row.showRow and row.isMe" class="self">
+			<p class="rank self">$row.rank</p>
+			<p class="user userlink self"
+				onmouseout="ajax_hideQueryTooltip(this);" 
+				onmouseover="showUserDetailsTooltip(this, ${row.user_id}, -250);"
+			>$row.user_name</p>
+			<p class="score self">$row.score</p>
+			<div class="new_line"></div>
+		</div>
+		<div py:if="row.showRow and not row.isMe">
+			<p class="rank">$row.rank</p>
+			<p class="user userlink"
+				onmouseout="ajax_hideQueryTooltip(this);" 
+				onmouseover="showUserDetailsTooltip(this, ${row.user_id}, -250);"
+			>$row.user_name</p>
+			<p class="score">$row.score</p>
+			<div class="new_line"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,94 @@
+<div xmlns:py="http://genshi.edgewall.org/" id="blogentryContent">
+	<input id="blog_entry_id" type="hidden" value="${blogentry_id}"/>
+	<input id="queryId" type="hidden" value="${query_id}"/>
+	<div class="content_header">
+		<div style="height:15px;">
+			<a class="actionlink fl" onclick="setContent('blogs','-1')"  title="Back to Notebook" >Back to Notebook</a>
+			<a py:if="back_chat"  class="actionlink fr" onclick="setContent('chat','$query_id')"  title="Go To Chat" >Back to CHAT</a>
+		</div>
+	</div>
+	<div class="content_body">
+		<div class="blogEdit">
+			<h1 class="content_title">Create a new note entry:</h1>
+			<table>
+				<tr>
+					<th>
+		                Title:
+		            </th>
+		            <td>
+		                <input type="text" name="blogentry_topic" 
+						class="topicField" 
+						maxlength="50" 
+						id="blogentry_topic"
+						value="${topic}"/>
+		            </td>
+				</tr>
+				<tr> 
+					<td></td>
+		            <td style="text-align:right;">
+		                (max. 50 characters)
+		            </td>
+				</tr>
+				<tr> 
+					<td></td>
+		            <td><p></p></td>
+				</tr>
+				<tr>
+			        <th>
+			            Text:
+			        </th>
+			        <td id="text-in" >
+			            <textarea id="blogentry_text" 
+							class="textField"
+							rows="10"							
+							py:content="text" />
+			        </td>
+					<td id="add_text" style="display:none;">
+			            <textarea id="blogentry_chatText" 
+							class="textField"
+							rows="10"
+							py:content="chat_text" />
+			        </td>
+				</tr>
+				<tr>
+			        <th>
+			            Private:
+			        </th>
+					<td>
+				 		<input py:if="privat" id="blogentry_check" type="checkbox" name="check_box" checked="checked" style="left-margin:100px;"/>
+						<input py:if="not privat" id="blogentry_check" type="checkbox" name="check_box" style="left-margin:100px;"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align="right">
+						<button py:if="back_chat" class="btn" id="button_add_chat" type="button" value="" onclick="javascript:blogedit_addChat();" title="Add the text of the chat into the notebook">
+							<div class="btn">
+							<p class="btn">Add the chat</p>
+							</div>
+						</button>
+						<button class="btn" id = "button_clear" type="button" value="" onclick="javascript:blogentry_clearFields();" title="Clear fields">
+							<div class="btn-red">
+							<p class="btn-red">Clear</p>
+							</div>
+						</button>
+						<button class="btn" id = "blogentry_createButton" type="button" value="" onclick="javascript:blogentry_save();" title="Save entry">
+							<div class="btn">
+							<p class="btn">Save</p>
+							</div>
+						</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+

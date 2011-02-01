@@ -1,0 +1,51 @@
+<div xmlns:py="http://genshi.edgewall.org/">
+<div style="background-color:#ccc; height:15px; padding:3px 5px 3px 5px; font-weight:bold;">
+					<p style="float:left;">Users</p>
+					<p style="float:right;">${offset+1}-${limit} / ${totalUsersCount}</p>
+</div>
+<div style="clear:both;"></div>
+<div class="body" style="height:345px">
+		<div id="imUserlist">
+			<ul id="imUsers" class="imUserList">
+				<li py:for="i in range(0,len(users))" 
+					class="${users[i]._class}"
+					onclick="im.showUserDetails(this);"
+					name = "${users[i].id}"
+					>
+						<div py:if="users[i].isonline" title = "User is online">				
+							<p 
+								title="Show user details" 
+								name = "${users[i].id}">
+									${users[i].name}
+							</p>
+						</div>
+						<div py:if="not users[i].isonline" title = "User is offline">
+							<p 
+								title="Show user details">
+									${users[i].name}
+							</p>			
+						</div>
+				</li>
+			</ul>
+		</div>
+		
+</div>
+<div py:if="len(users) &gt; 0" style="text-align:center">
+				<a py:if="currentPage &gt; 1" 
+					onclick="javascript:im.loadUsers(${currentPage}-1)" 
+					class="actionlink">
+						&lt;&lt;
+				</a>
+				
+				<font py:if="currentPage &lt; 2" class="disabledLink">&lt;&lt;</font>
+				
+				&nbsp;&nbsp;
+				
+				<a py:if="currentPage &lt; pagesCount" 
+					onclick="javascript:im.loadUsers(${currentPage}+1)" 
+					class="actionlink">
+						&gt;&gt;
+				</a>
+				<font py:if="currentPage == pagesCount" class="disabledLink">&gt;&gt;</font>
+		</div>
+</div>

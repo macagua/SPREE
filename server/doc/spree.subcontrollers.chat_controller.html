@@ -1,0 +1,141 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.subcontrollers.chat_controller</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.subcontrollers.html"><font color="#ffffff">subcontrollers</font></a>.chat_controller</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/subcontrollers/chat_controller.py">c:\studium\spree\opensource\spree\subcontrollers\chat_controller.py</a></font></td></tr></table>
+    <p><tt>The&nbsp;controller&nbsp;for&nbsp;the&nbsp;chat&nbsp;content&nbsp;box.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="cPickle.html">cPickle</a><br>
+<a href="turbogears.config.html">turbogears.config</a><br>
+<a href="spree.constants.html">spree.constants</a><br>
+<a href="turbogears.controllers.html">turbogears.controllers</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+<a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+<a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+<a href="spree.util.helpers.html">spree.util.helpers</a><br>
+<a href="turbogears.identity.html">turbogears.identity</a><br>
+<a href="spree.json.html">spree.json</a><br>
+<a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+<a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+<a href="re.html">re</a><br>
+<a href="spree.register_model.html">spree.register_model</a><br>
+<a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+<a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+<a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="spree.submodels.tree_model.html">spree.submodels.tree_model</a><br>
+<a href="turbogears.html">turbogears</a><br>
+<a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.chat_controller.html#ChatController">ChatController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.chat_controller.html#ChatController">ChatController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ChatController">class <strong>ChatController</strong></a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;controller&nbsp;for&nbsp;the&nbsp;chat&nbsp;content&nbsp;box.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.subcontrollers.chat_controller.html#ChatController">ChatController</a></dd>
+<dd><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a></dd>
+<dd><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ChatController-finish"><strong>finish</strong></a>(self, query_id, *args, **kwargs)</dt><dd><tt>Wreps&nbsp;up&nbsp;the&nbsp;finished&nbsp;chat.<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;needed&nbsp;to&nbsp;identify&nbsp;chat&nbsp;session</tt></dd></dl>
+
+<dl><dt><a name="ChatController-getAllEntries"><strong>getAllEntries</strong></a>(self, query_id, last_entry_id, *args, **kwargs)</dt><dd><tt>Fetches&nbsp;all&nbsp;or&nbsp;just&nbsp;the&nbsp;newes&nbsp;chat&nbsp;messages,&nbsp;starting&nbsp;from&nbsp;last_entry_id,<br>
+belongeng&nbsp;to&nbsp;the&nbsp;same&nbsp;chat&nbsp;session.<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;each&nbsp;chat&nbsp;session&nbsp;is&nbsp;conected&nbsp;to&nbsp;one&nbsp;query<br>
+@param&nbsp;last_entry_id:&nbsp;if&nbsp;set&nbsp;to&nbsp;-1&nbsp;all&nbsp;chat&nbsp;messages&nbsp;are&nbsp;fetched<br>
+@return:&nbsp;chat&nbsp;messages&nbsp;and&nbsp;status&nbsp;of&nbsp;the&nbsp;chat</tt></dd></dl>
+
+<dl><dt><a name="ChatController-getChatOverviewContent"><strong>getChatOverviewContent</strong></a>(self, *args, **kwargs)</dt><dd><tt>Fetches&nbsp;chat&nbsp;sessions&nbsp;from&nbsp;chat&nbsp;history&nbsp;of&nbsp;the&nbsp;user&nbsp;(as&nbsp;a&nbsp;user&nbsp;and/or&nbsp;expert).&nbsp;<br>
+Takes&nbsp;care&nbsp;of&nbsp;paginate,&nbsp;too.<br>
+&nbsp;<br>
+@return:&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="ChatController-join"><strong>join</strong></a>(self, query_id, *args, **kwargs)</dt><dd><tt>Joins&nbsp;user&nbsp;and&nbsp;expert&nbsp;into&nbsp;a&nbsp;chat&nbsp;session.<br>
+Logging&nbsp;about&nbsp;chat&nbsp;and&nbsp;query&nbsp;gets&nbsp;updated.<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;chat&nbsp;evolves&nbsp;from&nbsp;a&nbsp;query&nbsp;<br>
+@return:&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="ChatController-rate"><strong>rate</strong></a>(self, query_id, rating, *args, **kwargs)</dt><dd><tt>Rates&nbsp;the&nbsp;chat.&nbsp;Updates&nbsp;user&nbsp;score&nbsp;and&nbsp;statistics.<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;needed&nbsp;to&nbsp;identify&nbsp;chat&nbsp;session&nbsp;<br>
+@param&nbsp;rate:&nbsp;&nbsp;points&nbsp;given</tt></dd></dl>
+
+<dl><dt><a name="ChatController-send"><strong>send</strong></a>(self, query_id, *args, **kwargs)</dt><dd><tt>Posts&nbsp;a&nbsp;chat&nbsp;message.<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;needed&nbsp;to&nbsp;identify&nbsp;chat&nbsp;session&nbsp;to&nbsp;which&nbsp;chat&nbsp;message&nbsp;should&nbsp;be&nbsp;appended<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;the&nbsp;text&nbsp;of&nbsp;the&nbsp;message</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>require</strong> = &lt;turbogears.identity.conditions.not_anonymous object&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Controller' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>:<br>
+<dl><dt><a name="ChatController-__getattribute__"><strong>__getattribute__</strong></a>(self, name)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()<br>
+<strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;</td></tr></table>
+</body></html>

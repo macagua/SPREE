@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<div id="main_menu" py:match="main_menu">
+	<ul>
+		<li><a href='${tg.url("/")}' title="Home" style="cursor:pointer;" ><span>Home</span></a></li>
+		<li><a href='${tg.url("/about")}' title="About SPREE" style="cursor:pointer;" ><span>About spree</span></a></li>
+		<li><a href='${tg.url("/help")}' title="Help" style="cursor:pointer; text-decoration:underline;" ><span>Help</span></a></li>
+		<li py:if="tg.identity.anonymous"><a href='${tg.url("/registration/register")}' title="Become a SPREE member." style="cursor:pointer;" ><span>Registration</span></a></li>
+		<li py:if="not tg.identity.anonymous"><a href='${tg.url("/logout")}' title="Logout"><span>Logout</span></a></li>
+	</ul>
+</div>
+
+<div id="login" py:match="login">	
+</div>
+
+<div id="leftMenu" py:match="leftMenu" >
+	<ul>
+		<li py:if="not page==1" onclick="location ='${tg.url('/help')}';" title="How to register?">Registration</li>
+		<li py:if="page==1" onclick="location ='${tg.url('/help')}';" title="How to register?" style="background-color:white;">Registration</li>
+		<li py:if="not page==2" onclick="location ='${tg.url('/help?page=2')}';" title="How to ask an expert?">Asking questions</li>
+		<li py:if="page==2" onclick="location ='${tg.url('/help?page=2')}';" title="How to ask an expert?" style="background-color:white;">Asking questions</li>
+		<li py:if="not page==3" onclick="location ='${tg.url('/help?page=3')}';" title="How to answer a question?">Answering questions</li>
+		<li py:if="page==3" onclick="location ='${tg.url('/help?page=3')}';" title="How to answer a question?" style="background-color:white;">Answering questions</li>
+		<li py:if="not page==4" onclick="location ='${tg.url('/help?page=4')}';" title="All about chatting.">Chatting</li>
+		<li py:if="page==4" onclick="location ='${tg.url('/help?page=4')}';" title="All about chatting." style="background-color:white;">Chatting</li>
+		<li py:if="not page==5" onclick="location ='${tg.url('/help?page=5')}';" title="All about notes.">Creating notes</li>
+		<li py:if="page==5" onclick="location ='${tg.url('/help?page=5')}';" title="All about notes." style="background-color:white;">Creating notes</li>
+		<li py:if="not page==6" onclick="location ='${tg.url('/help?page=6')}';" title="Changing your user settings.">Editing your profile</li>
+		<li py:if="page==6" onclick="location ='${tg.url('/help?page=6')}';" title="Changing your user settings." style="background-color:white;">Editing your profile</li>
+		<li py:if="not page==7" onclick="location ='${tg.url('/help?page=7')}';" title="Getting your feed.">Get the Spree feed</li>
+		<li py:if="page==7" onclick="location ='${tg.url('/help?page=7')}';" title="Getting your feed." style="background-color:white;">Get the Spree feed</li>
+	</ul>
+</div>
+
+<div id="rightMenu" py:match="rightMenu" >
+	<a href='${tg.url("/static/help/help.pdf")}' target="_blank"><img border="0" id="logo_help_pdf" src='${tg.url("/static/images/for_help/pdf_help.gif")}' title="Get spree help as PDF"/></a>
+	<p>Spree help</p>
+</div>
+
+<div id="content" py:match="content" style="margin-left:-30px;">
+	<div py:if="page==1" class="content_fullHelpBody">
+		<h1>How to register?</h1>
+		<p> 
+			Registration consists of three parts: 
+			<br/><br/>
+			<b>1.</b> Standard <b>user information</b> section. 
+			<br/><br/>
+			<b>2.</b> <b>Profile generation</b> where you specify your expert profile by entering websites (your homepage or links related 
+			to your knowledge domains) and keywords that explain your competences.
+			<br/><br/>
+			<b>3.</b> <b>Profile refinement</b> where you customize your expert categories. You can add additional fields, delete the ones 
+			automatically filtered and set up the level of expertise for each category by clicking on scale bar
+			<img src='${tg.url("/static/images/for_help/bar_scale_ss.gif")}'/>. 
+			<br/><br/>
+			After filling in the forms you will receive a confirmation e-mail. Open the link inside of this e-mail in your browser to activate your <b><i>spree</i></b> account.  
+		</p>
+	</div>
+	
+	<div py:if="page==2" class="content_fullHelpBody">
+		<h1>How to ask an expert?</h1>
+			<p>
+				<img src='${tg.url("/static/images/for_help/ask_expert_tab.gif")}'/> is the core functionality of the <b><i>spree</i></b> system and your starting option after the login. 
+				You can always reach it via the "Ask expert" tab. 
+				<br/><br/>
+				<b>Enter your question</b> in the "Question" field and click on <img src='${tg.url("/static/images/for_help/search_expert_button.gif")}' align="absmiddle"/>. 
+				In order to get correct answer from the expert provide as many details as you can when writing your questions. 
+				Please provide your question in English! 
+				<br/><br/>
+				After clicking on <img src='${tg.url("/static/images/for_help/search_expert_button.gif")}' align="absmiddle"/> your question goes through the process of <b>automatic classification</b>. 
+				If you are not happy with the categorization you can reformulate your question and click <img src='${tg.url("/static/images/for_help/re-classify_button.gif")}' align="absmiddle" /> or you can click 
+				<img src='${tg.url("/static/images/for_help/modify_button.gif")}' align="absmiddle"/> and manually categorize your question. 
+				Here you can erase wrong categorization fields from the Question classification on the right side and 
+				add new ones from the Category tree on the left side. The main categories listed in a tree can be expanded by clicking on the 
+				plus sign on the left side of each category. 
+			</p>	
+			<br/><br/>
+			<center><img src='${tg.url("/static/images/for_help/change_classification_ss.gif")}' /></center>
+			<br/><br/>
+			<p>
+				Now you are ready to <b>contact the experts</b>. Click <img src='${tg.url("/static/images/for_help/search_expert_button.gif")}' align="absmiddle"/>. The system is going to present you 
+				detailed information about the ongoing expert contacting process. 
+				<b><i>Spree</i></b> also informs you about the note entries which are most related to your question and may already provide some answer.
+			</p>
+			<br/><br/>
+			<center><img src='${tg.url("/static/images/for_help/question_report_ss.gif")}' /></center>
+			<br/><br/>
+			<p>
+				<b><i>Spree</i></b> users are allowed to have five ongoing questions/chats. The <b>"My Questions" box</b> monitors the status of your questions/chats on the left side of your screen. 
+				Clicking on one of the questions/chats will get you detailed information about it. 
+				Icons associated with questions/chats provide you with quick status information. 
+			</p>
+			<br/><br/>
+			<center><img src='${tg.url("/static/images/for_help/my_questions_ss.gif")}' /></center>
+			<br/><br/>
+			<p>	
+				After an expert has accepted your question you can join him in a <b>chat room</b> where the expert will answer your question. Upon finishing the chat you will be prompted 
+				by a window to rate the chat based on the answer's quality. You can <b>rate the chat</b> immediately or you can postpone it for later. <a onclick="location ='${tg.url('/help?page=4')}';" class="helplink" title="Direct chats">Direct chats</a> 
+				are not rated. 
+			</p>	
+			<br/><br/>
+			<center><img src='${tg.url("/static/images/for_help/rate_chat_ss.gif")}'/></center>
+	</div>
+	
+	<div py:if="page==3" class="content_fullHelpBody">
+		<h1>How to answer a question?</h1>
+			<p>
+				You can monitor the questions addressed to you in the <b>"Incoming Questions" box</b> on the left side of the screen. 
+			</p>
+			<br/><br/>
+			<center><img src='${tg.url("/static/images/for_help/incoming_questions_ss.gif")}'/></center>
+			<br/><br/>
+			<p>
+				If you click on one of the questions you will get its detailed overview. You can get as much as five questions at a time. 
+			</p>	
+			<br/><br/>
+			<center><img src='${tg.url("/static/images/for_help/question_ss.gif")}'/></center>
+			<br/><br/>
+			<p>	
+				The title bar of your window will blink every time you get a new question (even when your browser is minimized). 
+				If you select that option, you can also receive your new incoming questions through e-mail. 
+				<br/><br/>
+				If you want to <b>answer a question</b> you just need to click on <img src='${tg.url("/static/images/for_help/i_know_it_button.gif")}' align="absmiddle"/>. 
+				This will bring you to chat room with the user who asked the question. Upon finishing the chat you are offered the possibility 
+				to <a onclick="location ='${tg.url('/help?page=5')}';" class="helplink" title="create">create a note</a> based upon your conversation.
+				<br/><br/>
+				If you don't know the answer of a question click on <img src='${tg.url("/static/images/for_help/dont_know_button.gif")}' align="absmiddle"/>
+				and the question will disappear from your "Incoming Questions" box. 
+				<br/><br/>
+				<b>"Show all open questions"</b> positioned in the bottom of the "Incoming Questions" box allows you to see a list of all unanswered 
+				questions currently in the system. <b>Please feel free to answer these questions too.</b> 
+			</p>
+	</div>
+	
+	<div py:if="page==4" class="content_fullHelpBody">
+		<h1>All about chatting</h1>
+			<p>
+				The <img src='${tg.url("/static/images/for_help/chat_tab.gif")}'/> tab offers you two main options: direct chat with a selected user/expert and an overview of your finished chats.
+				<br/><br/>
+				<b>Direct chat</b> (follow <b>link "Users"</b>) allows you to pick an expert from a list of all experts in the system 
+				and contact him avoiding the regular procedure of posting your question to the system. 
+				Here you can also find an overview of the users currently online.
+			</p>	
+			<br/><br/>
+			<center><img src='${tg.url("/static/images/for_help/direct_chat_ss.gif")}'/></center>
+			<br/><br/>
+			<p>	
+				You can <b>contact an expert</b> by sending this expert a request for direct conversation. 
+				Selecting an expert shows the user details. Just below the details you will find the fields related to the setup of a direct chat.
+				Here you can optionally fill in a description and a subject of your question. 
+				Direct questions are marked by the word "direct" so you can distinguish them from the regular ones. 
+				<br/><br/>
+				To get an <b>overview of your chats</b> follow the <b>"History" link</b> which will take you to your chat history. 
+				Click on a chat to get the full conversation. 
+				<br/><br/>
+				You can repeat the question you have posted if you are not satisfied with the answer you got by clicking 
+				<img src='${tg.url("/static/images/for_help/ask_again_button.gif")}' align="absmiddle"/>.
+				<b><i>Spree</i></b> will then try to find another expert for your question.
+				<br/><br/>
+				After the chat the expert can <b>create a note</b> related to the question by clicking <img src='${tg.url("/static/images/for_help/create_note_entry_button.gif")}' align="absmiddle"/>. 
+				This might save an expert's future time as users with similar questions might refer to the note instead of contacting the expert. 
+			</p>
+	</div>
+	
+	<div py:if="page==5" class="content_fullHelpBody">
+		<h1>All about notes.</h1>
+			<p>
+				To go to your notes click on <img src='${tg.url("/static/images/for_help/notebook_tab.gif")}'/>. 
+				You will get the list of your note entries. 
+			</p>
+			<br/><br/>
+			<center><img src='${tg.url("/static/images/for_help/note_report_ss.gif")}'/></center> 
+			<br/><br/>
+			<p>
+				The notebook is at your disposal whenever you would like to create private notes or to share your knowledge with other users.
+				Follow the <b>"Create new entry" link</b> to create a note. If you mark your note as "private" it will not be shown to other users. 
+				<br/><br/>
+				After saving your note you might want to change its automatic classification. The process of manual classification 
+				follows the same steps as <a onclick="location ='${tg.url('/help?page=2')}';" class="helplink" title="manual classification">question classification</a>. 
+				<br/><br/>
+				<b>Reading the notes</b> others have written is possible upon posting a question, when the system is going to present you 
+				the notes which are most related to your question. 
+				<br/><br/>
+				You can <b>rate notes</b> of other users directly influencing their score. You are allowed to give one rating per note.
+			</p>
+	</div>
+	
+	<div py:if="page==6" class="content_fullHelpBody">
+		<h1>Changing your user settings.</h1>
+			<p>
+				You can change your user settings in the <img src='${tg.url("/static/images/for_help/my_profile_tab.gif")}'/> tab.
+				<br/><br/>
+				The <b>"Personal"</b> section lets you modify some of your user data such as your password or email.
+				<br/><br/>
+				The <b>"Settings"</b> section lets you choose whether you want to be informed about new incoming questions by email. 
+				Here you can also decide whether you want to subscribe to the <b><i>spree</i></b> newsletter.
+				<br/><br/>
+				The <b>"Profile"</b> section allows you to change your expert profile the same way as during the  <a onclick="location ='${tg.url('/help?page=1')}';" class="helplink" title="registration">registration</a> phase.
+			</p>	
+			<br/><br/>
+			<center><img src='${tg.url("/static/images/for_help/change_profile_ss.gif")}'/></center> 
+			<br/><br/>
+			<p>
+				A short summary of <b>other users profiles</b> is obtainable by positioning the cursor over a users' name whenever the name appears underlined (e.g. in the "Score" box or in chats).
+			</p>
+			<br/><br/>
+			<center><img src='${tg.url("/static/images/for_help/user_details_ss.gif")}'/></center> 
+	</div>
+	
+	<div py:if="page==7" class="content_fullHelpBody">
+		<h1>Getting your feed</h1>
+		<p>
+			If you prefer not to be logged into <b><i>spree</i></b> the whole time 
+			and you still like to be informed about incoming questions or starting chats you can subscribe to the <b><i>spree</i></b> feed. 
+			This comes in two flavors: as standard <b>RSS</b> feed 
+			and as <b>Google gadget</b>. 
+			<br/><br/>
+			Clicking on <img src='${tg.url("/static/images/for_help/RSS_feed.gif")}' align="absmiddle"/> will give you the opportunity to 
+			subscribe to the <b><i>spree</i> feed</b>. You can use 
+			any RSS reader you like but be aware that the refreshing period is set by the reader not by  <b><i>spree</i></b>! The RSS feed 
+			is personalized if your user name is provided in the url (the line where RSS is specified for your client application should look like 
+			<em style="color:blue">http://www.askspree.de/feed/rss2.0?user_name=robert</em>). Without your user_name specification RSS will not be 
+			personalized and you will get all newly asked questions.
+			<br/><br/>
+			Google gadget is obtainable for your iGoogle account and for Google desktop as well. 
+			For most browsers clicking on <img src='${tg.url("/static/images/add-to-google-plus.gif")}' align="absmiddle"/> will automatically <b>add the google gadget</b> to your account. 
+			If you would like to use the gadget in your Google desktop you need to: click on "Add gadgets" (plus sign 
+			in the upper right corner of Google desktop window), fill in 
+			<em style="color:blue">http://www.askspree.de/gadget/getGadget</em> in the 
+			search field in the right upper corner, click on search. The <b><i>spree</i></b> feed icon will appear in the window. 
+			You can then position on it and click on the "Add" button that appeared. The gadget will spring up. 
+		</p>
+		<br/><br/>
+		<center><img src='${tg.url("/static/images/for_help/gadget_ss.gif")}'/></center>
+		<br/><br/>
+		<p>	
+			After that you can change the options of the gadget according to your taste. 
+			The gadget can also be personalized when you enter your <b><i>spree</i></b> user name. 
+			The google gadget constantly refreshes its contents and keeps you up to date about the status of your <b><i>spree</i></b> inbox. 
+		</p>
+	</div>
+	
+</div>
+
+<xi:include href="login_master.html"/>
+</html>

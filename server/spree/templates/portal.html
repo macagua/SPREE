@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/"
+    xmlns:xi="http://www.w3.org/2001/XInclude" 
+	onclick="javascript:rememberUserActivity()" 
+	onkeypress="javascript:rememberUserActivity()">
+
+<link rel="alternate" type="application/rss+xml"
+    title="SPREE RSS" href="${tg.url('/feed/rss2.0')}?user_name=${user_name}"/>
+
+<div id="main_menu" py:match="main_menu">
+	<ul>
+		<li><a href="http://babelfish.altavista.com/" target="_blank" title="Use 'Babel Fish' for translation" style="cursor:pointer" ><span>Translate</span></a></li>
+		<li><a href="${tg.url('/about')}" title="What's spree about" style="cursor:pointer" ><span>About spree</span></a></li>
+		<li><a href="${tg.url('/help')}" title="Help" style="cursor:pointer" ><span>Help</span></a></li>
+		<li><a href="${tg.url('/logout')}" title="Logout"><span>Logout</span></a></li>
+	</ul>
+</div>
+
+<div id="feed_menu" py:match="feed_menu">
+	<div class="igoogle" title="Add spree to your personal google site" onClick="window.open('$gadget_address')">
+	</div>
+	<div class="rss" title="Subscribe to the spree RSS feed" onClick="window.open('${tg.url('/feed/rss2.0')}?user_name=${user_name}')">
+		<p>RSS</p>		
+	</div>
+	
+</div>
+
+
+<div id="statusline" py:match="status"> ${message}</div>
+
+<div id="menu" py:match="menu">
+	<ul>
+		<li id="searchMenuItem" lang="searchMenuItem"><a class="menulink_search" onclick="setContent('search','')" style="cursor:pointer" title="Start new search"><span >ASK EXPERT</span></a></li>
+		<li id="imMenuItem" lang="imMenuItem"><a onclick="setContent('im','')" style="cursor:pointer" title="Chat with expert"><span >Chat</span></a></li>
+		<li id="blogsMenuItem" lang="blogsMenuItem"><a onclick="setContent('blogs','-1')" style="cursor:pointer" title="Show note entries"><span >Notebook</span></a></li>
+		<!--li id="chatsMenuItem" lang="chatsMenuItem"><a onclick="setContent('chat_overview','',{'chat_type':'all'})" style="cursor:pointer" title="My chat history"><span >History</span></a></li-->
+		<li id="profileMenuItem" lang="profileMenuItem"><a onclick="setContent('preferences','')" style="cursor:pointer" title="Edit your settings"><span >MyProfile</span></a></li>
+		<li id="feedbackMenuItem" lang="feedbackMenuItem"><a onclick="setContent('feedback','')" style="cursor:pointer" title="Give us your feedback"><span >Feedback</span></a></li>
+	</ul>
+</div>
+
+<div id="content" py:match="content">
+</div>
+
+<div id="incoming" py:match="incoming" class="iobox">
+	<div class="iobox_header">
+		<h1>Incoming Questions</h1>
+	</div>
+	<div class="iobox_items">
+		<div>
+			<ul xmlns:py="http://genshi.edgewall.org/" id="incoming_box">
+				<py:for each="i in range(0,5)">
+					<li id="iboxentry_${i}" 
+						class="hidden"
+						lang=""
+						onclick="boxes_selectQuery('incoming', this)"  style="border-bottom:1px #ccc solid;">
+						<div class="iobox_statusimg">
+						</div>
+						<div class="arrow_up"></div>
+						<div class="iobox_text">
+							<h3>topic</h3>
+						</div>
+					</li>
+				</py:for>
+				<li id="incomingbox_noentriesField" class="noEntries hidden">
+					No entries.
+				</li>
+			</ul>
+		</div>
+		<div id="allquestionslink">
+			<a class="actionlink" 
+				style="float:right; padding: 5px 5px 5px 5px; font-size:10px;" 
+				onclick="setContent('allquestions');">Show all open questions</a>
+			<div class="arrow_down"></div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>	
+</div>
+
+<div id="outgoing" py:match="outgoing" class="iobox">
+	<div class="iobox_header">
+		<h1>My Questions</h1>
+	</div>
+	<div class="iobox_items"> 		
+		<ul xmlns:py="http://genshi.edgewall.org/" id="outgoing_box">
+			<py:for each="i in range(0,5)">
+				<li id="oboxentry_${i}"
+					class="hidden" 
+					lang=""
+					onclick="boxes_selectQuery('outgoing', this)">
+					<span class="iobox_statusimg">
+					</span>
+					<span class="arrow_down"></span>
+					<span class="iobox_text">
+						<h3>topic</h3>		
+					</span>
+				</li>		
+			</py:for>
+			<li id="outgoingbox_noentriesField" class="noEntries hidden">
+				No entries.
+			</li>
+		</ul>
+	</div>	
+</div>
+
+<div id="statistics" py:match="statistics" class="statistics_box" style="margin: 25px 0 0 15px;">
+		<div class="statistics_box_header">
+			<h1>Statistics</h1>
+		</div>
+		<div id="statisticsBoxContent">
+		</div>			
+</div>
+
+<div id="highscores" py:match="highscores" class="statistics_box" style="margin: 10px 0 0 15px;">
+		<div class="statistics_box_header">
+			<h1>Scores</h1>
+		</div>
+		<div id="highscores_listContent">
+		</div>
+</div>
+
+<div id="polling" py:match="polling" class="planbox" style="display:none;">
+		<div class="box_right">	  		
+		 	<h1>Polling</h1>
+			<ul class="box_statistics">
+				<li>
+					<p id="polling_interval">Interval: 0 ms</p>
+				</li>
+			</ul>
+		</div>	
+</div>
+
+<xi:include href="master.html"/>
+<xi:include href="submaster.html"/>
+
+<script TYPE="text/javascript">
+	var current_query_id = -1;
+	var lastSelectedClassname = "";
+	
+	var pollingManager = new PollingManager();
+	
+	addLoadEvent(init);
+	
+	/**
+	 * init
+	 */
+	function init(){
+		BrowserAdaptor.adapt();
+		
+		refreshBoxes.maxInterval = 10;
+		chat_refresh.maxInterval = 5;
+		search_refresh.maxInterval = 10;
+		
+		pollingManager.addFunction(refreshBoxes);
+		pollingManager.addFunction(refreshRightBoxes);
+		pollingManager.addFunction(chat_refresh);
+		pollingManager.addFunction(search_refresh);
+		pollingManager.addFunction(im.update);
+		polling_start();
+		
+		d = setContent("search","");
+	}
+	
+	/**
+	 * remembers whenever the user clicked or pressed a key
+	 */
+	function rememberUserActivity(){
+		pollingManager.rememberUserActivity();
+	}
+
+</script>
+
+</html>

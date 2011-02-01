@@ -1,0 +1,46 @@
+<div xmlns:py="http://genshi.edgewall.org/">
+	<div  class="content_header">	
+			<div align="right">
+	        	<a id="aIMUsersRef" class="actionlink actionlinkSelected" onclick="setContent('im');" title="Chat with spree user">Users</a>   
+				<a id="aIMHistory" class="actionlink" onclick="setContent('chat_overview','',{'chat_type':'all'})" title="Show chat history">History</a>
+	      	</div>
+	</div>
+	<div id="imContent">
+		<div class="content_body">
+			<div>
+				<div class="graybox imUsers" id = "imUsersBox" style="overflow:hidden;">
+					<p class="header">Users</p>
+					<div class="body">
+						<div id="imUserlist">
+							<img style="margin:150px 0 0 80px;" src='${tg.url("/static/images/loading_32.gif")}'/>					
+						</div>
+					</div>
+				</div>
+				<div id="imDetails">
+					<div>
+						<div class="graybox imDetails">
+							<div>
+								<p class="header">Details: </p>
+								<p style="margin: 5px 0 0 5px;"> Select a user from the list.</p>
+							</div>
+						</div>
+					</div>
+					<div class="graybox imChat">
+						<div>
+							<p class="header">Chat</p>
+							<p style="margin: 5px 0 0 5px;"> Select a user from the list.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+

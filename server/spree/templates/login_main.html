@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<div id="main_menu" py:match="main_menu">
+	<ul>
+		<li><a href='${tg.url("/")}' title="Home" style="cursor:pointer; text-decoration:underline;" ><span>Home</span></a></li>
+		<li><a href='${tg.url("/about")}' title="About SPREE" style="cursor:pointer;" ><span>About spree</span></a></li>
+		<li><a href='${tg.url("/help")}' title="Help" style="cursor:pointer;"><span>Help</span></a></li>
+		<li><a href='${tg.url("/registration/register")}' title="Become a SPREE member." style="cursor:pointer;" ><span>Registration</span></a></li>
+	</ul>
+</div>
+
+<div id="content" py:match="content" style="background:none; left: 150px; top: 0px; width: 670px; height: 600px; padding:0px;">
+	<img width="300" heigth="223" style="margin:75px 0px 10px 370px;" src='${tg.url("/static/images/community_small.gif")}'/>
+	<img style="position:absolute; top: 6px; left: 3px; cursor:pointer;" src='${tg.url("/static/images/playvideo.gif")}' onclick="location='${tg.url('/about?page=4')}';"/>
+	<div style="position:absolute; top: 70px; left: 80px; width: 275px; line-height:20px; color:#004173; font-weight: bold; font-size:12px;">
+		<p >
+			<i>spree</i> creates an active online community where everybody shares knowledge and benefits from other users' knowledge alike. 
+			The <i>spree</i> technology automatically channels user questions to competent fellow users who are willing to help.
+		</p>
+		<p style="margin-top:5px;">
+			<i>spree</i> enables real-time communication between knowledge seekers and appropriate experts via its chat interface. 
+			In addition, users may edit notebooks or store chat histories and thus contribute to a constantly growing knowledge base. 
+		</p>
+		<p style="margin-top:15px;">
+			Learn more <a href='${tg.url("/about")}'>about <i>spree</i></a> and watch the <a href='${tg.url("/about?page=4")}'><i>spree</i> video</a>.
+		</p>		
+	</div>
+	<img style="position:absolute; top: 330px; left: 365px; cursor:pointer;" 
+		src='${tg.url("/static/images/registerbutton.gif")}'
+		onclick="location=${tg.url('/registration/register')}"/>
+	<p style="position:absolute; top: 343px; left: 410px; cursor:pointer; font-size: 18px; font-weight:bold; color:#4A3418" 
+		onclick="location='${tg.url('/registration/register')};';">Register</p>
+</div>
+
+<xi:include href="login_master.html"/>
+</html>

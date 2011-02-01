@@ -1,0 +1,9 @@
+Thank you for registering at SPREE. In order to complete your
+registration, please open the following address in your favorite web 
+browser:
+
+%(validation_url)s
+
+If you did not register at SPREE, please disregard this email. 
+
+We appreciate your interest in SPREE.  See you soon.

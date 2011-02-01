@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<div id="main_menu" py:match="main_menu">
+	<ul>
+		<li><a href='${tg.url("/")}' title="Home" style="cursor:pointer;" ><span>Home</span></a></li>
+		<li><a href='${tg.url("/about")}' title="About SPREE" style="cursor:pointer; text-decoration:underline;" ><span>About spree</span></a></li>
+		<li><a href='${tg.url("/help")}' title="Help" style="cursor:pointer;"><span>Help</span></a></li>
+		<li py:if="tg.identity.anonymous"><a href='${tg.url("/registration/register")}' title="Become a SPREE member." style="cursor:pointer;" ><span>Registration</span></a></li>
+		<li py:if="not tg.identity.anonymous"><a href='${tg.url("/logout")}' title="Logout"><span>Logout</span></a></li>
+	</ul>
+</div>
+
+<div id="login" py:match="login">	
+</div>
+
+<div id="leftMenu" py:match="leftMenu" >
+	<ul>
+		<li py:if="not page==1" onclick="location ='${tg.url('/about')}';" title="What's spree about?">What's spree about?</li>
+		<li py:if="page==1" onclick="location ='${tg.url('/about')}';" title="What's spree about?" style="background-color:white;">What's spree about?</li>
+		<li py:if="not page==2" onclick="location ='${tg.url('/about?page=2')}';" title="How does spree work?">How does spree work?</li>
+		<li py:if="page==2" onclick="location = '${tg.url('/about?page=2')}';" title="How can spree help me?" style="background-color:white;">How does spree work?</li>
+		<li py:if="not page==3" onclick="location ='${tg.url('/about?page=3')}';" title="How can spree help me?">How can spree help me?</li>
+		<li py:if="page==3" onclick="location ='${tg.url('/about?page=3')}';" title="How can spree help me?" style="background-color:white;">How can spree help me?</li>
+		<li py:if="not page==4" onclick="location ='${tg.url('/about?page=4')}';" title="Watch the spree video">Watch the spree video</li>
+		<li py:if="page==4" onclick="location ='${tg.url('/about?page=4')}';" title="Watch the spree video" style="background-color:white;">Watch the spree video</li>
+		<li py:if="not page==5" onclick="location ='${tg.url('/about?page=5')}';" title="The spree team">The spree team</li>
+		<li py:if="page==5" onclick="location ='${tg.url('/about?page=5')}';" title="The spree team" style="background-color:white;">The spree team</li>
+	</ul>
+</div>
+
+<div id="content" py:match="content" style="margin-left:-30px;">
+	<div py:if="page==1" id="content_about" style="margin-left:20px; width:500px;">
+		<h1>What's spree about?</h1>
+		<p style="font-size: 12px; line-height:20px; color:#4A3418; margin-top: 10px;">
+			<b><i>Spree</i></b> is an expert search engine where users ask questions to find other participating users, who are knowledgeable in that area and willing to help. 
+			<br/><br/><b><i>Spree</i></b> facilitates real-time communication between users and experts via its chat interface.
+
+			<br/><br/><b><i>Spree</i></b> aims to create an active online community, especially in enterprises, 
+			where every user can ask questions or act as an expert helping fellow users.
+			<br/><br/><b><i>Spree</i></b> project is being jointly developed by Deutsche Telekom Laboratories and Dai-Labor, Technical University Berlin.
+		</p>
+		<img style="position:absolute; top: 310px; left: 345px; cursor:pointer;" 
+			src='${tg.url("/static/images/registerbutton.gif")}' 
+			onclick="location='${tg.url('/registration/register')}';"/>
+		<p style="position:absolute; top: 323px; left: 390px; cursor:pointer; font-size: 18px; font-weight:bold; color:#4A3418" 
+			onclick="location='${tg.url('/registration/register')}';">Register</p>
+	</div>
+	<div py:if="page==2" id="content_about" style="margin-left:20px; width:500px;">
+		<img src='${tg.url("/static/images/spree_logo.gif")}' style=""/>
+	</div>
+	<div py:if="page==3" id="content_about" style="margin-left:20px; width:500px;">
+		<h1>How can spree help me?</h1>
+		<p style="font-size: 12px; line-height:20px; color:#4A3418; margin-top: 10px;">
+			<b><i>Spree</i></b> helps you find answers you can't find on the web. When you ask a question in <b><i>spree</i></b>, it intelligently matches 
+			it to people who are knowledgeable about the subject. <br/><br/>
+			It's a great way to network with fellow professionals and get answers and advice from knowledgeable sources.
+		</p>
+		<img style="position:absolute; top: 310px; left: 345px; cursor:pointer;" 
+			src='${tg.url("/static/images/registerbutton.gif" )}'
+			onclick="location='${tg.url('/registration/register')}'"/>
+		<p style="position:absolute; top: 323px; left: 390px; cursor:pointer; font-size: 18px; font-weight:bold; color:#4A3418" 
+			onclick="location='${tg.url('/registration/register')}'">Register</p>
+	</div>
+	<div py:if="page==4" id="content_about_video">
+		<embed style="margin:20px 0 0 5px; border: 1px" src='${tg.url("/static/video/spreemovie.swf")}' width="560" height="395"
+			type="application/x-shockwave-flash"
+			pluginspage="http://www.macromedia.com/shockwave/download/index.cgi
+			?P1_Prod_Version=ShockwaveFlash">
+		</embed>
+	</div>
+	<div py:if="page==5" id="content_about" style="margin-left:20px; width:500px;">
+		<h1>The spree team</h1>
+		<div style="font-weight:bold; margin-top:50px;">
+			<div>
+				<div style="float:left; height:100px; margin-right:30px;">
+					<img src='${tg.url("/static/images/logos/tlabs_logo_small.gif")}'/>
+				</div>
+				<div style="float:left; width:200px;">
+					<p>Tansu Alpcan</p>
+					<p>Christian Bauckhage</p>
+					<p>Florian Metze</p>
+					<p>Sachin Agrawal</p>
+				</div>
+				<div style="font-weight:normal;">
+					<p><a href="http://www.deutsche-telekom-laboratories.de/~alpcan/">(View Profile)</a></p>
+					<p><a href="http://www.deutsche-telekom-laboratories.de/deutsch/content/4-mitarbeiter/43-research-scientists/4331-individuell/bauckhage_c.html">(View Profile)</a></p>
+					<p><a href="http://www.deutsche-telekom-laboratories.de/deutsch/content/4-mitarbeiter/43-research-scientists/4331-individuell/metze_f.html">(View Profile)</a></p>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+			<div style="height: 20px;"></div>
+			<div>
+				<div style="float:left; height:100px; margin-right:30px;">
+					<img src='${tg.url("static/images/logos/dai_logo_small.gif")}'/>
+				</div>
+				<div style="float:left; width:200px;">
+					<p>Robert Wetzker</p>
+					<p>Milena Ilic</p>
+					<p>Winfried Umbrath</p>
+					<p>Mitra Zare-Toori</p>
+				</div>
+				<div style="font-weight:normal;">
+					<p><a href="http://www.dai-labor.de/index.php?id=920">(View Profile)</a></p>
+					<p><a href="http://www.dai-labor.de/index.php?id=920">(View Profile)</a></p>
+					<p><a href="http://www.dai-labor.de/index.php?id=919">(View Profile)</a></p>
+					<p><a href="http://www.dai-labor.de/index.php?id=919">(View Profile)</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<xi:include href="login_master.html"/>
+
+</html>

@@ -1,0 +1,268 @@
+<div xmlns:py="http://genshi.edgewall.org/" id="feedbackContent">
+	<div class="content_fullBody" >
+		<h1 style="margin-bottom:5px;">Please help to improve spree and send us your opinion. </h1>
+		
+		<table id = "feedbacktable4boxes">
+			<tbody>
+				<tr>
+					<th>
+			           <label for="feedbackcontent_textField" class="feedbackcontent_label">Design:<br /><small>(optional)</small></label>
+					</th>
+					<td>
+		                <textarea id="feedbackcontent_design"
+						    rows="4"
+							class="feedbackcontent_textField"/>
+					</td>
+				</tr>
+				<tr>
+					<th>
+			           <label for="feedbackcontent_textField" class="feedbackcontent_label">Interaction:<br /><small>(optional)</small></label>
+					</th>
+					<td>
+		                <textarea id="feedbackcontent_interaction"
+						    rows="4"
+							class="feedbackcontent_textField"/>
+					</td>
+				</tr>
+				<tr>
+					<th>
+			           <label for="feedbackcontent_textField" class="feedbackcontent_label">Bugs:<br /><small>(optional)</small></label>
+					</th>
+					<td>
+		                <textarea id="feedbackcontent_bugs"
+						    rows="4"
+							class="feedbackcontent_textField"/>
+					</td>
+				</tr>
+				<tr>
+					<th>
+			           <label for="feedbackcontent_textField" class="feedbackcontent_label">Ideas:<br /><small>(optional)</small></label>
+					</th>
+					<td>
+		                <textarea id="feedbackcontent_ideas"
+						    rows="4"
+							class="feedbackcontent_textField"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align:right;">
+						<button class="btn" id="feedbackcontent_sendButton" type="button" value="" title="Send your opinion to SPREE" onclick="javascript:feedback_send2DB();">
+						<div class="btn">
+							<p class="btn">Send feedback</p>
+						</div>
+					</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		If you like please fill out this questionaire:
+		<form name="form" method="post" action="">
+		<table id = "feedbacktable" cellspacing="0">
+			<tbody>
+				<tr>
+					<th style="width:50%"></th>
+					<th>totally agree</th>
+					<th>agree</th>
+					<th>so-so</th>
+					<th>disagree</th>
+					<th>totally disagree</th>
+					<th>&nbsp;</th>
+					<th>do not know</th>
+				</tr>
+				<tr >
+					<td style="text-align:left;" >The registration process is easy to do.</td>
+					<td><input type="Radio" name="fast_registration" value="1" /></td>
+					<td><input type="Radio" name="fast_registration" value="2" /></td>
+					<td><input type="Radio" name="fast_registration" value="3" /></td>
+					<td><input type="Radio" name="fast_registration" value="4" /></td>
+					<td><input type="Radio" name="fast_registration" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="fast_registration" value="0" /></td>
+				</tr>
+				<tr><td style="text-align:left;" >The steps to ask a question are suitable.</td>
+					<td><input type="Radio" name="ask_many_steps" value="1" /></td>
+					<td><input type="Radio" name="ask_many_steps" value="2" /></td>
+					<td><input type="Radio" name="ask_many_steps" value="3" /></td>
+					<td><input type="Radio" name="ask_many_steps" value="4" /></td>
+					<td><input type="Radio" name="ask_many_steps" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="ask_many_steps" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >I frequently change the question category after the automatic classification of a question.</td>
+					<td><input type="Radio" name="change_automatic_classification" value="1" /></td>
+					<td><input type="Radio" name="change_automatic_classification" value="2" /></td>
+					<td><input type="Radio" name="change_automatic_classification" value="3" /></td>
+					<td><input type="Radio" name="change_automatic_classification" value="4" /></td>
+					<td><input type="Radio" name="change_automatic_classification" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="change_automatic_classification" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >It is easy to categorize questions using the tree.</td>
+					<td><input type="Radio" name="easy_categorization" value="1" /></td>
+					<td><input type="Radio" name="easy_categorization" value="2" /></td>
+					<td><input type="Radio" name="easy_categorization" value="3" /></td>
+					<td><input type="Radio" name="easy_categorization" value="4" /></td>
+					<td><input type="Radio" name="easy_categorization" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="easy_categorization" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >I found my wanted categories in the tree.</td>
+					<td><input type="Radio" name="right_categorization" value="1" /></td>
+					<td><input type="Radio" name="right_categorization" value="2" /></td>
+					<td><input type="Radio" name="right_categorization" value="3" /></td>
+					<td><input type="Radio" name="right_categorization" value="4" /></td>
+					<td><input type="Radio" name="right_categorization" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="right_categorization" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >My question was routed to a competent expert.</td>
+					<td><input type="Radio" name="competent_expert" value="1" /></td>
+					<td><input type="Radio" name="competent_expert" value="2" /></td>
+					<td><input type="Radio" name="competent_expert" value="3" /></td>
+					<td><input type="Radio" name="competent_expert" value="4" /></td>
+					<td><input type="Radio" name="competent_expert" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="competent_expert" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >I can easily see if there is a new answer for my question.</td>
+					<td><input type="Radio" name="see_answer" value="1" /></td>
+					<td><input type="Radio" name="see_answer" value="2" /></td>
+					<td><input type="Radio" name="see_answer" value="3" /></td>
+					<td><input type="Radio" name="see_answer" value="4" /></td>
+					<td><input type="Radio" name="see_answer" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="see_answer" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >I can easily see if there is a new question to me. </td>
+					<td><input type="Radio" name="see_question" value="1" /></td>
+					<td><input type="Radio" name="see_question" value="2" /></td>
+					<td><input type="Radio" name="see_question" value="3" /></td>
+					<td><input type="Radio" name="see_question" value="4" /></td>
+					<td><input type="Radio" name="see_question" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="see_question" value="0"  /></td>
+				</tr>
+				
+				<tr><td style="text-align:left;" >I quickly get an answer by an expert.</td>
+					<td><input type="Radio" name="quick_answer" value="1" /></td>
+					<td><input type="Radio" name="quick_answer" value="2" /></td>
+					<td><input type="Radio" name="quick_answer" value="3" /></td>
+					<td><input type="Radio" name="quick_answer" value="4" /></td>
+					<td><input type="Radio" name="quick_answer" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="quick_answer" value="0"  /></td>
+				</tr>
+				<tr>
+					<th style="width:50%"></th>
+					<th>totally agree</th>
+					<th>agree</th>
+					<th>so-so</th>
+					<th>disagree</th>
+					<th>totally disagree</th>
+					<th>&nbsp;</th>
+					<th>do not know</th>
+				</tr>
+				<tr><td style="text-align:left;">The answers of the experts are helpful.</td>
+					<td><input type="Radio" name="helpful_answer" value="1" /></td>
+					<td><input type="Radio" name="helpful_answer" value="2" /></td>
+					<td><input type="Radio" name="helpful_answer" value="3" /></td>
+					<td><input type="Radio" name="helpful_answer" value="4" /></td>
+					<td><input type="Radio" name="helpful_answer" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="helpful_answer" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;">The experts contacted by the system are usually online.</td>
+					<td><input type="Radio" name="expert_online" value="1" /></td>
+					<td><input type="Radio" name="expert_online" value="2" /></td>
+					<td><input type="Radio" name="expert_online" value="3" /></td>
+					<td><input type="Radio" name="expert_online" value="4" /></td>
+					<td><input type="Radio" name="expert_online" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="expert_online" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >No system errors occurred when I worked with the system. </td>
+					<td><input type="Radio" name="no_system_errors" value="1" /></td>
+					<td><input type="Radio" name="no_system_errors" value="2" /></td>
+					<td><input type="Radio" name="no_system_errors" value="3" /></td>
+					<td><input type="Radio" name="no_system_errors" value="4" /></td>
+					<td><input type="Radio" name="no_system_errors" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="no_system_errors" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >The system reacts quickly to mouse clicks. </td>
+					<td><input type="Radio" name="system_speed" value="1" /></td>
+					<td><input type="Radio" name="system_speed" value="2" /></td>
+					<td><input type="Radio" name="system_speed" value="3" /></td>
+					<td><input type="Radio" name="system_speed" value="4" /></td>
+					<td><input type="Radio" name="system_speed" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="system_speed" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >The system does not interfere with my everyday tasks. </td>
+					<td><input type="Radio" name="everyday" value="1" /></td>
+					<td><input type="Radio" name="everyday" value="2" /></td>
+					<td><input type="Radio" name="everyday" value="3" /></td>
+					<td><input type="Radio" name="everyday" value="4" /></td>
+					<td><input type="Radio" name="everyday" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="everyday" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >The terms and concepts used in the system are clear and unambiguous.  </td>
+					<td><input type="Radio" name="clear_design" value="1" /></td>
+					<td><input type="Radio" name="clear_design" value="2" /></td>
+					<td><input type="Radio" name="clear_design" value="3" /></td>
+					<td><input type="Radio" name="clear_design" value="4" /></td>
+					<td><input type="Radio" name="clear_design" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="clear_design" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >When executing functions, I have the feeling that the results are predictable. </td>
+					<td><input type="Radio" name="predictable_reaction" value="1" /></td>
+					<td><input type="Radio" name="predictable_reaction" value="2" /></td>
+					<td><input type="Radio" name="predictable_reaction" value="3" /></td>
+					<td><input type="Radio" name="predictable_reaction" value="4" /></td>
+					<td><input type="Radio" name="predictable_reaction" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="predictable_reaction" value="0"  /></td>
+				</tr>
+				<tr><td style="text-align:left;" >I needed a short time to learn how to use the system. </td>
+					<td><input type="Radio" name="how_to_use" value="1" /></td>
+					<td><input type="Radio" name="how_to_use" value="2" /></td>
+					<td><input type="Radio" name="how_to_use" value="3" /></td>
+					<td><input type="Radio" name="how_to_use" value="4" /></td>
+					<td><input type="Radio" name="how_to_use" value="5" /></td>
+					<td>&nbsp;</td>
+					<td><input type="Radio" name="how_to_use" value="0"  /></td>
+				</tr>
+				<tr>
+					<th style="width:50%"></th>
+					<th>totally agree</th>
+					<th>agree</th>
+					<th>so-so</th>
+					<th>disagree</th>
+					<th>totally disagree</th>
+					<th>&nbsp;</th>
+					<th>do not know</th>
+				</tr>
+				
+			</tbody>
+		</table>
+		</form>
+			
+		<table width="528px">
+			<tbody>
+			<tr>
+				<td style="text-align:right;">
+						<button class="btn" id="feedbackcontent_sendButton" type="button" value="" title="Send your opinion to SPREE" onclick="javascript:feedback_send2DB();">
+						<div class="btn">
+							<p class="btn">Send feedback and questionaire</p>
+						</div>
+					</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,1203 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.spree_model</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.spree_model</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/spree_model.py">c:\studium\spree\opensource\spree\spree_model.py</a></font></td></tr></table>
+    <p><tt>Table&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;wrappers&nbsp;needed&nbsp;by&nbsp;spree&nbsp;and&nbsp;methods&nbsp;provided&nbsp;by&nbsp;these&nbsp;<a href="__builtin__.html#object">object</a>.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="cPickle.html">cPickle</a><br>
+<a href="turbogears.config.html">turbogears.config</a><br>
+<a href="spree.constants.html">spree.constants</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+<a href="spree.util.matching.distances.html">spree.util.matching.distances</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+<a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+<a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+<a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+<a href="spree.util.mail.html">spree.util.mail</a><br>
+<a href="spree.model.html">spree.model</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.databases.mysql.html">sqlalchemy.databases.mysql</a><br>
+<a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+<a href="pkg_resources.html">pkg_resources</a><br>
+<a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+<a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+<a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+<a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="turbogears.html">turbogears</a><br>
+<a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.spree_model.html#QueryExpert">QueryExpert</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.spree_model.html#UserBlog">UserBlog</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.spree_model.html#BlogEntry">BlogEntry</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.spree_model.html#ChatMessage">ChatMessage</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.spree_model.html#ChatSession">ChatSession</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.spree_model.html#Feedback">Feedback</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.spree_model.html#FeedbackInt">FeedbackInt</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.spree_model.html#Query">Query</a>
+</font></dt><dt><font face="helvetica, arial"><a href="spree.spree_model.html#Settings">Settings</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BlogEntry">class <strong>BlogEntry</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;notebook&nbsp;entry.<br>
+&nbsp;<br>
+@todo:&nbsp;add&nbsp;indices<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.spree_model.html#BlogEntry">BlogEntry</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BlogEntry-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="BlogEntry-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="BlogEntry-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="BlogEntry-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="BlogEntry-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="BlogEntry-getCategoriesIDs"><strong>getCategoriesIDs</strong></a>(self)</dt><dd><tt>@return:&nbsp;this&nbsp;blogs&nbsp;categories&nbsp;as&nbsp;list&nbsp;of&nbsp;node&nbsp;ids</tt></dd></dl>
+
+<dl><dt><a name="BlogEntry-getCategoriesString"><strong>getCategoriesString</strong></a>(self)</dt><dd><tt>@return:&nbsp;All&nbsp;categories&nbsp;of&nbsp;the&nbsp;note&nbsp;as&nbsp;string.</tt></dd></dl>
+
+<dl><dt><a name="BlogEntry-getSimilarity"><strong>getSimilarity</strong></a>(self, subgraph)</dt><dd><tt>Computes&nbsp;similarity&nbsp;between&nbsp;this&nbsp;blog&nbsp;and&nbsp;a&nbsp;given&nbsp;subgraph<br>
+&nbsp;<br>
+@param&nbsp;subgraph:&nbsp;a&nbsp;second&nbsp;subgraph&nbsp;used&nbsp;in&nbsp;comparison&nbsp;process.<br>
+@return:&nbsp;The&nbsp;graph&nbsp;overlap&nbsp;measure&nbsp;to&nbsp;another&nbsp;graph.</tt></dd></dl>
+
+<dl><dt><a name="BlogEntry-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="BlogEntry-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="BlogEntry-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="BlogEntry-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="BlogEntry-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="BlogEntry-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="BlogEntry-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>average_rating</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>blogentry_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>columns</strong> = [Column('average_rating',Float(precision=10),default=ColumnDefault(0.0)), Column('blogentry_id',Integer(),primary_key=True,nullable=False), Column('created',DateTime(timezone=False),defaul...ilt-in method now of type object at 0x1E194748&gt;)), Column('lastChanged',DateTime(timezone=False),de...ilt-in method now of type object at 0x1E194748&gt;)), Column('no_ratings',Integer(),default=ColumnDefault(0)), Column('private',Integer(),default=ColumnDefault(0)), Column('profile',MSText(),default=ColumnDefault('')), Column('profile_calculated_subtree',MSText(),default=ColumnDefault('')), Column('profile_subtree',MSText(),default=ColumnDefault('')), Column('query_id',Integer(),ForeignKey('query.query_id')), Column('text',TEXT(length=20000,convert_unicode=False)), Column('title',TEXT(length=1000,convert_unicode=False)), Column('user_id',Integer(),ForeignKey('tg_user.user_id'))]</dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>lastChanged</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.spree_model.mapping&gt;</dl>
+
+<dl><dt><strong>no_ratings</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>private</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>profile</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>profile_calculated_subtree</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>profile_subtree</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>query_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>relatedQueries</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>relations</strong> = {'user': &lt;sqlalchemy.ext.activemapper.many_to_many object&gt;}</dl>
+
+<dl><dt><strong>table</strong> = Table('blogentry',DynamicMetaData(),Column('aver...ger(),ForeignKey('tg_user.user_id')),schema=None)</dl>
+
+<dl><dt><strong>text</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>title</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="BlogEntry-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ChatMessage">class <strong>ChatMessage</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>During&nbsp;the&nbsp;chat&nbsp;users&nbsp;are&nbsp;entering&nbsp;chat&nbsp;messages.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.spree_model.html#ChatMessage">ChatMessage</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ChatMessage-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatMessage-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatMessage-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatMessage-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatMessage-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatMessage-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatMessage-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatMessage-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatMessage-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatMessage-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="ChatMessage-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatMessage-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>chatSession</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>chat_message_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>columns</strong> = [Column('chat_message_id',Integer(),primary_key=True,nullable=False), Column('created',DateTime(timezone=False),defaul...ilt-in method now of type object at 0x1E194748&gt;)), Column('session_id',Integer(),ForeignKey('chatsession.session_id')), Column('text',TEXT(length=10000,convert_unicode=False)), Column('type',String(length=50,convert_unicode=False)), Column('user_id',Integer(),ForeignKey('tg_user.user_id'))]</dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.spree_model.mapping&gt;</dl>
+
+<dl><dt><strong>relations</strong> = {}</dl>
+
+<dl><dt><strong>session_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>table</strong> = Table('chatmessage',DynamicMetaData(),Column('ch...ger(),ForeignKey('tg_user.user_id')),schema=None)</dl>
+
+<dl><dt><strong>text</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>type</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="ChatMessage-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ChatSession">class <strong>ChatSession</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;chat&nbsp;session&nbsp;is&nbsp;created&nbsp;when&nbsp;an&nbsp;expert&nbsp;accepts&nbsp;a&nbsp;question,&nbsp;and&nbsp;it&nbsp;consists&nbsp;of&nbsp;a&nbsp;list&nbsp;of&nbsp;chat&nbsp;messages.<br>
+&nbsp;<br>
+@todo:&nbsp;add&nbsp;indices&nbsp;(status,&nbsp;created,&nbsp;rating?)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.spree_model.html#ChatSession">ChatSession</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ChatSession-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatSession-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatSession-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatSession-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatSession-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatSession-getExpert"><strong>getExpert</strong></a>(self)</dt><dd><tt>@return:&nbsp;user&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;of&nbsp;the&nbsp;expert&nbsp;who&nbsp;is&nbsp;chatting</tt></dd></dl>
+
+<dl><dt><a name="ChatSession-getLastMessage"><strong>getLastMessage</strong></a>(self)</dt><dd><tt>@return:&nbsp;last&nbsp;message&nbsp;for&nbsp;a&nbsp;given&nbsp;chat&nbsp;session</tt></dd></dl>
+
+<dl><dt><a name="ChatSession-getUser"><strong>getUser</strong></a>(self)</dt><dd><tt>@return:&nbsp;user&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;of&nbsp;the&nbsp;user&nbsp;who&nbsp;is&nbsp;chatting</tt></dd></dl>
+
+<dl><dt><a name="ChatSession-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatSession-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatSession-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatSession-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="ChatSession-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="ChatSession-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="ChatSession-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>columns</strong> = [Column('created',DateTime(timezone=False),defaul...ilt-in method now of type object at 0x1E194748&gt;)), Column('expert_id',Integer(),ForeignKey('tg_user.user_id')), Column('query_id',Integer(),ForeignKey('query.query_id')), Column('rating',Integer(),default=ColumnDefault(0)), Column('session_id',Integer(),primary_key=True,nullable=False), Column('status',String(length=50,convert_unicode=False)), Column('user_id',Integer(),ForeignKey('tg_user.user_id'))]</dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>expert_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.spree_model.mapping&gt;</dl>
+
+<dl><dt><strong>messages</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>query</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>query_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>rating</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>relations</strong> = {'messages': &lt;sqlalchemy.ext.activemapper.one_to_many object&gt;}</dl>
+
+<dl><dt><strong>session_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>status</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>table</strong> = Table('chatsession',DynamicMetaData(),Column('cr...ger(),ForeignKey('tg_user.user_id')),schema=None)</dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="ChatSession-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Feedback">class <strong>Feedback</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Hold&nbsp;information&nbsp;about&nbsp;user&nbsp;entered&nbsp;feedback<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.spree_model.html#Feedback">Feedback</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Feedback-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Feedback-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Feedback-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Feedback-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Feedback-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Feedback-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Feedback-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Feedback-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Feedback-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Feedback-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="Feedback-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Feedback-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>bugs</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>columns</strong> = [Column('bugs',TEXT(length=10000,convert_unicode=False)), Column('created',DateTime(timezone=False),defaul...ilt-in method now of type object at 0x1E194748&gt;)), Column('design',TEXT(length=10000,convert_unicode=False)), Column('feedback_id',Integer(),primary_key=True,nullable=False), Column('ideas',TEXT(length=10000,convert_unicode=False)), Column('interaction',TEXT(length=10000,convert_unicode=False)), Column('user_id',Integer(),ForeignKey('tg_user.user_id'))]</dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>design</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>feedback_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>ideas</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>interaction</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.spree_model.mapping&gt;</dl>
+
+<dl><dt><strong>relations</strong> = {}</dl>
+
+<dl><dt><strong>table</strong> = Table('feedback',DynamicMetaData(),Column('bugs'...ger(),ForeignKey('tg_user.user_id')),schema=None)</dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="Feedback-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FeedbackInt">class <strong>FeedbackInt</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;information&nbsp;about&nbsp;users&nbsp;feeback&nbsp;form&nbsp;selections<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.spree_model.html#FeedbackInt">FeedbackInt</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="FeedbackInt-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="FeedbackInt-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="FeedbackInt-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="FeedbackInt-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="FeedbackInt-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="FeedbackInt-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="FeedbackInt-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="FeedbackInt-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="FeedbackInt-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="FeedbackInt-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="FeedbackInt-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="FeedbackInt-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>ask_many_steps</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>change_automatic_classification</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>clear_design</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>columns</strong> = [Column('ask_many_steps',Integer(),default=ColumnDefault(0)), Column('change_automatic_classification',Integer(),default=ColumnDefault(0)), Column('clear_design',Integer(),default=ColumnDefault(0)), Column('competent_expert',Integer(),default=ColumnDefault(0)), Column('created',DateTime(timezone=False),defaul...ilt-in method now of type object at 0x1E194748&gt;)), Column('easy_categorization',Integer(),default=ColumnDefault(0)), Column('everyday',Integer(),default=ColumnDefault(0)), Column('expert_online',Integer(),default=ColumnDefault(0)), Column('fast_registration',Integer(),default=ColumnDefault(0)), Column('feedback_int_id',Integer(),primary_key=True,nullable=False), Column('helpful_answer',Integer(),default=ColumnDefault(0)), Column('how_to_use',Integer(),default=ColumnDefault(0)), Column('no_system_errors',Integer(),default=ColumnDefault(0)), Column('predictable_reaction',Integer(),default=ColumnDefault(0)), Column('quick_answer',Integer(),default=ColumnDefault(0)), Column('right_categorization',Integer(),default=ColumnDefault(0)), Column('see_answer',Integer(),default=ColumnDefault(0)), Column('see_question',Integer(),default=ColumnDefault(0)), Column('system_speed',Integer(),default=ColumnDefault(0)), Column('user_id',Integer(),ForeignKey('tg_user.user_id'))]</dl>
+
+<dl><dt><strong>competent_expert</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>easy_categorization</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>everyday</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>expert_online</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>fast_registration</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>feedback_int_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>helpful_answer</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>how_to_use</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.spree_model.mapping&gt;</dl>
+
+<dl><dt><strong>no_system_errors</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>predictable_reaction</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>quick_answer</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>relations</strong> = {}</dl>
+
+<dl><dt><strong>right_categorization</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>see_answer</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>see_question</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>system_speed</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>table</strong> = Table('feedbackint',DynamicMetaData(),Column('as...ger(),ForeignKey('tg_user.user_id')),schema=None)</dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="FeedbackInt-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Query">class <strong>Query</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;necessary&nbsp;information&nbsp;about&nbsp;queries&nbsp;posted&nbsp;by&nbsp;the&nbsp;users.<br>
+&nbsp;<br>
+@todo:&nbsp;Add&nbsp;indices&nbsp;(isDirect,&nbsp;status!,&nbsp;created!)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.spree_model.html#Query">Query</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Query-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Query-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Query-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Query-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Query-findExperts"><strong>findExperts</strong></a>(self, dont_ask<font color="#909090">=0</font>, n_max_experts<font color="#909090">=5</font>)</dt><dd><tt>Identifies&nbsp;and&nbsp;adds&nbsp;the&nbsp;experts&nbsp;to&nbsp;this&nbsp;query&nbsp;which&nbsp;could&nbsp;answered&nbsp;the&nbsp;question.<br>
+&nbsp;<br>
+@param&nbsp;dont_ask:&nbsp;carries&nbsp;the&nbsp;user_id&nbsp;of&nbsp;the&nbsp;user&nbsp;who&nbsp;had&nbsp;already&nbsp;asnwered&nbsp;the&nbsp;question&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(so&nbsp;he&nbsp;is&nbsp;left&nbsp;out&nbsp;if&nbsp;the&nbsp;question&nbsp;is&nbsp;asked&nbsp;again).<br>
+@param&nbsp;n_max_experts:&nbsp;defines&nbsp;how&nbsp;many&nbsp;top&nbsp;experts&nbsp;should&nbsp;be&nbsp;fetched.</tt></dd></dl>
+
+<dl><dt><a name="Query-findRelatedBlogs"><strong>findRelatedBlogs</strong></a>(self, n_max_blogs<font color="#909090">=5</font>)</dt><dd><tt>Identifies&nbsp;and&nbsp;adds&nbsp;the&nbsp;related&nbsp;blogs&nbsp;to&nbsp;the&nbsp;query&nbsp;based&nbsp;on&nbsp;the&nbsp;query's&nbsp;profile.<br>
+&nbsp;<br>
+@param&nbsp;n_max_blogs:&nbsp;defines&nbsp;the&nbsp;number&nbsp;of&nbsp;top&nbsp;matching&nbsp;blogs&nbsp;that&nbsp;should&nbsp;be&nbsp;fetched.</tt></dd></dl>
+
+<dl><dt><a name="Query-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Query-getCategoriesString"><strong>getCategoriesString</strong></a>(self)</dt><dd><tt>@return:&nbsp;All&nbsp;categories&nbsp;of&nbsp;the&nbsp;query&nbsp;as&nbsp;string.</tt></dd></dl>
+
+<dl><dt><a name="Query-getSimilarity"><strong>getSimilarity</strong></a>(self, subgraph)</dt><dd><tt>Computes&nbsp;similarity&nbsp;between&nbsp;query&nbsp;and&nbsp;the&nbsp;given&nbsp;subgraph<br>
+&nbsp;<br>
+@param&nbsp;subgraph:&nbsp;a&nbsp;second&nbsp;subgraph&nbsp;used&nbsp;in&nbsp;comparison&nbsp;process.<br>
+@return:&nbsp;The&nbsp;graph&nbsp;overlap&nbsp;measure&nbsp;to&nbsp;another&nbsp;graph.</tt></dd></dl>
+
+<dl><dt><a name="Query-getTopicString"><strong>getTopicString</strong></a>(self, out<font color="#909090">=True</font>, maxlength<font color="#909090">=1000</font>)</dt><dd><tt>Returns&nbsp;the&nbsp;queries&nbsp;topic&nbsp;string.<br>
+The&nbsp;string&nbsp;varies&nbsp;if&nbsp;the&nbsp;query&nbsp;goes&nbsp;directly&nbsp;to&nbsp;a&nbsp;certain&nbsp;user.<br>
+&nbsp;<br>
+@param&nbsp;out:&nbsp;true&nbsp;if&nbsp;it&nbsp;is&nbsp;outgoing&nbsp;query<br>
+@param&nbsp;maxLength:&nbsp;max&nbsp;length&nbsp;of&nbsp;the&nbsp;topic&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="Query-informExperts"><strong>informExperts</strong></a>(self, *args)</dt><dd><tt>Fills&nbsp;a&nbsp;template&nbsp;of&nbsp;a&nbsp;mail&nbsp;which&nbsp;will&nbsp;be&nbsp;sent&nbsp;to&nbsp;the&nbsp;expert.<br>
+&nbsp;<br>
+@parem&nbsp;*args:&nbsp;args[0]&nbsp;contains&nbsp;server&nbsp;address.</tt></dd></dl>
+
+<dl><dt><a name="Query-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Query-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Query-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Query-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Query-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="Query-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Query-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>chatSession</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>columns</strong> = [Column('created',DateTime(timezone=False),defaul...ilt-in method now of type object at 0x1E194748&gt;)), Column('isDirect',Integer(),default=ColumnDefault(0)), Column('profile',MSText(),default=ColumnDefault('')), Column('profile_calculated_subtree',MSText(),default=ColumnDefault('')), Column('profile_subtree',MSText(),default=ColumnDefault('')), Column('query_id',Integer(),primary_key=True,nullable=False), Column('status',String(length=50,convert_unicode=False)), Column('text',TEXT(length=40000,convert_unicode=False)), Column('topic',String(length=250,convert_unicode=False)), Column('user_id',Integer(),ForeignKey('tg_user.user_id'))]</dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>experts</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>isDirect</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.spree_model.mapping&gt;</dl>
+
+<dl><dt><strong>profile</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>profile_calculated_subtree</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>profile_subtree</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>query_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>relatedBlogs</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>relations</strong> = {'chatSession': &lt;sqlalchemy.ext.activemapper.one_to_one object&gt;, 'experts': &lt;sqlalchemy.ext.activemapper.many_to_many object&gt;, 'relatedBlogs': &lt;sqlalchemy.ext.activemapper.many_to_many object&gt;, 'user': &lt;sqlalchemy.ext.activemapper.one_to_one object&gt;}</dl>
+
+<dl><dt><strong>status</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>table</strong> = Table('query',DynamicMetaData(),Column('created'...ger(),ForeignKey('tg_user.user_id')),schema=None)</dl>
+
+<dl><dt><strong>text</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>topic</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="Query-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="QueryExpert">class <strong>QueryExpert</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;relationship&nbsp;between&nbsp;asked&nbsp;query&nbsp;and&nbsp;experts&nbsp;that&nbsp;could&nbsp;answer&nbsp;it.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="QueryExpert-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>x.<a href="#QueryExpert-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;x.__class__.__doc__&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'QueryExpert' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>expert</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>expert_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>query</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>query_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>status</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Settings">class <strong>Settings</strong></a>(<a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>User&nbsp;settings.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.spree_model.html#Settings">Settings</a></dd>
+<dd><a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Settings-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Settings-delete"><strong>delete</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Settings-expire"><strong>expire</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Settings-expunge"><strong>expunge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Settings-flush"><strong>flush</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Settings-merge"><strong>merge</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Settings-refresh"><strong>refresh</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Settings-save"><strong>save</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Settings-save_or_update"><strong>save_or_update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<dl><dt><a name="Settings-update"><strong>update</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="Settings-count"><strong>count</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-count_by"><strong>count_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-get"><strong>get</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-get_by"><strong>get_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-instances"><strong>instances</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-join_to"><strong>join_to</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-join_via"><strong>join_via</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-options"><strong>options</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><strong>query</strong> <em>lambda</em> cls<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-select"><strong>select</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-select_by"><strong>select_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-selectfirst"><strong>selectfirst</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-selectfirst_by"><strong>selectfirst_by</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<dl><dt><a name="Settings-selectone"><strong>selectone</strong></a>(self, *args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sqlalchemy.ext.activemapper.html#ActiveMapperMeta">sqlalchemy.ext.activemapper.ActiveMapperMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>anonymous</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>columns</strong> = [Column('anonymous',Integer(),default=ColumnDefault(0)), Column('created',DateTime(timezone=False),defaul...ilt-in method now of type object at 0x1E194748&gt;)), Column('email',Integer(),default=ColumnDefault(1)), Column('iFtype',Integer(),default=ColumnDefault(0)), Column('id',Integer(),primary_key=True,nullable=False), Column('newsletter',Integer(),default=ColumnDefault(1)), Column('user_id',Integer(),ForeignKey('tg_user.user_id'))]</dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>email</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>iFtype</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>mapper</strong> = &lt;sqlalchemy.orm.mapper.Mapper object&gt;</dl>
+
+<dl><dt><strong>mapping</strong> = &lt;class spree.spree_model.mapping&gt;</dl>
+
+<dl><dt><strong>newsletter</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>relations</strong> = {}</dl>
+
+<dl><dt><strong>table</strong> = Table('settings',DynamicMetaData(),Column('anony...ger(),ForeignKey('tg_user.user_id')),schema=None)</dl>
+
+<dl><dt><strong>user</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<hr>
+Methods inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><a name="Settings-set"><strong>set</strong></a>(self, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="sqlalchemy.ext.activemapper.html#ActiveMapper">sqlalchemy.ext.activemapper.ActiveMapper</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'sqlalchemy.ext.activemapper.ActiveMapperMeta'&gt;</dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'ActiveMapper' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>mysql_engine</strong> = 'InnoDB'</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UserBlog">class <strong>UserBlog</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;relationship&nbsp;between&nbsp;users&nbsp;and&nbsp;the&nbsp;notes&nbsp;they&nbsp;have&nbsp;rated.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="UserBlog-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>x.<a href="#UserBlog-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;x.__class__.__doc__&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'UserBlog' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>blog</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>blogentry_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>created</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>rating</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>user_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-create_spree_tables"><strong>create_spree_tables</strong></a>()</dt><dd><tt>Creates&nbsp;the&nbsp;appropriate&nbsp;database&nbsp;tables.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()<br>
+<strong>metadata</strong> = DynamicMetaData()<br>
+<strong>query_blogentry_table</strong> = Table('query_blogentry',DynamicMetaData(),Column...sion=10),default=ColumnDefault(1.0)),schema=None)<br>
+<strong>query_expert_table</strong> = Table('query_expert',DynamicMetaData(),Column('q...,default=ColumnDefault('HANDSHAKE')),schema=None)<br>
+<strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;<br>
+<strong>user_blog</strong> = Table('user_blog',DynamicMetaData(),Column('user... now of type object at 0x1E194748&gt;)),schema=None)</td></tr></table>
+</body></html>

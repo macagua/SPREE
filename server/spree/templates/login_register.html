@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<div id="main_menu" py:match="main_menu">
+		<ul>
+			<li><a href='${tg.url("/")}' title="Home" style="cursor:pointer;" ><span>Home</span></a></li>
+			<li><a href='${tg.url("/about")}' title="About SPREE" style="cursor:pointer;" ><span>About spree</span></a></li>
+			<li><a href='${tg.url("/help")}' title="Help" style="cursor:pointer;"><span>Help</span></a></li>
+			<li><a href='${tg.url("/registration/register")}' title="Become a SPREE member." style="cursor:pointer; text-decoration:underline;" ><span>Registration</span></a></li>
+		</ul>
+	</div>
+	
+	<div id="login" py:match="login">	
+	</div>
+	
+	<div id="leftMenu" py:match="leftMenu" >
+		<ul> 
+			<li style="background-color:white; cursor:default;">1. User information</li>
+			<li style="cursor:default;">2. Profile generation</li>
+			<li style="cursor:default;">3. Profile refinement</li>
+		</ul>
+	</div>
+	
+	<div id="content" py:match="content" style="margin-left:-30px;">
+		<xi:include href="register_new.html"/>
+	</div>
+	
+	<xi:include href="submaster.html"/>
+	<xi:include href="login_master.html"/>
+</html>

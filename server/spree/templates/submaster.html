@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/"
+    xmlns:xi="http://www.w3.org/2001/XInclude" py:strip="">
+
+<script type="text/javascript">
+	tgurl = "${tg.url('/')}";
+	if(tgurl.charAt(tgurl.length-1) == '/'){
+			tgurl = tgurl.substring(0,tgurl.length-1);
+	}
+	
+	djConfig = { isDebug: false, preventBackButtonFix: false };
+	pic1= new Image();
+	pic1.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_blank.gif")}';
+	pic2= new Image();
+	pic2.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_grid_c.gif")}';
+	pic3= new Image();
+	pic3.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_grid_t.gif")}';
+	pic4= new Image();
+	pic4.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_grid_v.gif")}';
+	pic5= new Image();
+	pic5.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_grid_x.gif")}';
+	pic6= new Image();
+	pic6.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_expand_minus.gif")}';
+	pic7= new Image();
+	pic7.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_expand_plus.gif")}';
+	pic8= new Image();
+	pic8.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_grid_l.gif")}';
+	pic9= new Image();
+	pic9.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_grid_p.gif")}';
+	pic10= new Image();
+	pic10.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_grid_y.gif")}';
+	pic11= new Image();
+	pic11.src='${tg.url("/static/javascript/libs/dojo/src/widget/templates/images/Tree/treenode_grid_z.gif")}';
+	pic12= new Image();
+	pic12.src='${tg.url("/static/images/green_bullet.gif")}';
+	pic13= new Image();
+	pic13.src='${tg.url("/static/images/gray_bullet.gif")}';
+	
+</script>
+<script type="text/javascript" src='${tg.url("/static/javascript/libs/dojo/dojo.js")}'></script>
+<script src='${tg.url("/static/javascript/libimports.js")}'></script>
+<script py:if="isProd" src='${tg.url("/static/javascript/packed/spree.js")}'></script>
+<script py:if="not isProd" src='${tg.url("/static/javascript/content/profile.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/content/preferences.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/content/content.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/content/search.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/content/chat.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/content/im.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/widgets/tooltip.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/content/blog.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/content/feedback.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/boxes/boxes.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/utils/datetools.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/utils/dom.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/utils/blinking.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/utils/arrays.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/management/PollingManager.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/management/BrowserDetector.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/management/BrowserAdaptor.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/management/ApplicationState.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/management/HistoryManager.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/management/CallManager.js")}'/>
+<script py:if="not isProd" src='${tg.url("/static/javascript/content/registration.js")}'/>
+
+
+<body>
+	<div id="ratePopup" toggle="fade" style="display:none;">
+		<p>Please specify your knowledge level about <span id="ratepopuplabel"></span>:</p>
+		<div id="popupRatingBar">
+			<a class="ratingBarElement" onclick="ratePopup(event,1);" onmouseout="delightBar(event, 1);" onmouseover="highlightBar(event, 1);" title="Basic"><div id="prate1"></div></a>
+			<a class="ratingBarElement" onclick="ratePopup(event,2);" onmouseout="delightBar(event, 2);" onmouseover="highlightBar(event, 2);" title="Mediocre"><div id="prate2"></div></a>
+			<a class="ratingBarElement" onclick="ratePopup(event,3);" onmouseout="delightBar(event, 3);" onmouseover="highlightBar(event, 3);" title="Fair"><div id="prate3"></div></a>
+			<a class="ratingBarElement" onclick="ratePopup(event,4);" onmouseout="delightBar(event, 4);" onmouseover="highlightBar(event, 4);" title="Good"><div id="prate4"></div></a>
+			<a class="ratingBarElement" onclick="ratePopup(event,5);" onmouseout="delightBar(event, 5);" onmouseover="highlightBar(event, 5);" title="Perfect"><div id="prate5"></div></a>
+			<input type="hidden" id="ratePopupRating"></input>
+			<input type="hidden" id="ratePopupTitle"></input>
+			<input type="hidden" id="ratePopupObjectId"></input>
+			<span class="ratingBarTitle"></span>
+		</div>
+		
+		<input id="btnPopupRateCancel" class="btnSubmitProfile btnRatePopup" type="button" value="Cancel" onclick="javascript:popupRateCancel()"/>
+		<input id="btnPopupRateOk" class="btnSubmitProfile btnRatePopup" type="button" value="Ok" onclick="javascript:popupRateOk()"/>
+	</div>
+	<div id="loadingScreen" class="content" style="display:none;">
+		<br /><br /><br /><br /><br /><br /><br /><br />
+		<h3 style="text-align:center;">Please wait while loading...</h3>
+		<br /><br /><br />
+		<p style="text-align:center;">	
+			<img src='${tg.url("/static/images/loading_32.gif")}'/>
+		</p>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="DialogContent" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<form onsubmit="return false;">
+			<h1 align="center">Chat was finished</h1>
+	   		<p style="margin-top: 3px; text-align:center;">Please help us to make spree better.</p>
+			<p align="center">Rate this chat:</p>
+			<p style="padding: 10px 0 0 90px">
+					<input type="radio" name="chat_rating_radio" id="chat_rating_radio_5" value="5"/>Expert<br />
+		            <input type="radio" name="chat_rating_radio" id="chat_rating_radio_4" value="4"/>Excellent<br />
+		            <input type="radio" name="chat_rating_radio" id="chat_rating_radio_3" value="3" checked="checked"/>Good<br />
+		            <input type="radio" name="chat_rating_radio" id="chat_rating_radio_2" value="2"/>Medium<br />
+		            <input type="radio" name="chat_rating_radio" id="chat_rating_radio_1" value="0"/>Poor<br /><br />
+			</p>
+			<p style="margin-left: 70px;">
+				<input id="chat_dialog_hider" type="button" value="Save" onclick="chat_rate(current_query_id)"/>
+				<input id="chat_dialog_cancel" type="button" value="Rate later" onclick="chat_rate_cancelDialog()"/>
+			</p>
+		</form>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="DialogContent_blog" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<form onsubmit="return false;">
+			<h1 align="center">Rate this blog</h1>
+			<p style="margin-top: 3px; text-align:center;">Please help us to make spree better.</p>
+			<!--<p align="center">How would you rate this blog?</p>-->
+			<p style="padding: 10px 0 0 90px">
+				<input type="radio" name="blog_rating_radio" id="blog_rating_radio_5" value="5"/>Expert<br />
+	            <input type="radio" name="blog_rating_radio" id="blog_rating_radio_4" value="4"/>Excellent<br />
+	            <input type="radio" name="blog_rating_radio" id="blog_rating_radio_3" value="3" checked="checked"/>Good<br />
+	            <input type="radio" name="blog_rating_radio" id="blog_rating_radio_2" value="2"/>Medium<br />
+	            <input type="radio" name="blog_rating_radio" id="blog_rating_radio_1" value="0"/>Poor<br /><br />
+			</p>
+			<p style="margin-left: 70px;">
+				<input id="blog_dialog_hider" type="button" value="Save" onclick="blog_rate(current_blogentry_id)"/>
+				<input id="blog_dialog_cancel" type="button" value="Cancel" onclick="blog_rate_cancelDialog()"/>
+			</p>
+		</form>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="Dialog_Disconnected" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<form onsubmit="return false;">
+			<h1>Warning: Lost connection to the SPREE server!</h1>
+			<p>The spree server is not responding. Please check your internet connection.</p>
+			<p>Press "F5" to refresh this page once the connection was restored.</p>
+		</form>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="Dialog_search" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<form onsubmit="return false;">
+			<h1 align="center">Warning:</h1>
+			<p style="margin: 3px 0px 10px 0px; text-align:center;">Please add more information to your question!</p>
+			<p style="margin-left: 130px;">
+				<input id="searchDialog" type="button" value="OK" onclick="search_closeDialog()"/>
+			</p>
+		</form>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="Dialog_searchExpert" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<form onsubmit="return false;">
+			<h1 align="center">Warning:</h1>
+			<p style="margin-top: 3px; text-align:center;">This question does not provide the amount of information needed to find an expert.</p>
+			<p style="margin-bottom: 10px; text-align:center;">Please add a better description or choose a category by hand!</p>
+			<p style="margin-left: 250px;">
+				<input id="searchExpert_Dialog" type="button" value="OK" onclick="searchExpert_closeDialog()"/>
+			</p>
+		</form>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="Dialog_createBlog" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<form onsubmit="return false;">
+			<h1 align="center">Warning:</h1>
+			<p style="margin: 3px 0px 10px 0px; text-align:center;">Please add a title!</p>
+			<p style="margin-left: 40px;">
+				<input id="createBlog_Dialog" type="button" value="OK" onclick="createBlog_closeDialog()"/>
+			</p>
+		</form>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="Dialog_feedback" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<form onsubmit="return false;">
+			<h1 align="center">Warning:</h1>
+			<p style="margin: 3px 0px 10px 0px; text-align:center;">Please add some content!</p>
+			<p style="margin-left: 70px;">
+				<input id="feedback_Dialog" type="button" value="OK" onclick="feedback_closeDialog()"/>
+			</p>
+		</form>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="Dialog_profile" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<form onsubmit="return false;">
+			<h1 align="center">Your profile has been saved.</h1>
+			<p style="margin: 10px 0px 0px 100px;">
+				<input id="profileDialog" type="button" value="OK" onclick="profile_closeDialog()"/>
+			</p>
+		</form>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="dialogDynamic" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<div id="iecenterdiv">
+		<form onsubmit="return false;">
+			<h1 align="center" id="dialogDynamicMessage"></h1>
+			<p align="center" style="margin-top: 10px;">
+				<div style="width:40px;margin:0px auto;">
+				<input id="dynamicDialogBtn" type="button" value="OK" onclick="preferences.closeDialog()"/>
+				</div>
+			</p>
+		</form>
+		</div>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="dialogFeedback" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<form onsubmit="return false;">
+			<h1 align="center">Thank you - Your feedback was sent to SPREE</h1>
+			<p style="margin: 10px 0px 0px 160px;">
+				<input id="feedbackDialog" type="button" value="OK" onclick="feedback_close_dialog()"/>
+			</p>
+		</form>
+	</div>
+	<div dojoType="dialog" style="display:none;" id="dialogDirectChat" bgColor="white" bgOpacity="0.5" toggle="fade" toggleDuration="250">
+		<form onsubmit="return false;">
+			<h1 align="center">Please add some information for the expert:</h1>
+			<p align="center">(optional)</p>
+			<div style="margin-left: 25px;">
+				<p style="margin-top:10px;"><b>Question:</b></p>
+	            <textarea id="dialogDirectChatQuestionField"
+				    rows="8"
+					style="width:300px;"
+					onkeyup="javascript:im.autoCompleteTopic(this.value)">${text}</textarea>
+				<p style="margin-top:10px;"><b>Subject:</b></p>
+				<input id = "dialogDirectChatSubjectField" 
+					type="text" 
+					style="width:300px;"
+					lang="0"
+					maxlength="50"
+					onfocus="javascript:this.lang='1';"/>
+			</div>
+			<p style="margin: 10px 0px 0px 125px;">
+				<input type="button" id="dialogDirectChatCancel" value="Cancel" onclick="im.cancelDialog()"/>
+				<input type="button" id="dialogDirectChatSend" value="Start Chat" onclick="im.closeDialog()"/>
+			</p>
+		</form>
+	</div>
+</body>
+
+<script type="text/javascript">
+	
+	var historyManager = new HistoryManager();
+	/**
+	 * Replaces a node in the dom tree with the given result.
+	 * 
+	 * @param {Object} nodeID - the node div id
+	 * @param {Object} result - the result containing the new node html
+	 */
+	function replaceNode(nodeID, result){
+		try{
+			getElement(nodeID).innerHTML = result.responseText;
+		}
+		catch(e){
+			alert("replaceNodeException: " + e.name + " " + e.message);
+		}
+		
+		return result;
+
+	}
+	
+	/**
+	 * do a request to the given url. the result is assumed to be valig html
+	 * as it will be used to replaced the specified node.
+	 * 
+	 * @param {Object} url - request url
+	 * @param {Object} callBackArgs - args forwarded to the request function
+	 */
+	function doRequest(url, callBackArgs){
+		var d = doSimpleXMLHttpRequest(url,{"nocache": (new Date()).getTime()});
+		d.addCallback(replaceNode,callBackArgs);
+		return d;
+	}
+	
+	/**
+	 * set the status text of the statsu line.
+	 * 
+	 * @param {Object} status - the status text
+	 */
+	function setStatus(status){
+		//return;
+		var statusNode = getElement("statusline");
+		statusNode.innerHTML = "A"; // IE hack (creating the childNode if not there ;-)
+		statusNode.removeChild(statusNode.childNodes[0]);
+		statusNode.appendChild(document.createTextNode(status));
+	}
+</script>
+
+</html>

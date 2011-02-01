@@ -1,0 +1,32 @@
+<div xmlns:py="http://genshi.edgewall.org/" id="preferencesContent" style="overflow:visible;" 
+		xmlns:xi="http://www.w3.org/2001/XInclude">
+	<xi:include href="preferencesHead.html"/>
+	<div class="content_body">
+		<div class="setting_checkBox">
+			<input style="display:none;" py:if="settings.anonymous == 1" id="anonymous_check" type="checkbox" name="check_box_setting" checked="checked"/>
+			<input style="display:none;" py:if="not settings.anonymous == 1" id="anonymous_check" type="checkbox" name="check_box_setting"/>
+			<!-- p class="setting_title">I want to be anonymous</p>
+			<div style="clear:both;">
+			</div >
+			<p class="description">Other users don't see your name.</p-->
+			<input py:if="settings.email == 1" id="email_check" type="checkbox" name="check_box_setting" checked="checked"/>
+			<input py:if="settings.email != 1" id="email_check" type="checkbox" name="check_box_setting"/>
+			<p class="setting_title">I want to receive an email each time an incoming question arrives</p>
+			<div style="clear:both;">
+			</div >
+			<p class="description"><i>spree</i> sends you an email every time a new question arrives in your inbox.
+			This option enables you to keep track of your inbox without any browser.</p>
+			<input py:if="settings.newsletter == 1" id="newsletter_check" type="checkbox" name="check_box_setting" checked="checked"/>
+			<input py:if="settings.newsletter != 1" id="newsletter_check" type="checkbox" name="check_box_setting"/>
+			<p class="setting_title">I want to subscribe to the <i>spree</i> newsletter</p>
+			<div style="clear:both;">
+			</div >
+			<p class="description">The <i>spree</i> newsletter informs you about the latest <i>spree</i> developments including new features, statistics and research results.</p>
+		</div><br /><br />
+		<button class="btn btnRegNext" id="preferencesSettings_Button" type="button" value="" title="Save your changes" onclick="javascript:settingEntry_save();">
+			<div class="btn">
+				<p class="btn">Save</p>
+			</div>
+		</button>
+	</div>
+</div>

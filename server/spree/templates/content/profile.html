@@ -1,0 +1,62 @@
+<div id="profileContent" style="overflow:visible;"
+		xmlns:py="http://genshi.edgewall.org/"
+		xmlns:xi="http://www.w3.org/2001/XInclude">
+	<xi:include py:if="showHeaderPref" href="preferencesHead.html"/>
+	<xi:include py:if="showHeaderSearch" href="searchModifyHead.html"/>
+	<xi:include py:if="showHeaderReg" href="regProfileHead.html"/>
+	<xi:include py:if="showHeaderBlog" href="blogProfileHead.html"/>
+	<div id="myWidgetContainer" class="treeWidget">
+		<div class="tablehead">Category Tree</div>
+	   <span id="treePlaceHolder" class="placeholder">
+	     Loading tree...
+	   </span>
+	 </div>
+	 <div id="expertFields" class="tableContainer">
+	 	<div class="tablehead">My Fields of expertise</div>
+		<div class="scrolltable" id="scrolllist">
+	 	<table id="myExpertiseFields" cellpadding="0" cellspacing="3" border="0">
+			<tbody>
+			</tbody>
+		</table>
+		</div>
+	 </div>
+	 <div style="clear:both; margin-top:-5px;">
+		 <button id="btnRegistrationBack" style="display:None;" class="btnRegBack" type="button" value=""  onclick="javascript:profile2docs()" title="Back">
+			<div class="btn">
+				<p class="btn">Back</p>
+			</div>
+		</button>
+		<button id="btnSubmitProfile" style="margin-right:15px;" class="btnSubmitProfile btn fr" type="button" value=""  onclick="javascript:submitEntries()" title="Save your Profile">
+			<div class="btn">
+				<p class="btn">Save</p>
+			</div>
+		</button>	 
+		 <button id="btnSubmitRegistration" style="display:None;margin-right:10px;" class="btnSubmitProfile btn" type="button" value=""  onclick="javascript:submitRegistration()" title="Send">
+			<div class="btn">
+				<p class="btn">Send</p>
+			</div>
+		</button>
+		 <button id="btnCategoriesAccept" style="display:None;margin-right:10px" class="btnSubmitProfile btn" type="button" value=""  onclick="javascript:search_classifyManuallyAccept()" title="Save">
+			<div class="btn">
+				<p class="btn">Save</p>
+			</div>
+		</button>
+		 <button id="btnCategoriesBack" style="display:None;float:right;margin-right:10px;" class="btnRegBack btn" type="button" value=""  onclick="javascript:search_classifyManuallyAbort()" title="Cancel">
+			<div class="btn">
+				<p class="btn">Cancel</p>
+			</div>
+		</button>
+	 </div>
+	 <div id="regWebsiteStatus" class="site_status" style="clear:both;padding-left:7px;"></div>
+	 <div id="ratingBar" style="display:None">
+		<img class="removeRating" onclick="ftable.removeRating(event)" src='${tg.url("/static/images/decline_16.gif")}' title="Remove this entry from my expertise list" alt="Remove"/>
+		<a class="ratingBarElement" onclick="rate(event,1)" onmouseout="delightBar(event, 1)" onmouseover="highlightBar(event, 1)" title="Basic"><div id="rate1"></div></a>
+		<a class="ratingBarElement" onclick="rate(event,2)" onmouseout="delightBar(event, 2)" onmouseover="highlightBar(event, 2)" title="Mediocre"><div id="rate2"></div></a>
+		<a class="ratingBarElement" onclick="rate(event,3)" onmouseout="delightBar(event, 3)" onmouseover="highlightBar(event, 3)" title="Fair"><div id="rate3"></div></a>
+		<a class="ratingBarElement" onclick="rate(event,4)" onmouseout="delightBar(event, 4)" onmouseover="highlightBar(event, 4)" title="Good"><div id="rate4"></div></a>
+		<a class="ratingBarElement" onclick="rate(event,5)" onmouseout="delightBar(event, 5)" onmouseover="highlightBar(event, 5)" title="Perfect"><div id="rate5"></div></a>
+		<span class="ratingBarTitle"></span>
+		<input type="hidden"></input>
+	</div>
+</div>
+

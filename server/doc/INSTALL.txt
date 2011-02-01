@@ -1,0 +1,90 @@
+Install dependecies of spree
+----------------------------
+
+$ su
+
+# aptitude update
+
+# aptitude -y install mysql-server mysql-client libmysqlclient15-dev
+
+# aptitude -y install python2.4 python2.4-dev python-setuptools
+
+# exit
+
+
+$ easy_install-2.4 pip
+
+## wget http://voxel.dl.sourceforge.net/sourceforge/mysql-python/MySQL-python-1.2.3c1.tar.gz
+pip install http://pypi.python.org/packages/source/m/MySQL-python/MySQL-python-1.2.3c1.tar.gz
+pip install turbogears==10.1
+pip install sqlalchemy==0.3.7
+pip install http://ftp.edgewall.com/pub/genshi/old/Genshi-0.3.6.tar.gz
+pip install sqlobject==0.7.1
+pip install http://downloads.sourceforge.net/nltk/nltk_lite-0.7.tar.gz
+
+
+Create a database:
+------------------
+
+$ mysql -u root -p
+Enter password:
+
+mysql> CREATE DATABASE spree_dev;
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema | 
+| spree_dev          | 
+| mysql              | 
++--------------------+
+3 rows in set (0.00 sec)
+
+
+Grant privileges to the framework:
+----------------------------------
+
+GRANT ALL PRIVILEGES ON spree_dev.* TO 'username'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+
+mysql> EXIT
+
+Modify the connect string in the follow files:
+
+    * spree/server/dev.cfg: TODO
+    * spree/server/prod.cfg: TODO
+
+to the values you specified above:
+
+i.e. "sqlalchemy.dburi="mysql://username:password@localhost:3306/spree_dev"
+
+
+Creating the model
+------------------
+
+Go to the project directory and execute the follow command from the command shell. 
+
+$ tg-admin sql create 
+
+This should create the main tables (Some tables will be created the first time you run the server.) 
+
+
+Configure spree
+---------------
+
+Before running spree you first need to tell spree which mail server to use. This is done by editing following configuration files :
+
+    * spree/config/registration.cfg: All entries starting with "registration.mail"
+    * spree/config/feedback.cfg: All entries starting with "feedback.mail". Used only for sending the feedback form to the desired email addresses.
+
+ 
+Run the project
+---------------
+
+Go to the project directory and call "python start-spree.py" from the command shell. If you would like to use the bigger ontology you must run the project the first time in production mode: "python start-spree.py prod.cfg".
+
+Open a browser and go th 'http://localhost:8080'.
+
+To start the crawler that downloads and classifies web pages during the registration process start an additional script: "python start-crawler.py".
+
+Yes. That's it. 

@@ -1,0 +1,86 @@
+<div  xmlns:py="http://genshi.edgewall.org/">
+	<div class="graybox imDetails">
+		<input id="userDetailsUserId" type="hidden" value="$id"/>
+		<div>
+			<p class="header">Details for $name</p>
+			<div class="body">
+				<div style="width: 80px; height: 90px; float: left;">
+					<div>
+						<p style="margin-top: 5px; width: 30px;"><b>Status:</b></p>
+						<p style="margin-top: 10px;"><b>Rank:</b></p>
+						<p><b>Score:</b></p>
+						<p style="margin-top: 10px;"><b>Answers:</b></p>
+						<p><b>Blogs:</b></p>					
+					</div>
+				</div>
+				<div style=" float:left; margin-top:5px; ">
+					<p py:if="status=='offline'">$status</p>
+					<p py:if="status=='online'" style="font-weight:bold; color: #31CF31;">$status</p>
+					<p style="margin-top: 10px;">$rank</p>
+					<p>$score</p>
+					<div style="margin-top: 10px; float:left; width:20px;">
+						<p>$answers</p> 
+						<p>$blogs</p>					
+					</div>
+					<div style="margin: 10px 0 0 15px; float:left; font-weight:bold;">
+						<p>Avg.Rating:</p> 
+						<p>Avg.Rating:</p>					
+					</div>
+					<div style="margin: 10px 0 0 5px; float:left;">
+						<p py:if="answers>0">$avg_rating_chat</p> 
+						<p py:if="answers==0">-</p> 
+						<p py:if="blogs>0">$avg_rating_blogs</p> 
+						<p py:if="blogs==0">-</p> 					
+					</div>
+				</div>
+				<div class="noone" style="float:right; margin-top:0px;">
+					
+				</div>
+				<div style="margin: 0px 0 0 0; clear: both;">
+					<p ><b>Expert in:</b></p>
+					<div  style="height: 60px; overflow:auto; font-size: 11px; background-color:#eee; margin-top: 5px;">
+						<p>$expertise</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="graybox imChat">
+		<div>
+			<p class="header">Chat with $name</p>
+			<div py:if="isFull" class="body">
+				<div style="font-weight:bold; color: red; padding: 5px 5px 5px 5px;">
+					<p ><i>spree</i> limits the number of questions to 5. </p><br/>
+					<p>Please delete another question first if you would like to chat with this user.</p>
+				</div>
+			</div>
+			<div py:if="not isFull" class="body" style="overflow:auto;">
+				<div style="">
+					<div>
+						<p><b>Question (optional):</b></p>
+			            <textarea id="imQuestionField"
+						    rows="3"
+							style="width:320px; border: 1px solid #ccc; overflow: auto;"
+							onkeyup="javascript:im.autoCompleteTopic(this.value)">${text}</textarea>
+					</div>
+					<p><b>Subject (optional):</b></p>
+					<input id = "imSubjectField" 
+						type="text"
+						lang="0"
+						style="width:320px; border: 1px solid #ccc; "
+						maxlength="50"
+						onfocus="javascript:this.lang='1';"/>
+					<div style="clear:both;"></div>
+					<div style="margin: 5px 0 0 95px;">
+						<button class="btn" style="width:131px;" id="imStartChat" type="button" value="" title="Click here to chat with $name" onclick="javascript:im.startChat();">
+							<div class="btn">
+								<p class="btn">Start chat</p>
+							</div>
+						</button>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+</div>

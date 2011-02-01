@@ -1,0 +1,101 @@
+<div xmlns:py="http://genshi.edgewall.org/" id="waitSearchContent">
+	<input id="waitsearch_doPolling" type="hidden" value="$doPolling"/>
+		<div class="content_fullBody">
+			<div class="waitsearch_status">
+				<p py:if="state=='nobody_available'">	
+					No experts found.
+				</p>
+				<p py:if="state=='all_offline'">
+					All experts offline. Waiting for expert to connect ...
+				</p>
+				<p py:if="state=='all_declined'">
+					All experts declined your question.	
+				</p>				
+				<p py:if="state=='accepted'" style="color:#000;">
+					An expert accepted your question and is waiting for you ... 
+				</p>
+				<p py:if="state=='at_least_one_online'" style="color:#000;">	
+					Contacting experts.... please wait
+				</p>
+			</div>
+			<div class="graybox" style="height:200px;">
+				<p class="header" >Question</p>
+				<div id="wait_query_${id}" class="body" style="height:135px;">
+					<h1>${topic}</h1>
+					<p style="margin-bottom:4px;font-size:10px">${created}</p>
+					<p><b>Categories:</b> $profile</p>
+					<p><b>Question:</b> ${text}</p>
+					<p></p>
+				</div>
+		       	<button py:if="len(experts_accepted) == 0" id="button_delete" class="btn fr" style="margin: 5px 2px 0 0;" type="button" value=""  onclick="javascript:search_deleteQuery(${id});" title="Delete question" name="Delete">
+					<div class="btn">
+						<p class="btn-red">Delete</p>
+					</div>
+				</button>
+				<button py:if="state=='accepted'" id="button_gotochat" class="btn fr" type="button" style="margin: 5px 2px 0 0;" value=""  onclick="javascript:chat_loadContent(${id});" title="Go to chat" name="Delete">
+					<div class="btn">
+						<p class="btn">Go to chat</p>
+					</div>
+				</button>
+			</div>
+			<div style="clear:both; margin-top: 10px;">
+				<div class="graybox"  style="width:200px; height: 170px; float:left;">
+					<p class="header">Experts</p>
+					<div class="body">
+						<div>
+							<p style="float:left; margin-right:4px;"><b>Contacted:</b></p>
+							<div py:for="item in all_experts['expert_ids']" 
+								style="float:left; margin-right: 4px;"
+								class="tooltip_linker" >
+									<p 	onmouseout="ajax_hideQueryTooltip(this)" 
+										onmouseover="showUserDetailsTooltip(this, ${item[0]}, 230);">
+											${item[1]}, 
+									</p>
+							</div>
+							<div style="clear:both;"></div>
+						</div>
+						<p><b>Declined:</b>
+							<span id="waitsearch_experts_declined">${expert_strings.experts_declined}</span>
+						</p>
+						<p><b>Accepted:</b>
+							<span id="waitsearch_experts_accepted">${expert_strings.experts_accepted}</span>
+						</p>
+						<img py:if="state=='at_least_one_online' or state=='all_offline'" style="margin:10px 0 0 84px;" src='${tg.url("/static/images/loading_32.gif")}'/>
+					</div>
+				</div>
+				<div class="graybox" style="width:340px; height: 170px; float:right;">
+					<p class="header">Most related Notebook entries</p>
+					<div class="body" style="height: 125px;">
+						<p py:if="lengthBlogEntries == 0">
+							No entry found.
+						</p>
+						<div py:for="blog in blogs" style="padding-bottom: 5px; cursor:pointer;" title="Show details">
+							<p style="color:#003C73; font-weight:bold; font-size: 11px; text-decoration:underline;" onclick="setContent('blogentry',$blog.id+'/'+1+'/'+$id)">
+								$blog.topic
+							</p>
+							<div style="font-size: 10px; clear:both;">
+								<p style="float:left;margin-right:4px;">by</p>
+								<div class="tooltip_linker" style="float:left;">
+									<p  
+									    onmouseout="ajax_hideQueryTooltip(this)" 
+										onmouseover="showUserDetailsTooltip(this, $blog.user_id, -210, 150);"
+										> ${blog.user_name}</p>
+								</div>
+								<p style="float:left;">, $blog.created,</p>
+								<a onclick="setContent('blogentry',$blog.id+'/'+1+'/'+$id)" class="actionlink" title="Read more">Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+
+
+
+
+
+
+

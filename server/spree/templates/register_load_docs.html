@@ -1,0 +1,87 @@
+<div id="registerLoadDocs">
+	<div class="content_body">
+		<h1>New User Registration</h1>
+		<p>Please specify some websites (<font class="site_status">**</font>) which reflect your knowledge domain:</p>
+		<form id="regLoadDocsForm" name="form" class="tableform" method="post">
+	    <table>
+			<colgroup>
+				<col width="82px"/>
+				<col/>
+				<col/>
+			</colgroup>
+		    <tbody>
+		        <tr class="even">
+		            <th>
+		                <label for="form_website_1" class="fieldlabel">Website 1 </label>
+		            </th>
+		            <td>
+		                <input onblur="javascript:sendSites(1)" type="text" name="website_1" class="websiteField" id="form_website_1"/>
+		            </td>
+					<td id="message_website_1" class="site_status">*
+		            </td>
+		        </tr><tr class="odd">
+		            <th>
+		                <label for="form_website_2" class="fieldlabel">Website 2 </label>
+		            </th>
+		            <td>
+		                <input onblur="javascript:sendSites(2)" type="text" name="website_2" class="websiteField" id="form_website_2"/>
+		            </td>
+					<td id="message_website_2" class="site_status">*
+		            </td>
+		        </tr><tr class="even">
+		            <th>
+		                <label for="form_website_3" class="fieldlabel">Website 3 </label>
+		            </th>
+		            <td>
+		                <input onblur="javascript:sendSites(3)" type="text" name="website_3" class="websiteField" id="form_website_3"/>
+		            </td>
+					<td id="message_website_3" class="site_status">*
+		            </td>
+		        </tr><tr class="odd">
+		            <th>
+		                <label for="form_website_4" class="fieldlabel">Website 4 </label>
+		            </th>
+		            <td>
+		                <input onblur="javascript:sendSites(4)" type="text" name="website_4" class="websiteField" id="form_website_4"/>
+		            </td>
+					<td id="message_website_4" class="site_status">*
+		            </td>
+		        </tr><tr class="even">
+		            <th>
+		                <label for="form_website_5" class="fieldlabel">Website 5 </label>
+		            </th>
+		            <td>
+		                <input onblur="javascript:sendSites(5)" type="text" name="website_5" class="websiteField" id="form_website_5"/>
+		            </td>
+					<td id="message_website_5" class="site_status">*
+		            </td>
+		        </tr>
+		        <tr>
+		            <td> </td>
+		            <td> </td>
+		        </tr>
+		    </tbody>
+	    </table>
+		<br/>
+		</form>
+		<p><b>Keywords </b>- Some comma separated keywords describing your knowledge domain:<font class="site_status">*</font></p>
+		<textarea id="txtKeywords" class="keywordField" rows="4" columns="50" style="width:520px;"/>
+		<button id="button_reg_back" style="margin-left:0px;margin-right:10px" class="btnRegBack btn" type="button" value=""  onclick="javascript:docs2personal();" title="Back">
+			<div class="btn">
+				<p class="btn">Back</p>
+			</div>
+		</button>
+		<button id="btnNext" style="margin-left:0px;margin-right:10px" class="btnRegNext btn" type="button" value=""  onclick="javascript:docs2profile();" title="Next">
+			<div class="btn">
+				<p class="btn">Next</p>
+			</div>
+		</button>
+		<div style="clear:both;"><br/><br/>
+			<font class="site_status">*</font> : optional<br/>
+			<font class="site_status">**</font> : please provide english speaking sites if available
+		</div>
+	</div>
+</div>
+
+
+

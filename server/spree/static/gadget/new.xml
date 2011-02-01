@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+	<ModulePrefs title="Spree feed" 
+		title_url="http://130.149.154.79/" 
+		description="Spree feed allows users of Spree, the knowledge exchange network, to see the latest incoming questions and chat status."
+		author="Milena Ilic"
+		screenshot="http://130.149.154.79/static/images/screenshot.png"
+		scrolling="true"/>
+	
+	<UserPref name="user_name_" display_name="User name:" />
+	<UserPref name="font_size" display_name="Font size in %:" default_value="80"/>
+	<UserPref name="show_date" display_name="Show Dates?" datatype="bool"/>
+	<UserPref name="show_summ" display_name="Show Summaries?" datatype="bool"/>
+	<UserPref name="user_name" display_name="Spree user name:" datatype="hidden" />
+	
+	<Content type="html">
+		<![CDATA[
+		  <div id="content_div"></div>
+		  <script type="text/javascript">
+		
+		  function displayRSS()
+		  {
+		
+		
+		    var prefs = new _IG_Prefs(__MODULE_ID__);
+		    var showdate = prefs.getBool("show_date");
+		    var summary = prefs.getBool("show_summ");
+			var fsize = prefs.getString("font_size")+"";
+		    var spree_name = prefs.getString("user_name_")+"";
+		    var adding="?nocache="+(new Date()).getTime() ;
+		    var message = "";
+			var flag = 0;
+		
+			if (spree_name!="")
+		    {
+		        message='Personalized feed for ' + spree_name;
+		                adding+="&user_name=" + spree_name;
+		
+		    }
+		    else
+		    {
+		        message='You can get personalized feed if you provide your spree user name';
+		    };
+		
+		        var url = "http://130.149.154.79/gadget/ig"+adding;
+		
+		    
+		
+		    _IG_FetchXmlContent(url, function (response) {
+		           if (response == null || typeof(response) != "object" || 
+		                      response.firstChild == null) {
+		              _gel("content_div").innerHTML = "<i>Invalid data.</i>";
+		              return;
+		           }
+		
+			var rootList = response.getElementsByTagName("spree");
+				
+					
+		
+					 var first = rootList.item(0).childNodes;
+		            
+		             for (var j = 0; j < first.length ; j++)
+		                        {
+		                var node = first.item(j);
+		
+		                if (node.nodeName == "valid_name")
+		                {
+		                        var valid = node.firstChild.nodeValue;
+		                };
+					
+				}
+		
+				if (valid==-1){
+				message='You have to specify valid spree user name';
+					}
+					
+		           // Start building HTML string that will be displayed in <div>.
+		           // Set the style for the <div>.
+				
+			  var html = "<div style='text-align:left;font-size:"
+				html+=fsize+"%'>";   
+							    
+		           // Set style for title.
+		           html +="<div style='text-align:left; font-size: 100%;";
+					if (valid==-1){
+					 html+="color: red;'>";
+						}
+					else {
+					
+					html+= "color: black;'>"; 
+					}
+		
+		          
+		           html += "<b>" + message + "</b></div><br>";
+					
+				
+		
+				if (valid==-1){
+		
+					itemList=[];
+				}		
+				else{
+		
+		           itemList = response.getElementsByTagName("element");
+				}
+		        
+		
+		           
+		
+		           for (var i = 0; i < itemList.length ; i++) {
+		             
+		             var nodeList = itemList.item(i).childNodes;
+		            
+		             for (var j = 0; j < nodeList.length ; j++)
+		                        {
+		                var node = nodeList.item(j);
+		
+		                if (node.nodeName == "title")
+		                {
+		                        var question = node.firstChild.nodeValue;
+		                };
+		
+		
+		                if (node.nodeName == "guid")
+		                                {
+		                   var guid = node.firstChild.nodeValue;
+		                };
+		
+		                if (node.nodeName == "author")
+		                                {
+		                   var author = node.firstChild.nodeValue;
+		                };
+		
+						if (node.nodeName == "comments")
+		                                {
+		                   var image = node.firstChild.nodeValue;
+		                };
+		
+		                if (node.nodeName == "description" && summary==true)
+		                                {
+		                   var description = node.firstChild.nodeValue;
+		                };
+		
+						if (node.nodeName == "pubDate" && showdate==true)
+		                                {
+		                   var date = node.firstChild.nodeValue;
+						};             
+		  
+		
+		
+		           };
+		
+		             // Append extracted data to the HTML string.
+		
+		
+				if(flag == 0){
+					html+='<div style="background-color: #D0D0D0; clear:both; padding-top:3px; padding-bottom:3px;">';
+		            flag = 1;
+				}
+				else {
+					html+='<div style=" clear:both;padding-top:3px;padding-bottom:3px">';
+		            flag = 0;
+				}
+					
+					//html+="<p>"
+					con=0
+					html += "<div style='float:left'><img src='"+ image +"' /> </div>";
+		            
+					html+='<div style="">';
+					html += "<a target='_blank' href='" + guid + "'>" + question + "</a> ";
+		
+					 html += "by " + author+"</br>"
+		             
+		             // If user has chosen to display descriptions
+		             if (summary==true) {
+		                html += "<i>" + description + "</i><br>";
+		             }
+					 else{
+						con+=1;
+					}
+		
+					 if (showdate==true) {
+		                html += date + "<br>";
+		             }
+					else{
+						con+=1;
+					}
+		
+					if (con==2){
+						html+="<br>";
+					}
+				   //html+="</p>"
+					html += "</div>";
+				 html += "</div>";
+					
+		         };
+		         // Close up div
+		         html += "</div>";
+		
+		        // Display HTML string in <div>
+		        _gel('content_div').innerHTML = html;
+		    });
+		  t=setTimeout("displayRSS()",30000)	
+		  };
+		  _IG_RegisterOnloadHandler(displayRSS);
+		  </script>
+	  ]]>
+  </Content>
+</Module>
+
+
+

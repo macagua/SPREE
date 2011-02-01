@@ -1,0 +1,181 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.subcontrollers.search_controller</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.subcontrollers.html"><font color="#ffffff">subcontrollers</font></a>.search_controller</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/subcontrollers/search_controller.py">c:\studium\spree\opensource\spree\subcontrollers\search_controller.py</a></font></td></tr></table>
+    <p><tt><a href="turbogears.controllers.html#Controller">Controller</a>&nbsp;for&nbsp;the&nbsp;search&nbsp;(ASK)&nbsp;content</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="cPickle.html">cPickle</a><br>
+<a href="turbogears.config.html">turbogears.config</a><br>
+<a href="spree.constants.html">spree.constants</a><br>
+<a href="turbogears.controllers.html">turbogears.controllers</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+<a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+<a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+<a href="spree.util.text.extractor.html">spree.util.text.extractor</a><br>
+<a href="spree.util.helpers.html">spree.util.helpers</a><br>
+<a href="turbogears.identity.html">turbogears.identity</a><br>
+<a href="spree.json.html">spree.json</a><br>
+<a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+<a href="pkg_resources.html">pkg_resources</a><br>
+<a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+<a href="spree.register_model.html">spree.register_model</a><br>
+<a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+<a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+<a href="threading.html">threading</a><br>
+<a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="spree.submodels.tree_model.html">spree.submodels.tree_model</a><br>
+<a href="turbogears.html">turbogears</a><br>
+<a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.search_controller.html#SearchController">SearchController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.search_controller.html#SearchController">SearchController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SearchController">class <strong>SearchController</strong></a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Handels&nbsp;content&nbsp;box.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.subcontrollers.search_controller.html#SearchController">SearchController</a></dd>
+<dd><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a></dd>
+<dd><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SearchController-deleteQuery"><strong>deleteQuery</strong></a>(self, query_id, *args, **kwargs)</dt><dd><tt>Allows&nbsp;user&nbsp;to&nbsp;delete&nbsp;a&nbsp;query.&nbsp;Updates&nbsp;query&nbsp;logging.<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;identifies&nbsp;the&nbsp;query<br>
+@return:&nbsp;status&nbsp;of&nbsp;attempted&nbsp;&nbsp;delete&nbsp;operation&nbsp;of&nbsp;the&nbsp;query</tt></dd></dl>
+
+<dl><dt><a name="SearchController-doDecline"><strong>doDecline</strong></a>(self, query_id, *args, **kwargs)</dt><dd><tt>Allows&nbsp;expert&nbsp;to&nbsp;decline&nbsp;query.&nbsp;Updates&nbsp;query&nbsp;logging.<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;identifies&nbsp;the&nbsp;query</tt></dd></dl>
+
+<dl><dt><a name="SearchController-doQuery"><strong>doQuery</strong></a>(self, *args, **kwargs)</dt><dd><tt>Accepts&nbsp;a&nbsp;new&nbsp;query,&nbsp;classifies&nbsp;it&nbsp;(automatic&nbsp;classification&nbsp;could&nbsp;be&nbsp;enough,&nbsp;<br>
+but&nbsp;manual&nbsp;interruption&nbsp;is&nbsp;allowed&nbsp;in&nbsp;this&nbsp;stage&nbsp;too)&nbsp;and&nbsp;saves&nbsp;it&nbsp;in&nbsp;a&nbsp;db.&nbsp;<br>
+Updates&nbsp;query&nbsp;logging.&nbsp;If&nbsp;expert&nbsp;settings&nbsp;demand&nbsp;it,&nbsp;email&nbsp;with&nbsp;the&nbsp;query&nbsp;is&nbsp;sent.&nbsp;<br>
+&nbsp;<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;text,&nbsp;topic&nbsp;and&nbsp;categories&nbsp;of&nbsp;the&nbsp;query&nbsp;<br>
+@return:&nbsp;query_id</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getAllOpenQuestionsContent"><strong>getAllOpenQuestionsContent</strong></a>(self, *args, **kwargs)</dt><dd><tt>All&nbsp;open&nbsp;questions&nbsp;except&nbsp;the&nbsp;questions&nbsp;of&nbsp;the&nbsp;current&nbsp;user<br>
+&nbsp;<br>
+@param&nbsp;kwargs:&nbsp;kwargs["page"]&nbsp;is&nbsp;the&nbsp;current&nbsp;page&nbsp;(pagination)<br>
+&nbsp;<br>
+@return:&nbsp;fills&nbsp;the&nbsp;allquestions&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getExperts"><strong>getExperts</strong></a>(self, query_id)</dt><dd><tt>Fetches&nbsp;the&nbsp;experts&nbsp;and&nbsp;their&nbsp;status&nbsp;for&nbsp;a&nbsp;given&nbsp;query.&nbsp;State&nbsp;of&nbsp;the&nbsp;query&nbsp;is&nbsp;also&nbsp;calculated,<br>
+and&nbsp;information&nbsp;about&nbsp;refreshing&nbsp;of&nbsp;the&nbsp;content&nbsp;as&nbsp;well.<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;identifies&nbsp;the&nbsp;query<br>
+@return:&nbsp;dict&nbsp;with&nbsp;information&nbsp;about&nbsp;status&nbsp;for&nbsp;all&nbsp;experts&nbsp;initially&nbsp;contacted,&nbsp;state&nbsp;of&nbsp;the&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;query&nbsp;and&nbsp;info&nbsp;about&nbsp;refreshing</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getExpertsStatus"><strong>getExpertsStatus</strong></a>(self, query_id, *args, **kwargs)</dt><dd><tt>?&nbsp;&nbsp;get&nbsp;the&nbsp;experts&nbsp;nd&nbsp;their&nbsp;status&nbsp;for&nbsp;a&nbsp;given&nbsp;query</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getKeywords"><strong>getKeywords</strong></a>(self, *args, **kwargs)</dt><dd><tt>Extracts&nbsp;keywords&nbsp;from&nbsp;the&nbsp;query&nbsp;-&nbsp;simple&nbsp;version<br>
+&nbsp;<br>
+@param&nbsp;text&nbsp;of&nbsp;the&nbsp;query:&nbsp;<br>
+@return:&nbsp;extracted&nbsp;keywords</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getKeywordsAndCategories"><strong>getKeywordsAndCategories</strong></a>(self, *args, **kwargs)</dt><dd><tt>Extracts&nbsp;keywords&nbsp;from&nbsp;the&nbsp;query&nbsp;and&nbsp;does&nbsp;automatic&nbsp;classification.<br>
+&nbsp;<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;text&nbsp;and&nbsp;topic&nbsp;of&nbsp;the&nbsp;query<br>
+@return:&nbsp;keywords&nbsp;extracted&nbsp;and&nbsp;information&nbsp;about&nbsp;classification</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getQueryOverviewContent"><strong>getQueryOverviewContent</strong></a>(self, query_id, *args, **kwargs)</dt><dd><tt>Serves&nbsp;information&nbsp;about&nbsp;query&nbsp;to&nbsp;the&nbsp;expert&nbsp;who&nbsp;got&nbsp;it.<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;identifies&nbsp;the&nbsp;query<br>
+@return:&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getQueryStatus"><strong>getQueryStatus</strong></a>(self, query_id, *args, **kwargs)</dt><dd><tt>Informs&nbsp;whether&nbsp;a&nbsp;query&nbsp;is&nbsp;taken&nbsp;by&nbsp;someone&nbsp;or&nbsp;not.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+@param&nbsp;query_id:&nbsp;identifies&nbsp;the&nbsp;query<br>
+@return:&nbsp;true&nbsp;if&nbsp;query&nbsp;is&nbsp;taken&nbsp;?</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getSearchContent"><strong>getSearchContent</strong></a>(self, *args, **kwargs)</dt><dd><tt>Takes&nbsp;the&nbsp;entered&nbsp;query&nbsp;and&nbsp;topic&nbsp;and&nbsp;tries&nbsp;to&nbsp;classify&nbsp;it.&nbsp;It&nbsp;also&nbsp;checks&nbsp;that&nbsp;the&nbsp;limit&nbsp;<br>
+of&nbsp;questions&nbsp;and&nbsp;open&nbsp;chats&nbsp;per&nbsp;user&nbsp;is&nbsp;not&nbsp;exceeded.<br>
+&nbsp;<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;query_id&nbsp;if&nbsp;the&nbsp;question&nbsp;is&nbsp;asked&nbsp;again<br>
+@return:&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getSearchContentLimitReached"><strong>getSearchContentLimitReached</strong></a>(self, *args, **kwargs)</dt><dd><tt>Show&nbsp;warning&nbsp;when&nbsp;to&nbsp;many&nbsp;queries&nbsp;are&nbsp;still&nbsp;open.</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getUsers"><strong>getUsers</strong></a>(self, *args, **kwargs)</dt><dd><tt>@return:&nbsp;all&nbsp;the&nbsp;users&nbsp;except&nbsp;the&nbsp;current&nbsp;user&nbsp;and&nbsp;their&nbsp;online&nbsp;status</tt></dd></dl>
+
+<dl><dt><a name="SearchController-getWaitSearchContent"><strong>getWaitSearchContent</strong></a>(self, query_id, *args, **kwargs)</dt><dd><tt>Serves&nbsp;content&nbsp;about&nbsp;the&nbsp;current&nbsp;status&nbsp;of&nbsp;the&nbsp;query&nbsp;(which&nbsp;experts&nbsp;are&nbsp;contacted,&nbsp;has&nbsp;anybody&nbsp;declined&nbsp;etc...)<br>
+to&nbsp;the&nbsp;loqged&nbsp;in&nbsp;user&nbsp;,&nbsp;after&nbsp;the&nbsp;query&nbsp;has&nbsp;been&nbsp;posted.&nbsp;Also&nbsp;provides&nbsp;related&nbsp;notes.<br>
+&nbsp;<br>
+@param&nbsp;query_id:&nbsp;identifies&nbsp;the&nbsp;query<br>
+@return:&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>limit</strong> = 5</dl>
+
+<dl><dt><strong>require</strong> = &lt;turbogears.identity.conditions.not_anonymous object&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Controller' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>:<br>
+<dl><dt><a name="SearchController-__getattribute__"><strong>__getattribute__</strong></a>(self, name)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()<br>
+<strong>metadata</strong> = DynamicMetaData()<br>
+<strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;</td></tr></table>
+</body></html>

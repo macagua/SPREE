@@ -1,0 +1,115 @@
+<div xmlns:py="http://genshi.edgewall.org/" class="chat" id="chatContent">
+	<div  py:if="session_status != 'FINISHED' and session_status == 'RATED'" class="content_header">
+		<a
+			style="margin:0;" 
+			class="actionlink" 
+			onclick="setContent('chat_overview','',{'chat_type':'all'})" 
+			title="Back to history" >Back to history</a>
+	</div>
+	<div py:if="session_status != 'FINISHED' and session_status == 'RATED'" style="margin-top:10px;"></div>
+	<div class="content_body" >
+
+		<h1 py:if="session_status != 'FINISHED' and session_status != 'RATED'" style="float:left;" >SPREE Chat</h1>
+		<h1 py:if="session_status == 'FINISHED' or session_status == 'RATED'" style="float:left; margin-top:5px;" >SPREE Chat</h1>
+		<input py:if="session_status != 'FINISHED' and session_status != 'RATED'"
+			type="image"  
+			style="float:right; " 
+			src='${tg.url("/static/images/buttons/close_orange.gif")}'
+			onclick="javascript:chat_finish(${query_id});" 
+			title="Finish this chat"/>
+		<div py:if="session_status != 'FINISHED' and session_status != 'RATED'" >
+			<h1 style="float:right; margin-right:10px;" >Finish Chat</h1>
+			<div style="clear:both;"></div>
+		</div>
+		<div class="chat_metadata" style="margin:5px 15px 0 0;">
+			<div style="float:right;">
+		   		<div id="view_chat_rating" py:if="session_status == 'RATED' and rating >= 0">
+					<img src='${tg.url("/static/images/star_icon_16x16.gif")}'/>
+					<p py:if="rating == 0">Poor </p>
+					<p py:if="rating == 2">Medium </p>	
+					<p py:if="rating == 3">Good </p>
+					<p py:if="rating == 4">Excellent </p>
+					<p py:if="rating == 5">Expert </p>
+				</div>
+				<img src='${tg.url("/static/images/clock.gif")}'/>
+				<p>$time </p>
+				<img src='${tg.url("/static/images/user_blue_16.gif")}' align="absbottom"/>
+				<div id="chat_metadata_user"
+					class="tooltip_linker"
+					onmouseout="ajax_hideQueryTooltip(this)" 
+					onmouseover="showUserDetailsTooltip(this, $user_id);">
+						<p id="chat_metadata_username">$username</p>
+				</div>
+	   			<img src='${tg.url("/static/images/user_green_16.gif")}' align="absbottom"/>
+				<div id="chat_metadata_expert"
+					class="tooltip_linker"
+					onmouseout="ajax_hideQueryTooltip(this)" 
+					onmouseover="showUserDetailsTooltip(this, $expert_id);">
+						<p id="chat_metadata_expertname">$expertname</p>			
+				</div>
+			</div>
+		</div>
+		<div  style="clear:both;">
+		</div >
+		<div py:if="session_status != 'FINISHED' and session_status != 'RATED'" id="chat_out" class="chat_out_box">
+			<table id="chat_out_table"  >
+				<tbody id="chat_out_table_body">
+					<tr py:for="chat_entry in chat_entries" id='chat_entry_${chat_entry.id}' >
+						<td>$chat_entry.date</td>
+						<td>$chat_entry.user</td>
+						<td>$chat_entry.text</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div py:if="session_status == 'FINISHED' or session_status == 'RATED'" id="chat_out" class="chat_out_box_finished">
+			<table id="chat_out_table">
+				<tbody id="chat_out_table_body">
+					<tr py:for="chat_entry in chat_entries" id='chat_entry_${chat_entry.id}' >
+						<td>$chat_entry.date</td>
+						<td>$chat_entry.user</td>
+						<td>$chat_entry.text</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<input id="chat_out_lastentryid" type="hidden" value="$last_entry_id"/>
+		<input id="chat_out_display_name" type="hidden" value="$myName"/>
+		<input id="chat_data_isExpert" type="hidden" value="$isExpert"/>
+		<input id="chat_data_status" type="hidden" value="$session_status"/>
+		<input id="chat_query_id" type="hidden" value="$query_id"/>
+		<div id="chat_input" style="display:none;">
+			<textarea id="chat_in" style="height:50px; width:500px; overflow:auto;" oncopy="utils.dom.limitTextSize(this, 1999);" onkeyup="utils.dom.limitTextSize(this, 1999); chat_handleKey(event);"></textarea>
+	        <input style="width:35px;" type="image"  src='${tg.url("/static/images/buttons/enter.gif")}' id="chat_send_button" value="" title="Send to chat" onclick="javascript:chat_commit();"/>
+		</div>
+	    <div id="chat_create_blog" style="display:none;">
+	        <p style="margin-top:20px;"><b>Would you like to create a note entry for this query?</b></p>
+			<button style="margin-right:10px;" class="btn fr" id="createNoteEntry" type="button" value="" onclick="setContent('blog_content_edit','-2/$query_id');" title="Create note entry">
+				<div class="btn">
+					<p class="btn" style="line-height:20px;">Create note entry</p>
+				</div>
+			</button>
+		</div>		
+		<input id="chat_exist_blog" type="hidden" value="$existsBlog"/>
+		<div id="exists_blog_entry" style="display:none;"> 
+			<p style="margin-top:20px;"><b>This chat resulted in a note entry. Click here to go to note entry.</b></p>
+			<button style="margin-right:10px;" class="btn fr" id="go_note_entry" type="button" value="" onclick="setContent('blogentry',${blogentry_id}+'/'+0+'/'+0);" title="My Note">
+				<div class="btn">
+					<p class="btn" style="line-height:20px;">Note entry</p>
+				</div>
+			</button>
+		</div>
+		<div id="chatFinished" style="display:none;">
+			<div py:if="not isDirect">
+				<p style="margin-top:20px"><b>Would you like to ask this question again?</b></p>	
+				<button style="margin-right:10px;" class="btn fr" id="askAgain" type="button" value="" onclick="setContent('search','',{query_id:'${query_id}'})" title="ask again">
+					<div class="btn">
+						<p class="btn" style="line-height:20px">Ask again</p>
+					</div>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+	

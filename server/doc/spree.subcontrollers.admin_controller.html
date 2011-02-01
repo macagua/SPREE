@@ -1,0 +1,115 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.subcontrollers.admin_controller</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.subcontrollers.html"><font color="#ffffff">subcontrollers</font></a>.admin_controller</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/subcontrollers/admin_controller.py">c:\studium\spree\opensource\spree\subcontrollers\admin_controller.py</a></font></td></tr></table>
+    <p><tt>Provides&nbsp;some&nbsp;internal&nbsp;status&nbsp;functions</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="turbogears.controllers.html">turbogears.controllers</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+<a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+<a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+<a href="turbogears.identity.html">turbogears.identity</a><br>
+<a href="spree.json.html">spree.json</a><br>
+<a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+<a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+<a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+<a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+<a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="turbogears.html">turbogears</a><br>
+<a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.admin_controller.html#AdminController">AdminController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.admin_controller.html#AdminController">AdminController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="AdminController">class <strong>AdminController</strong></a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.subcontrollers.admin_controller.html#AdminController">AdminController</a></dd>
+<dd><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a></dd>
+<dd><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="AdminController-emailList"><strong>emailList</strong></a>(self, *_decorator__varargs, **_decorator__kwargs)</dt><dd><tt>@return:&nbsp;a&nbsp;list&nbsp;of&nbsp;email&nbsp;addresses&nbsp;of&nbsp;the&nbsp;users&nbsp;that&nbsp;have&nbsp;provided&nbsp;one.</tt></dd></dl>
+
+<dl><dt><a name="AdminController-getUsersOnline"><strong>getUsersOnline</strong></a>(self, *_decorator__varargs, **_decorator__kwargs)</dt><dd><tt>@return:&nbsp;a&nbsp;list&nbsp;of&nbsp;email&nbsp;addresses&nbsp;of&nbsp;the&nbsp;users&nbsp;currently&nbsp;online.</tt></dd></dl>
+
+<dl><dt><a name="AdminController-newsletterList"><strong>newsletterList</strong></a>(self, *_decorator__varargs, **_decorator__kwargs)</dt><dd><tt>@return:&nbsp;a&nbsp;list&nbsp;of&nbsp;email&nbsp;addresses&nbsp;of&nbsp;the&nbsp;users&nbsp;who&nbsp;want&nbsp;to&nbsp;receive&nbsp;newsletter</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>require</strong> = &lt;turbogears.identity.conditions.not_anonymous object&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Controller' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>:<br>
+<dl><dt><a name="AdminController-__getattribute__"><strong>__getattribute__</strong></a>(self, name)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-checkPrivilege"><strong>checkPrivilege</strong></a>()</dt><dd><tt>Allows&nbsp;only&nbsp;certain&nbsp;users&nbsp;to&nbsp;have&nbsp;access&nbsp;to&nbsp;emaiList&nbsp;method.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()<br>
+<strong>metadata</strong> = DynamicMetaData()<br>
+<strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;</td></tr></table>
+</body></html>

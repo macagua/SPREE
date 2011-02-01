@@ -1,0 +1,43 @@
+<div xmlns:py="http://genshi.edgewall.org/">
+	<h1>Details for user: $name</h1>
+	<div style="margin:0 5px 0 5px;">
+		<div style="width: 80px; height: 100px; float: left;">
+			<div>
+				<p style="margin-top: 5px; width: 30px;"><b>Status:</b></p>
+				<p style="margin-top: 10px;"><b>Rank:</b></p>
+				<p><b>Score:</b></p>
+				<p style="margin-top: 10px;"><b>Answers:</b></p>
+				<p><b>Notes:</b></p>					
+			</div>
+		</div>
+		<div style=" float:left; margin-top:5px; ">
+			<p py:if="status=='offline'">$status</p>
+			<p py:if="status=='online'" style="font-weight:bold; color: #31CF31;">$status</p>
+			<p style="margin-top: 10px;">$rank</p>
+			<p>$score</p>
+			<div style="margin-top: 10px; float:left; width:20px;">
+				<p>$answers</p> 
+				<p>$blogs</p>					
+			</div>
+			<div style="margin: 10px 0 0 15px; float:left; font-weight:bold;">
+				<p>Avg.Rating:</p> 
+				<p>Avg.Rating:</p>					
+			</div>
+			<div style="margin: 10px 0 0 5px; float:left;">
+				<p py:if="answers>0">$avg_rating_chat</p> 
+				<p py:if="answers==0">-</p> 
+				<p py:if="blogs>0">$avg_rating_blogs</p> 
+				<p py:if="blogs==0">-</p> 					
+			</div>
+		</div>
+		<div class="noone" style="float:right; margin-top:5px;">
+			
+		</div>
+		<div style="margin: 10px 0 5px 0; clear: both;">
+			<p ><b>Expert in:</b></p>
+			<div  style="font-size: 11px; padding: 5px 5px 5px 5px;  background-color:#eee; margin-top: 5px;">
+				<p>$expertise</p>
+			</div>
+		</div>
+	</div>
+</div>

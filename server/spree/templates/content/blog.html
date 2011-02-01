@@ -1,0 +1,69 @@
+<div xmlns:py="http://genshi.edgewall.org/" id="blogContent">
+    <div class="content_header">
+    	<div>
+			<a style="float:right;" class="actionlink" onclick="setContent('blog_content_edit',-1+'/'+0+'/'+'')"  title="Create new entry" >Create new entry</a>
+			<a py:if="back_to_chat" style="float:left;" class="actionlink" onclick="setContent('chat','${query_id}')"  title="Back to chat" >Back to chat</a>
+		</div><div style="clear:both;"></div>
+	</div>
+	<div class="content_body" style="height:370px;">
+		<div py:for="i in range(0,len(blogentries))" id="blog_entry_${blogentries[i].id}" style="margin:10px 5px;">
+			<div class="graybox">
+				<p class="header" 
+					onclick="setContent('blogentry',${blogentries[i].id}+'/'+0+'/'+0)" 
+					title="Read more"
+					style="cursor:pointer;">${blogentries[i].topic}</p>
+				<div class="body">
+					<p><i>by ${blogentries[i].user}</i>, ${blogentries[i].created}, ${blogentries[i].private}</p>
+					<p><b>Categories:</b> <font id ="entryCats_${blogentries[i].id}">${blogentries[i].categories}</font></p>
+					<p style="margin-top:10px;">${blogentries[i].text}
+						<a onclick="setContent('blogentry',${blogentries[i].id}+'/'+0+'/'+0)" class="actionlink" title="Read more">Read More</a>
+					</p>
+				</div>
+			</div>
+			<div class="buttons_blog"  py:if="not blogentries[i].for_relevant" align="right">
+				<button class="btn" id = "button_delete" type="button" value="" onclick="javascript:deleteBlogEntry(${blogentries[i].id});" title="Delete entry">
+					<div class="btn-red">
+						<p class="btn-red">Delete</p>
+					</div>
+				</button>
+							
+				<button id="button_classify" class="btn" type="button" value=""  onclick="blogs_setBackFunction('blogs','-1');blog_modifyCategories${blogentries[i].categoryIDs}" >
+					<div class="btn">
+						<p class="btn">Classify</p>
+					</div>
+				</button>
+				<button class="btn" id = "button_edit" type="button" value="" onclick="setContent('blog_content_edit',${blogentries[i].id}+'/'+0)" title="Edit entry">
+					<div class="btn">
+						<p class="btn">Edit</p>
+					</div>
+				</button>
+				
+			</div>		
+		</div>
+	</div>
+	<div py:if="no_pages &gt; 1" class="blogPaginate">
+		<a py:if="no_pages!=0 and current_page!=1" class="actionlink" onclick="setContent2('blogs','-1/',{'current_page':${current_page-1}})">Prev</a>
+		<span py:if="no_pages &lt;=10">
+			<span py:for="p in range(1,no_pages+1)">
+				<a py:if="p != current_page" class="actionlink" onclick="setContent2('blogs','-1/',{'current_page':${p}})">${p}</a>
+				<a py:if="p == current_page and no_pages!=1" class="blog_link">${p}</a>
+			</span>
+		</span>
+		<span py:if="no_pages &gt;10">
+			<span py:if="current_page &gt;10">
+				<span py:for="p in range(current_page-10,min(current_page+10,no_pages+1))">
+					<a py:if="p != current_page " class="actionlink" onclick="setContent2('blogs','-1/',{'current_page':${p}})">${p}</a>
+					<a py:if="p == current_page" class="blog_link">${p}</a>
+				</span>
+			</span>
+			<span py:if="current_page &lt;=10">
+				<span py:for="p in range(1,min(current_page+10,no_pages+1))">
+					<a py:if="p != current_page " class="actionlink" onclick="setContent2('blogs','-1/',{'current_page':${p}})">${p}</a>
+					<a py:if="p == current_page" class="blog_link">${p}</a>
+				</span>
+			</span>
+		</span>
+		<a py:if="no_pages!=0 and current_page!=no_pages" class="actionlink" onclick="setContent2('blogs','-1/',{'current_page':${current_page+1}})">Next</a>
+	</div>
+</div>
+

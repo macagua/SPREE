@@ -1,0 +1,67 @@
+<div xmlns:py="http://genshi.edgewall.org/" id="queryOverviewContent">
+	<div class="content_fullBody" >
+		<div py:if="deleted" id="queryoverview_taken">
+			<p>This query was deleted by the user. Click 
+				<b>
+					<a class="actionlink" onclick="javascript:setContent('search');" title="here">here</a>
+				</b> to return.
+			</p>
+		</div>
+		<div py:if="not deleted">
+			<input id="queryoverview_query_id" type="hidden" value="$id"/>
+			<div class="graybox" style="margin-right:5px;">
+				<p class="header" >Would you like to answer this question?</p>
+				<div id="wait_query_${id}" class="body">
+					<h1>${topic}</h1>
+					<p style="margin:0 4px 0 0;font-size:10px; float:left;">by </p>
+					<div class="tooltip_linker" style="float:left;">
+						<p  
+						    onmouseout="ajax_hideQueryTooltip(this)" 
+							onmouseover="showUserDetailsTooltip(this, $user_id);"
+							> ${user}</p>
+					</div>
+					<p>, $date</p>
+					<br/>
+					<p><b>Categories:</b> $categories</p>
+					<p><b>Question:</b> ${text}</p>
+					<p></p>
+				</div>
+			</div>
+			<div class="buttons_blog">
+				<div  py:if="not declined and not taken and not isOverloaded" style="text-align:right;">
+		    		<button id="button_accept" class="btn" type="button" value=""  onclick="javascript:chat_loadContent(${id})" title="Accept Request" >
+							<div class="btn">
+							<p class="btn">I know it!</p>
+							</div>
+					</button>
+					<button py:if="isContactedExpert" id="button_decline" class="btn" type="button" value=""  onclick="javascript:doDecline(${id})" title="Decline Request" >
+						<div class="btn-red">
+						<p class="btn-red">Don't know</p>
+						</div>
+					</button>
+				</div>
+				<div py:if="not declined and not taken and isOverloaded" style="color:red; padding:10px 10px 10px 10px;">
+					The number of open questions in your inbox is currently to high.<br/><br/>
+					For answering this question you have to decline or finish answering at least one of your incoming questions.
+				</div>
+			</div>
+			<div py:if="not declined and taken" id="queryoverview_taken" style="margin-top:10px;">
+				This question is already being answered. Click 
+				<b>
+					<a class="actionlink" onclick="javascript:setContent('search','');" title="here">here</a>
+				</b> 
+				to leave.
+			</div>
+			<div py:if="declined" id="queryoverview_taken" style="margin-top:10px;">
+				You declined this question. Click 
+				<b>
+					<a class="actionlink" onclick="javascript:setContent('search');" title="here">here</a>
+				</b> 
+				to leave.					
+			</div>
+		</div>
+	</div>
+</div>
+   
+   
+   				

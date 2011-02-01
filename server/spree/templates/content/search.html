@@ -1,0 +1,118 @@
+<div xmlns:py="http://genshi.edgewall.org/" id="searchContent">
+	<div class="content_fullBody" >
+		<div class="search">
+			<h1 class="content_title">Please enter your question:</h1>
+			<table>
+				<colgroup>
+					<col width="76"/>
+					<col width="*"/>
+				</colgroup>
+				<tr class="searchcontent_enter">
+		            <th>Question:</th>
+		            <td>
+		                <textarea id="searchcontent_question"
+						    rows="8"
+							onkeyup="javascript:search_autoCompleteTopic(this.value)"
+							onfocus="javascript:this.rows=8;">${text}</textarea>
+		            </td>
+				</tr>
+				<tr class="searchcontent_enter">
+		            <th>Subject:</th>
+		            <td>
+		                <input type="text" lang="0" class="topicField" maxlength="50" id="searchcontent_topic" onfocus="javascript:this.lang='1';" value="${topic}" />
+		            </td>
+				</tr>
+				<tr class="searchcontent_enter"> 
+					<td></td>
+		            <td style="text-align:left;">
+		                (A title to be shown in the overview - max. 50 characters)
+		            </td>
+				</tr >
+				<tr class="searchcontent_enter">
+					<th>&nbsp;</th>
+					<td >
+						<button style="margin-top:7px;margin-left:-5px" class="btn fl" id="btnShowUsers" type="button" value="" 
+							title="Please click here to manually select an expert" 
+							onclick="javascript:search_clear();">
+							<div class="btn">
+								<p class="btn">Clear</p>
+							</div>
+						</button>						
+						<button style="margin-top:7px;width:131px;margin-right:-4px;" class="btn fr" id="button_classify" type="button" value="" title="Please click here to find an expert" onclick="javascript:search_classifyQuery();">
+							<div class="btn">
+								<p class="btn" id="btnContentClassify">Search Expert</p>
+							</div>
+						</button>
+					</td>
+				</tr>
+				<tr class="hidden searchRow selectRow"> 
+					<td></td>
+		            <td><br/><br/><p></p></td>
+				</tr>
+				<tr class="hidden selectRow"> 
+					<td colspan="2"><h1>Please select the user you want to chat with:</h1></td>
+				</tr>
+				<tr class="hidden selectRow"> 
+					<th>User: </th>
+		            <td>
+		            	<select id="lstUsers" class="listbox" name="users" size="1" onchange="search_lstUsersSelected()"></select>
+						<div class="divFilter">
+							<input type="checkbox" id="showOnlineOnly" onchange="search_showUserSelection()"/> Show online users only
+						</div>
+						
+		            </td>
+				</tr>
+				<tr class="hidden selectRow"> 
+					<td></td>
+		            <td>
+		            	<div class="statusbox">
+		            		Name: <br/>
+							Status: 
+		            	</div>
+						<div id="usrName"></div>
+						<div class="fl" id="usrStatus"></div>
+						
+						<div class="fr" style="margin-top:-8px;margin-right:-4px;" >
+							<button class="btn" style="width:131px;" id="btnDirectChat" type="button" value="" title="Click here to contact the selected user" onclick="javascript:search_startDirectChat(${query_id});">
+								<div class="btn">
+									<p class="btn">Chat</p>
+								</div>
+							</button>
+						</div>
+		            </td>
+				</tr>
+				<tr class="hidden searchRow" style="display:None;">
+		            <th>Keywords:</th>
+		            <td>
+		                <textarea  id="searchcontent_keywords" disabled="true" rows="2" columns="1"/>
+		            </td>
+				</tr>
+				<tr class="hidden searchRow">
+		            <th>Categories:</th>
+		            <td>
+		            	<div id="border_categories" >
+  							<a id="searchcontent_categories" style="display:None;" onclick="javascript:search_classifyManually();" target="_blank"></a>
+						</div>
+					</td>
+				</tr>
+				<tr class="hidden searchRow">
+					<td style="text-align:left;">
+					</td>
+					<td style="text-align:right; padding-top:10px;">
+						<button class="btn fl" id="button_modify"  type="button" value="" title="Please click here in order to modify your question" onclick="javascript:search_classifyManually();">
+							<div class="btn" style="margin-left:-1px;" >
+								<p class="btn">Modify</p>
+							</div>
+						</button>
+						<button class="btn fr" id="searchcontent_findButton" type="button" value="" title="Please click here to find an expert" onclick="javascript:search_doQuery(${query_id});">
+							<div class="btn">
+								<p class="btn">Search expert</p>
+							</div>
+						</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+

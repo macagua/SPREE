@@ -1,0 +1,2 @@
+db_module=spree.model
+history_dir=$base/spree/sqlobject-history

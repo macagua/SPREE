@@ -1,0 +1,51 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.util.text.extractor</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.util.html"><font color="#ffffff">util</font></a>.<a href="spree.util.text.html"><font color="#ffffff">text</font></a>.extractor</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/util/text/extractor.py">c:\studium\spree\opensource\spree\util\text\extractor.py</a></font></td></tr></table>
+    <p><tt>Provides&nbsp;functions&nbsp;for&nbsp;extracting&nbsp;terms&nbsp;out&nbsp;of&nbsp;documents</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="re.html">re</a><br>
+<a href="spree.util.nlp.stemmer.html">spree.util.nlp.stemmer</a><br>
+</td><td width="25%" valign=top><a href="spree.submodels.stopword_model.html">spree.submodels.stopword_model</a><br>
+<a href="nltk_lite.tokenize.html">nltk_lite.tokenize</a><br>
+</td><td width="25%" valign=top><a href="spree.util.list.wordlist.html">spree.util.list.wordlist</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-createDictionaryFromText"><strong>createDictionaryFromText</strong></a>(text, word_limit<font color="#909090">=-1</font>)</dt><dd><tt>Creates&nbsp;a&nbsp;dictionary&nbsp;consisting&nbsp;of&nbsp;stemmed&nbsp;words&nbsp;associated&nbsp;with&nbsp;their&nbsp;frequency&nbsp;of&nbsp;occurrence.<br>
+Stop&nbsp;words&nbsp;are&nbsp;removed&nbsp;and&nbsp;dictionary&nbsp;is&nbsp;cleaned&nbsp;(all&nbsp;the&nbsp;words&nbsp;with&nbsp;same&nbsp;stems&nbsp;are&nbsp;fused&nbsp;into<br>
+one&nbsp;occurrence&nbsp;in&nbsp;the&nbsp;dictionary).<br>
+&nbsp;<br>
+@param&nbsp;text:&nbsp;imput&nbsp;text<br>
+@param&nbsp;word_limit:&nbsp;only&nbsp;take&nbsp;the&nbsp;first&nbsp;n&nbsp;words&nbsp;of&nbsp;the&nbsp;text<br>
+@return:&nbsp;cleaned&nbsp;dictionary</tt></dd></dl>
+ <dl><dt><a name="-extractWords"><strong>extractWords</strong></a>(text)</dt><dd><tt>Extract&nbsp;all&nbsp;the&nbsp;words&nbsp;from&nbsp;a&nbsp;given&nbsp;text.<br>
+&nbsp;<br>
+@param&nbsp;text:&nbsp;input&nbsp;text<br>
+@return:&nbsp;the&nbsp;list&nbsp;of&nbsp;all&nbsp;found&nbsp;words</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>pattern</strong> = &lt;_sre.SRE_Pattern object&gt;</td></tr></table>
+</body></html>

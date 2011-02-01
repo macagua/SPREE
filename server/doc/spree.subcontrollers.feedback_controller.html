@@ -1,0 +1,101 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.subcontrollers.feedback_controller</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.subcontrollers.html"><font color="#ffffff">subcontrollers</font></a>.feedback_controller</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/subcontrollers/feedback_controller.py">c:\studium\spree\opensource\spree\subcontrollers\feedback_controller.py</a></font></td></tr></table>
+    <p><tt>The&nbsp;controller&nbsp;for&nbsp;the&nbsp;feedback&nbsp;content&nbsp;box</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="turbogears.config.html">turbogears.config</a><br>
+<a href="turbogears.controllers.html">turbogears.controllers</a><br>
+</td><td width="25%" valign=top><a href="turbogears.identity.html">turbogears.identity</a><br>
+<a href="spree.json.html">spree.json</a><br>
+</td><td width="25%" valign=top><a href="smtplib.html">smtplib</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.feedback_controller.html#FeedbackController">FeedbackController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.feedback_controller.html#FeedbackController">FeedbackController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FeedbackController">class <strong>FeedbackController</strong></a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Handles&nbsp;user&nbsp;feedbacks.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.subcontrollers.feedback_controller.html#FeedbackController">FeedbackController</a></dd>
+<dd><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a></dd>
+<dd><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="FeedbackController-getFeedbackContent"><strong>getFeedbackContent</strong></a>(self, *args, **kwargs)</dt><dd><tt>Returns&nbsp;content.feedback&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="FeedbackController-sendFeedback2DB"><strong>sendFeedback2DB</strong></a>(self, *args, **kwargs)</dt><dd><tt>Stores&nbsp;the&nbsp;users&nbsp;feedback&nbsp;information&nbsp;to&nbsp;the&nbsp;database&nbsp;and&nbsp;sends&nbsp;the&nbsp;information<br>
+as&nbsp;E-Mail&nbsp;to&nbsp;feedback.mail.receiver</tt></dd></dl>
+
+<dl><dt><a name="FeedbackController-send_email"><strong>send_email</strong></a>(self, to_addr, from_addr, username, design, interaction, bugs, ideas)</dt><dd><tt>Sends&nbsp;an&nbsp;email&nbsp;containing&nbsp;the&nbsp;information&nbsp;given&nbsp;as&nbsp;arguments.<br>
+&nbsp;<br>
+@param&nbsp;to_addr&nbsp;E-Mail&nbsp;receiver<br>
+@param&nbsp;from_addr&nbsp;E-Mail&nbsp;sender<br>
+@param&nbsp;username&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;user&nbsp;who&nbsp;submitted&nbsp;the&nbsp;feedback<br>
+@param&nbsp;design&nbsp;The&nbsp;users&nbsp;opinion&nbsp;about&nbsp;design<br>
+@param&nbsp;interaction&nbsp;The&nbsp;users&nbsp;opinion&nbsp;about&nbsp;interaction<br>
+@param&nbsp;bugs&nbsp;The&nbsp;users&nbsp;experiences&nbsp;with&nbsp;bugs<br>
+@param&nbsp;ideas&nbsp;The&nbsp;users&nbsp;own&nbsp;ideas</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>require</strong> = &lt;turbogears.identity.conditions.not_anonymous object&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Controller' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>:<br>
+<dl><dt><a name="FeedbackController-__getattribute__"><strong>__getattribute__</strong></a>(self, name)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;<br>
+<strong>turbomail</strong> = None</td></tr></table>
+</body></html>

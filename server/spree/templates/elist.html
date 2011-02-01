@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<py:choose test="len(email_list)!=0">
+    	<py:when test="True">
+    		<i py:for="e in email_list">${e};</i>
+  		</py:when>
+  		<py:otherwise>
+   			<i>Sorry, but you don't have the privilege to use this function</i>
+  		</py:otherwise>
+	</py:choose>
+	
+</html>

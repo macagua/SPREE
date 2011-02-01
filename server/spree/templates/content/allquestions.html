@@ -1,0 +1,60 @@
+<div xmlns:py="http://genshi.edgewall.org/">
+	<div id="allQuestionsContent">
+		<div class="content_bodyfull" style="margin-left:5px;">
+			<div class="graybox" style="height: 410px; width: 555px; border:none;">
+				<div style="background-color:#ccc; height:15px; padding:3px 5px 3px 5px; font-weight:bold;">
+					<p style="float:left;">Currently open questions</p>
+					<p style="float:right;">$from_-$to / $no_questions</p>
+				</div>
+				<div style="clear:both;"></div>
+				<div class="body" style="height: 370px;">
+					<div py:for="q in questions[:10]" 
+						class="entry" title="Show details" 
+						onclick="setContent('query_overview', ${q.query_id});">
+						<div class="counter">${q.count}.</div>
+						<div  class="text">
+							<p py:if="q.topic == ''" class="topic">No subject</p>
+							<p py:if="q.topic != ''" class="topic">${q.topic}</p>
+							<div style="font-size:10px;">
+								<p style="float:left;">by </p>
+								<div class="tooltip_linker" style="float:left; margin:0 0px 0 5px;">
+									<p  
+									    onmouseout="ajax_hideQueryTooltip(this)" 
+										onmouseover="showUserDetailsTooltip(this, $q.user.user_id, 220, -50);"
+										> ${q.user.display_name}</p>
+								</div>
+								<p>, $q.created</p>
+							</div>
+						</div>
+						<a class="details actionlink">Details</a>
+						<div style="clear:both;"></div>
+					</div>
+				</div>
+			</div>
+			<div py:if="no_pages &gt; 1" style="text-align:center">
+				<a py:if="no_pages!=0 and current_page!=1" class="actionlink" onclick="setContent2('allquestions','',{'page':${current_page-1}})">Prev</a>
+				<span py:if="no_pages &lt;=10">
+					<span py:for="p in range(1,no_pages+1)">
+						<a py:if="p != current_page" class="actionlink" onclick="setContent2('allquestions','',{'page':${p}})">${p}</a>
+						<a py:if="p == current_page and no_pages!=1" class="blog_link">${p}</a>
+					</span>
+				</span>
+				<span py:if="no_pages&gt;10">
+					<span py:if="current_page &gt;10">
+						<span py:for="p in range(current_page-10,min(current_page+10,no_pages+1))">
+							<a py:if="p != current_page" class="actionlink" onclick="setContent2('allquestions','',{'page':${p}})">${p}</a>
+							<a py:if="p == current_page" class="blog_link">${p}</a>
+						</span>
+					</span>
+					<span py:if="current_page &lt;=10">
+						<span py:for="p in range(1,min(current_page+10,no_pages+1))">
+							<a py:if="p != current_page" class="actionlink" onclick="setContent2('allquestions','',{'page':${p}})">${p}</a>
+							<a py:if="p == current_page" class="blog_link">${p}</a>
+						</span>
+					</span>
+				</span>			
+				<a py:if="no_pages!=0 and current_page!=no_pages" class="actionlink" onclick="setContent2('allquestions','',{'page':${current_page+1}})">Next</a>
+			</div>
+		</div>
+	</div>
+</div>

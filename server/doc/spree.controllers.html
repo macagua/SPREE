@@ -1,0 +1,162 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.controllers</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.controllers</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/controllers.py">c:\studium\spree\opensource\spree\controllers.py</a></font></td></tr></table>
+    <p><tt>The&nbsp;root&nbsp;controller&nbsp;containing&nbsp;all&nbsp;other&nbsp;controllers<br>
+and&nbsp;login,&nbsp;help&nbsp;and&nbsp;about&nbsp;functionality</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="spree.subcontrollers.admin_controller.html">spree.subcontrollers.admin_controller</a><br>
+<a href="spree.subcontrollers.boxes_controller.html">spree.subcontrollers.boxes_controller</a><br>
+<a href="cherrypy.html">cherrypy</a><br>
+<a href="turbogears.config.html">turbogears.config</a><br>
+<a href="spree.subcontrollers.content_controller.html">spree.subcontrollers.content_controller</a><br>
+</td><td width="25%" valign=top><a href="turbogears.controllers.html">turbogears.controllers</a><br>
+<a href="spree.subcontrollers.datainitializer.html">spree.subcontrollers.datainitializer</a><br>
+<a href="spree.subcontrollers.feed_controller.html">spree.subcontrollers.feed_controller</a><br>
+<a href="spree.subcontrollers.gadget_controller.html">spree.subcontrollers.gadget_controller</a><br>
+<a href="turbogears.identity.html">turbogears.identity</a><br>
+</td><td width="25%" valign=top><a href="spree.json.html">spree.json</a><br>
+<a href="logging.html">logging</a><br>
+<a href="spree.subcontrollers.profile_controller.html">spree.subcontrollers.profile_controller</a><br>
+<a href="spree.register_controllers.html">spree.register_controllers</a><br>
+<a href="spree.html">spree</a><br>
+</td><td width="25%" valign=top><a href="spree.subcontrollers.statistics_controller.html">spree.subcontrollers.statistics_controller</a><br>
+<a href="spree.submodels.stopword_model.html">spree.submodels.stopword_model</a><br>
+<a href="spree.submodels.tree_model.html">spree.submodels.tree_model</a><br>
+<a href="turbogears.html">turbogears</a><br>
+<a href="spree.visit_plugin.html">spree.visit_plugin</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="turbogears.controllers.html#RootController">turbogears.controllers.RootController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.controllers.html#Root">Root</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Root">class <strong>Root</strong></a>(<a href="turbogears.controllers.html#RootController">turbogears.controllers.RootController</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;is&nbsp;a&nbsp;father&nbsp;class&nbsp;of&nbsp;all&nbsp;controllers&nbsp;and&nbsp;provides&nbsp;login,&nbsp;help&nbsp;and&nbsp;about&nbsp;functionality.<br>
+&nbsp;<br>
+Subcontrollers:<br>
+&nbsp;<br>
+registration&nbsp;&nbsp;&nbsp;-&nbsp;the&nbsp;registration&nbsp;subcontroller<br>
+content&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;the&nbsp;controller(s)&nbsp;for&nbsp;actions&nbsp;related&nbsp;to&nbsp;the&nbsp;main&nbsp;content&nbsp;box<br>
+boxes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;the&nbsp;controller&nbsp;related&nbsp;to&nbsp;the&nbsp;smaller&nbsp;boxes&nbsp;(i/o-boxes&nbsp;etc.)<br>
+profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;the&nbsp;controller&nbsp;related&nbsp;to&nbsp;the&nbsp;user's&nbsp;expertise&nbsp;(tree&nbsp;widget&nbsp;etc.)<br>
+feed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;the&nbsp;rss&nbsp;feed&nbsp;controller<br>
+gadget&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;the&nbsp;google&nbsp;gadget&nbsp;controller<br>
+admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;a&nbsp;controller&nbsp;for&nbsp;administrative&nbsp;access<br>
+statistics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;a&nbsp;controller&nbsp;providing&nbsp;statistical&nbsp;data<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.controllers.html#Root">Root</a></dd>
+<dd><a href="turbogears.controllers.html#RootController">turbogears.controllers.RootController</a></dd>
+<dd><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Root-about"><strong>about</strong></a>(self, *args, **kwargs)</dt><dd><tt>Serves&nbsp;about&nbsp;page.</tt></dd></dl>
+
+<dl><dt><a name="Root-help"><strong>help</strong></a>(self, *args, **kwargs)</dt><dd><tt>Serves&nbsp;help&nbsp;page.</tt></dd></dl>
+
+<dl><dt><a name="Root-index"><strong>index</strong></a>(self, forward_url<font color="#909090">=None</font>, previous_url<font color="#909090">=None</font>, *args, **kw)</dt><dd><tt>The&nbsp;main&nbsp;url.&nbsp;Checks&nbsp;whether&nbsp;user&nbsp;is&nbsp;logged&nbsp;in&nbsp;or&nbsp;remembered&nbsp;and&nbsp;forwards<br>
+to&nbsp;the&nbsp;right&nbsp;url.</tt></dd></dl>
+
+<dl><dt><a name="Root-login"><strong>login</strong></a>(self, forward_url<font color="#909090">=None</font>, *args, **kw)</dt><dd><tt>Allows&nbsp;user&nbsp;to&nbsp;log&nbsp;in.&nbsp;Checks&nbsp;for&nbsp;validity&nbsp;of&nbsp;entered&nbsp;data&nbsp;and&nbsp;takes&nbsp;care&nbsp;of&nbsp;invalid&nbsp;cases.<br>
+Also&nbsp;takes&nbsp;care&nbsp;of&nbsp;remember&nbsp;me&nbsp;check&nbsp;box&nbsp;value.</tt></dd></dl>
+
+<dl><dt><a name="Root-logout"><strong>logout</strong></a>(self, *_decorator__varargs, **_decorator__kwargs)</dt><dd><tt>Logs&nbsp;user&nbsp;out.&nbsp;The&nbsp;action&nbsp;of&nbsp;user's&nbsp;logout&nbsp;is&nbsp;further&nbsp;logged&nbsp;in&nbsp;a&nbsp;user_log&nbsp;table.</tt></dd></dl>
+
+<dl><dt><a name="Root-onLogin"><strong>onLogin</strong></a>(self)</dt><dd><tt>Upon&nbsp;user's&nbsp;login&nbsp;user&nbsp;receives&nbsp;cookie.&nbsp;The&nbsp;action&nbsp;of&nbsp;user's&nbsp;logint&nbsp;is&nbsp;further&nbsp;logged&nbsp;in&nbsp;a&nbsp;user_log&nbsp;table.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>admin</strong> = &lt;spree.subcontrollers.admin_controller.AdminController object&gt;</dl>
+
+<dl><dt><strong>boxes</strong> = &lt;spree.subcontrollers.boxes_controller.BoxesController object&gt;</dl>
+
+<dl><dt><strong>content</strong> = &lt;spree.subcontrollers.content_controller.ContentController object&gt;</dl>
+
+<dl><dt><strong>feed</strong> = &lt;spree.subcontrollers.feed_controller.NewsFeedController object&gt;</dl>
+
+<dl><dt><strong>gadget</strong> = &lt;spree.subcontrollers.gadget_controller.GadgetController object&gt;</dl>
+
+<dl><dt><strong>profile</strong> = &lt;spree.subcontrollers.profile_controller.ProfileController object&gt;</dl>
+
+<dl><dt><strong>registration</strong> = &lt;spree.register_controllers.UserRegistration object&gt;</dl>
+
+<dl><dt><strong>statistics</strong> = &lt;spree.subcontrollers.statistics_controller.StatisticsController object&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.controllers.html#RootController">turbogears.controllers.RootController</a>:<br>
+<dl><dt><strong>accesslog</strong> = &lt;logging.Logger instance&gt;</dl>
+
+<dl><dt><strong>is_app_root</strong> = True</dl>
+
+<dl><dt><strong>msglog</strong> = &lt;logging.Logger instance&gt;</dl>
+
+<dl><dt><strong>msglogfunc</strong> = {0: &lt;bound method Logger.info of &lt;logging.Logger instance&gt;&gt;, 1: &lt;bound method Logger.warning of &lt;logging.Logger instance&gt;&gt;, 2: &lt;bound method Logger.error of &lt;logging.Logger instance&gt;&gt;}</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Controller' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-gmtime"><strong>gmtime</strong></a>(...)</dt><dd><tt><a href="#-gmtime">gmtime</a>([seconds])&nbsp;-&gt;&nbsp;(tm_year,&nbsp;tm_mon,&nbsp;tm_day,&nbsp;tm_hour,&nbsp;tm_min,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tm_sec,&nbsp;tm_wday,&nbsp;tm_yday,&nbsp;tm_isdst)<br>
+&nbsp;<br>
+Convert&nbsp;seconds&nbsp;since&nbsp;the&nbsp;Epoch&nbsp;to&nbsp;a&nbsp;time&nbsp;tuple&nbsp;expressing&nbsp;UTC&nbsp;(a.k.a.<br>
+GMT).&nbsp;&nbsp;When&nbsp;'seconds'&nbsp;is&nbsp;not&nbsp;passed&nbsp;in,&nbsp;convert&nbsp;the&nbsp;current&nbsp;time&nbsp;instead.</tt></dd></dl>
+ <dl><dt><a name="-strftime"><strong>strftime</strong></a>(...)</dt><dd><tt><a href="#-strftime">strftime</a>(format[,&nbsp;tuple])&nbsp;-&gt;&nbsp;string<br>
+&nbsp;<br>
+Convert&nbsp;a&nbsp;time&nbsp;tuple&nbsp;to&nbsp;a&nbsp;string&nbsp;according&nbsp;to&nbsp;a&nbsp;format&nbsp;specification.<br>
+See&nbsp;the&nbsp;library&nbsp;reference&nbsp;manual&nbsp;for&nbsp;formatting&nbsp;codes.&nbsp;When&nbsp;the&nbsp;time&nbsp;tuple<br>
+is&nbsp;not&nbsp;present,&nbsp;current&nbsp;time&nbsp;as&nbsp;returned&nbsp;by&nbsp;localtime()&nbsp;is&nbsp;used.</tt></dd></dl>
+ <dl><dt><a name="-time"><strong>time</strong></a>(...)</dt><dd><tt><a href="#-time">time</a>()&nbsp;-&gt;&nbsp;floating&nbsp;point&nbsp;number<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;current&nbsp;time&nbsp;in&nbsp;seconds&nbsp;since&nbsp;the&nbsp;Epoch.<br>
+Fractions&nbsp;of&nbsp;a&nbsp;second&nbsp;may&nbsp;be&nbsp;present&nbsp;if&nbsp;the&nbsp;system&nbsp;clock&nbsp;provides&nbsp;them.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>log</strong> = &lt;logging.Logger instance&gt;<br>
+<strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;</td></tr></table>
+</body></html>

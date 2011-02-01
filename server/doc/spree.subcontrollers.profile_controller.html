@@ -1,0 +1,161 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.subcontrollers.profile_controller</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.subcontrollers.html"><font color="#ffffff">subcontrollers</font></a>.profile_controller</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/subcontrollers/profile_controller.py">c:\studium\spree\opensource\spree\subcontrollers\profile_controller.py</a></font></td></tr></table>
+    <p><tt>The&nbsp;controller&nbsp;for&nbsp;the&nbsp;profile&nbsp;content</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cPickle.html">cPickle</a><br>
+<a href="cherrypy.html">cherrypy</a><br>
+</td><td width="25%" valign=top><a href="turbogears.controllers.html">turbogears.controllers</a><br>
+<a href="turbogears.identity.html">turbogears.identity</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+<a href="spree.submodels.tree_model.html">spree.submodels.tree_model</a><br>
+</td><td width="25%" valign=top><a href="turbogears.html">turbogears</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.profile_controller.html#ProfileController">ProfileController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.subcontrollers.profile_controller.html#ProfileController">ProfileController</a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ProfileController">class <strong>ProfileController</strong></a>(<a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>, <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Performs&nbsp;profiling&nbsp;of&nbsp;the&nbsp;user.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.subcontrollers.profile_controller.html#ProfileController">ProfileController</a></dd>
+<dd><a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a></dd>
+<dd><a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ProfileController-extractNodes"><strong>extractNodes</strong></a>(self, *args, **kwargs)</dt><dd><tt>Forms&nbsp;a&nbsp;user&nbsp;profile.&nbsp;?<br>
+&nbsp;<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;websites&nbsp;and&nbsp;keywords&nbsp;given&nbsp;by&nbsp;the&nbsp;user&nbsp;<br>
+@return:&nbsp;list&nbsp;of&nbsp;node&nbsp;with&nbsp;constant&nbsp;level&nbsp;of&nbsp;expertise&nbsp;set&nbsp;to&nbsp;3&nbsp;and&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;other&nbsp;values&nbsp;needed&nbsp;for&nbsp;the&nbsp;template</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-getChildren"><strong>getChildren</strong></a>(self, node)</dt><dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Converts&nbsp;node's&nbsp;children&nbsp;to&nbsp;a&nbsp;string.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@param&nbsp;node:&nbsp;starting&nbsp;position&nbsp;for&nbsp;conversion&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@return:&nbsp;string&nbsp;filed&nbsp;with&nbsp;information&nbsp;about&nbsp;nodes&nbsp;from&nbsp;the&nbsp;subtree<br>
+`</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-getExpertise"><strong>getExpertise</strong></a>(self, *args, **kwargs)</dt><dd><tt>Serves&nbsp;data&nbsp;about&nbsp;users&nbsp;expertise.&nbsp;<br>
+&nbsp;<br>
+@return:&nbsp;id&nbsp;and&nbsp;name&nbsp;of&nbsp;field&nbsp;of&nbsp;expertise,&nbsp;level&nbsp;of&nbsp;expertise,&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;full&nbsp;path&nbsp;from&nbsp;root&nbsp;till&nbsp;that&nbsp;node,&nbsp;as&nbsp;a&nbsp;list&nbsp;and&nbsp;as&nbsp;a&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-getNode"><strong>getNode</strong></a>(self, *args, **kwargs)</dt><dd><tt>?<br>
+&nbsp;<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;data&nbsp;<br>
+@return:&nbsp;The&nbsp;tree&nbsp;in&nbsp;json&nbsp;format</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-getNodesInfo"><strong>getNodesInfo</strong></a>(self, *args, **kwargs)</dt><dd><tt>Serves&nbsp;information&nbsp;about&nbsp;nodes&nbsp;from&nbsp;the&nbsp;tree.<br>
+&nbsp;<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;list&nbsp;of&nbsp;node&nbsp;ids<br>
+@return:&nbsp;id&nbsp;and&nbsp;name&nbsp;of&nbsp;the&nbsp;node,&nbsp;and&nbsp;full&nbsp;path&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;root&nbsp;till&nbsp;that&nbsp;node,&nbsp;as&nbsp;a&nbsp;list&nbsp;and&nbsp;as&nbsp;a&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-getSettingsContent"><strong>getSettingsContent</strong></a>(self, *args, **kwargs)</dt><dd><tt>Fetches&nbsp;user&nbsp;settings.<br>
+&nbsp;<br>
+@return:&nbsp;user&nbsp;settings</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-getWebsites"><strong>getWebsites</strong></a>(self, websites)</dt><dd><tt>Takes&nbsp;the&nbsp;websites&nbsp;one&nbsp;by&nbsp;one&nbsp;and&nbsp;checks&nbsp;their&nbsp;status.&nbsp;<br>
+&nbsp;<br>
+@param&nbsp;websites:&nbsp;websites&nbsp;given&nbsp;by&nbsp;the&nbsp;user<br>
+@return:&nbsp;status&nbsp;and&nbsp;classification&nbsp;for&nbsp;each&nbsp;website</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-loadDocs"><strong>loadDocs</strong></a>(self, *args, **kwargs)</dt><dd><tt>Loads&nbsp;a&nbsp;list&nbsp;of&nbsp;websites&nbsp;specified&nbsp;by&nbsp;the&nbsp;user&nbsp;and&nbsp;writes&nbsp;them&nbsp;to&nbsp;db.<br>
+&nbsp;<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;websites<br>
+@return:&nbsp;status&nbsp;of&nbsp;processing&nbsp;for&nbsp;each&nbsp;given&nbsp;website</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-setExpertise"><strong>setExpertise</strong></a>(self, *args, **kwargs)</dt><dd><tt>Sets&nbsp;a&nbsp;users&nbsp;expertise.<br>
+&nbsp;<br>
+@param&nbsp;*args:&nbsp;contains&nbsp;list&nbsp;of&nbsp;node&nbsp;ids<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;node&nbsp;ids&nbsp;and&nbsp;level&nbsp;of&nbsp;expertise&nbsp;for&nbsp;each&nbsp;one&nbsp;of&nbsp;them<br>
+@return:&nbsp;status&nbsp;of&nbsp;user&nbsp;expertise&nbsp;after&nbsp;processing</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-toDict"><strong>toDict</strong></a>(self, node)</dt><dd><tt>Converts&nbsp;a&nbsp;node&nbsp;and&nbsp;its&nbsp;children&nbsp;to&nbsp;a&nbsp;dict&nbsp;object.<br>
+&nbsp;<br>
+@param&nbsp;node:&nbsp;starting&nbsp;position&nbsp;for&nbsp;conversion&nbsp;<br>
+@return:&nbsp;dictionary&nbsp;filed&nbsp;with&nbsp;information&nbsp;about&nbsp;nodes&nbsp;from&nbsp;the&nbsp;subtree</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-toJSON"><strong>toJSON</strong></a>(self, node)</dt><dd><tt>Converts&nbsp;a&nbsp;node&nbsp;and&nbsp;its&nbsp;children&nbsp;to&nbsp;a&nbsp;json&nbsp;object.<br>
+&nbsp;<br>
+@param&nbsp;node:&nbsp;starting&nbsp;position&nbsp;for&nbsp;conversion&nbsp;<br>
+@return:&nbsp;JSON&nbsp;object&nbsp;filed&nbsp;with&nbsp;information&nbsp;about&nbsp;nodes&nbsp;from&nbsp;the&nbsp;subtree</tt></dd></dl>
+
+<dl><dt><a name="ProfileController-update_setting"><strong>update_setting</strong></a>(self, *args, **kwargs)</dt><dd><tt>Updates&nbsp;user&nbsp;settings.<br>
+&nbsp;<br>
+@param&nbsp;**kwargs:&nbsp;contains&nbsp;information&nbsp;about&nbsp;anonymity,&nbsp;sending&nbsp;a&nbsp;queries&nbsp;by&nbsp;email&nbsp;and&nbsp;newsletter</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>bannedFileTypes</strong> = ['.pdf', '.swf', '.ps', '.ppt', '.doc', '.PDF', '.SWF', '.PS', '.PPT', '.DOC', '.exe']</dl>
+
+<hr>
+Data and other attributes inherited from <a href="turbogears.controllers.html#Controller">turbogears.controllers.Controller</a>:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Controller' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+<hr>
+Methods inherited from <a href="turbogears.identity.conditions.html#SecureResource">turbogears.identity.conditions.SecureResource</a>:<br>
+<dl><dt><a name="ProfileController-__getattribute__"><strong>__getattribute__</strong></a>(self, name)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-cmpNodes"><strong>cmpNodes</strong></a>(node1, node2)</dt><dd><tt>Compares&nbsp;two&nbsp;nodes&nbsp;by&nbsp;their&nbsp;name<br>
+&nbsp;<br>
+@param&nbsp;node1:&nbsp;first&nbsp;node<br>
+@param&nbsp;node2:&nbsp;second&nbsp;node<br>
+@return:&nbsp;0&nbsp;if&nbsp;true,&nbsp;-1&nbsp;if&nbsp;false</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>session</strong> = &lt;sqlalchemy.ext.activemapper.Objectstore object&gt;</td></tr></table>
+</body></html>

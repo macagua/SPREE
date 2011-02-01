@@ -1,0 +1,111 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.visit_plugin</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.visit_plugin</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/visit_plugin.py">c:\studium\spree\opensource\spree\visit_plugin.py</a></font></td></tr></table>
+    <p><tt>Provides&nbsp;"remember&nbsp;me"&nbsp;functionality</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cherrypy.html">cherrypy</a><br>
+<a href="turbogears.identity.html">turbogears.identity</a><br>
+</td><td width="25%" valign=top><a href="sha.html">sha</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="turbogears.html">turbogears</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial">turbogears.identity.visitor.IdentityVisitPlugin(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.visit_plugin.html#IdentityVisitPlugin">IdentityVisitPlugin</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="IdentityVisitPlugin">class <strong>IdentityVisitPlugin</strong></a>(turbogears.identity.visitor.IdentityVisitPlugin)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Plugin&nbsp;for&nbsp;remember&nbsp;me&nbsp;functionality<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="spree.visit_plugin.html#IdentityVisitPlugin">IdentityVisitPlugin</a></dd>
+<dd>turbogears.identity.visitor.IdentityVisitPlugin</dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="IdentityVisitPlugin-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="IdentityVisitPlugin-identity_from_form"><strong>identity_from_form</strong></a>(self, visit_key)</dt><dd><tt>see&nbsp;also&nbsp;BaseIdentityVisitPlugin.identity_from_form</tt></dd></dl>
+
+<dl><dt><a name="IdentityVisitPlugin-identity_from_remember_me"><strong>identity_from_remember_me</strong></a>(self, visit_key)</dt><dd><tt>Inspect&nbsp;the&nbsp;remember&nbsp;me&nbsp;cookie&nbsp;to&nbsp;pull&nbsp;out&nbsp;identity&nbsp;information.<br>
+Returns&nbsp;an&nbsp;identity&nbsp;dictionary&nbsp;or&nbsp;none&nbsp;if&nbsp;the&nbsp;cookie&nbsp;contained&nbsp;no&nbsp;identity<br>
+information&nbsp;or&nbsp;the&nbsp;information&nbsp;was&nbsp;incorrect.<br>
+&nbsp;<br>
+@param&nbsp;visit_key:&nbsp;The&nbsp;visit&nbsp;key<br>
+@return:&nbsp;An&nbsp;identity&nbsp;dictionary&nbsp;or&nbsp;none&nbsp;if&nbsp;the&nbsp;cookie&nbsp;contained&nbsp;no&nbsp;identity<br>
+information&nbsp;or&nbsp;the&nbsp;information&nbsp;was&nbsp;incorrect.</tt></dd></dl>
+
+<dl><dt><a name="IdentityVisitPlugin-identity_from_request"><strong>identity_from_request</strong></a>(self, visit_key)</dt><dd><tt>Retrieve&nbsp;identity&nbsp;information&nbsp;from&nbsp;the&nbsp;HTTP&nbsp;request.&nbsp;Checks&nbsp;first&nbsp;for<br>
+form&nbsp;fields&nbsp;defining&nbsp;the&nbsp;identity&nbsp;then&nbsp;for&nbsp;a&nbsp;cookie.&nbsp;If&nbsp;no&nbsp;identity<br>
+is&nbsp;found,&nbsp;returns&nbsp;an&nbsp;anonymous&nbsp;identity.<br>
+&nbsp;<br>
+@param&nbsp;visit_key&nbsp;The&nbsp;visit&nbsp;key<br>
+@return:&nbsp;A&nbsp;identity&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="IdentityVisitPlugin-send_remember_me_cookie"><strong>send_remember_me_cookie</strong></a>(self, user_name, password)</dt><dd><tt>Sends&nbsp;a&nbsp;remember&nbsp;me&nbsp;cookie&nbsp;back&nbsp;to&nbsp;the&nbsp;browser</tt></dd></dl>
+
+<hr>
+Methods inherited from turbogears.identity.visitor.IdentityVisitPlugin:<br>
+<dl><dt><a name="IdentityVisitPlugin-decode_basic_credentials"><strong>decode_basic_credentials</strong></a>(self, credentials)</dt><dd><tt>Decode&nbsp;base64&nbsp;user_name:password&nbsp;credentials&nbsp;used&nbsp;in&nbsp;Basic&nbsp;Auth.&nbsp;Returned<br>
+with&nbsp;username&nbsp;in&nbsp;element&nbsp;0&nbsp;and&nbsp;password&nbsp;in&nbsp;element&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="IdentityVisitPlugin-identity_from_http_auth"><strong>identity_from_http_auth</strong></a>(self, visit_key)</dt><dd><tt>Only&nbsp;basic&nbsp;auth&nbsp;is&nbsp;handled&nbsp;at&nbsp;the&nbsp;moment.</tt></dd></dl>
+
+<dl><dt><a name="IdentityVisitPlugin-identity_from_visit"><strong>identity_from_visit</strong></a>(self, visit_key)</dt></dl>
+
+<dl><dt><a name="IdentityVisitPlugin-record_request"><strong>record_request</strong></a>(self, visit)</dt></dl>
+
+<hr>
+Data and other attributes inherited from turbogears.identity.visitor.IdentityVisitPlugin:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'IdentityVisitPlugin' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-clear_remember_me_cookie"><strong>clear_remember_me_cookie</strong></a>()</dt><dd><tt>Clears&nbsp;any&nbsp;remember&nbsp;me&nbsp;cookie.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>log</strong> = &lt;logging.Logger instance&gt;<br>
+<strong>remember_cookie_name</strong> = 'tg_remember_me'</td></tr></table>
+</body></html>

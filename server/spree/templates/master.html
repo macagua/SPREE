@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      py:strip="">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+    <title>SPREE community</title>
+	<link rel="shortcut icon" href='${tg.url("/static/images/favicon.ico")}'/>
+    <style type="text/css" media="screen">
+        @import url(${tg.url('/static/css/style.css')});
+        @import url(${tg.url('/static/css/boxes.css')});
+        @import url(${tg.url('/static/css/tooltip.css')});		
+    </style>
+
+	<style>
+		button
+		{	margin:0;
+			padding:0 .25em;
+			width:auto;
+			overflow:visible;
+			background:transparent none repeat scroll 0%;
+			border:0pt none;
+			cursor:pointer;
+			margin:0pt;
+			padding:0pt;
+			line-height:20px;
+		}	
+	</style>
+
+</head>
+
+<body>
+	<div id="centeringdiv">
+		<div id="hdr_c">
+			<div id="clickDiv" onclick="location=${tg.url('/')};"></div>
+			<div id="menu_block">
+				<main_menu></main_menu>
+				<feed_menu></feed_menu>
+			</div>
+			<status></status>
+		</div>
+		<div id="top_bar"></div>
+		<div id="container">
+	
+			<div id="left">
+				<leftMenu></leftMenu>
+				<newSearch></newSearch>	
+				<incoming></incoming>		
+				<outgoing></outgoing>
+				<div class="planbox" style="border: 0px"></div>
+			</div>
+			<startpage id="startpage"></startpage>	
+			<menu id="menu"></menu>
+			<content id="content"></content>
+		
+			<div id="right">
+				<login></login>
+				<rightMenu></rightMenu>
+				<statistics></statistics>
+				<highscores></highscores>
+				<polling></polling>
+				<link_list></link_list>
+			</div>
+		</div>
+		
+	    <div py:if="tg_flash" class="flash" py:content="tg_flash"></div>
+	</div>
+
+</body>
+
+</html>

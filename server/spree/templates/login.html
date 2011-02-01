@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<script type="text/javascript" src='${tg.url("/static/javascript/content/registration.js")}'></script>
+<div id="statusline" py:match="status">${message}</div>
+
+<div id="login" py:match="login">
+	<div id="loginBox" class="planbox">
+		<div class="box_right">
+			<div id="loginForm" class="box_login">
+				<h1>Login</h1>
+	            <form action='${tg.url("/login")}' method="post">
+	                <p>Username:</p>
+					<input type="text" id="user_name" name="user_name" style="width:95%"/>
+	                <p>Password:</p>
+					<input type="password" id="password" name="password" style="width:95%"/>
+					<input type="checkbox" id="rememberme" checked="true"/>	
+					<p>Remember me</p>
+	      			<button class="btn" type="submit" value="" name="login">
+						<div class="btn">
+						<p class="btn">Login</p>
+						</div>
+					</button>
+				   <ul>
+		            	<li><a onclick="javascript:setContent('register_new','')" style="cursor:pointer">Register</a></li>
+		            	<li><a onclick="javascript:setContent('register_lost_password','')" style="cursor:pointer">I lost my password</a></li>
+		            </ul>	            
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="spacer" py:match="spacer_right" class="planbox" style="border:none; text-align:center; height:140px"></div>
+
+<div id="content" py:match="content" >
+	
+	<img src='${tg.url("/static/images/spree_logo.gif")}' style=""/>
+	<a href='${tg.url("/static/video/spreevideo.html")}' target="_blank" style="float: right; margin-right: 20px;"> Watch the video</a>
+	<!--h1>This is the SPREE Project</h1>
+	<h2 style="color:#000000; text-transform: none; font-size: 11px;">A Community-Based Information Exchange Network</h2>
+	<p style="font-size: 11px;  margin-top:5px;">SPREE is a real-time search engine for an online community where users can ask experts, 
+	who are simply other participating users knowledgeable in that area, for help on various topics. SPREE uses a graph-based 
+	representation scheme consisting of an ontology tree where each node corresponds to a (sub)topic. 
+	The fields of expertise (profile) of the participating experts are represented as subtrees of this ontology. 
+	Since user queries can </p>
+	<p style="font-size: 11px; width:270px; padding-top: 0px">also be mapped to similar tree structures, assigning queries to relevant experts becomes a 
+	problem of graph matching. SPREE will demonstrate the feasability of this approach by identifying and contacting the relevant experts in 
+	realtime thus providing a tool for the efficient identification and distribution of existing knowledge in enterprises and communities.</p>
+	<h2 style="color:red; text-transform: none; font-size: 12px; position: absolute; top: 250px;margin-left:80px;">Ask the Experts!</h2>
+	<img src="/static/images/social.jpg" style="position: absolute; top: 140px;margin-left:300px;"/-->
+</div>
+
+<xi:include href="submaster.html"/>
+
+</html>

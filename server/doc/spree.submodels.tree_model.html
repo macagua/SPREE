@@ -1,0 +1,161 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.submodels.tree_model</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.submodels.html"><font color="#ffffff">submodels</font></a>.tree_model</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/submodels/tree_model.py">c:\studium\spree\opensource\spree\submodels\tree_model.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;model&nbsp;provides&nbsp;wrapper&nbsp;classes&nbsp;to&nbsp;the&nbsp;tree&nbsp;related&nbsp;tables&nbsp;(dictionary,&nbsp;ontologynode).<br>
+It&nbsp;also&nbsp;provides&nbsp;methods&nbsp;for&nbsp;the&nbsp;creation&nbsp;and&nbsp;loading&nbsp;of&nbsp;the&nbsp;initial&nbsp;tables&nbsp;from&nbsp;files&nbsp;<br>
+and&nbsp;for&nbsp;the&nbsp;mapping&nbsp;of&nbsp;text&nbsp;to&nbsp;the&nbsp;term&nbsp;space.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="cPickle.html">cPickle</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+<a href="spree.util.matching.distances.html">spree.util.matching.distances</a><br>
+<a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+<a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+<a href="spree.util.text.extractor.html">spree.util.text.extractor</a><br>
+<a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+<a href="sqlalchemy.databases.mysql.html">sqlalchemy.databases.mysql</a><br>
+<a href="spree.util.matching.normalization.html">spree.util.matching.normalization</a><br>
+<a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+<a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+<a href="shelve.html">shelve</a><br>
+<a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+<a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="turbogears.html">turbogears</a><br>
+<a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.submodels.tree_model.html#Node">Node</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Node">class <strong>Node</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Holds&nbsp;the&nbsp;node&nbsp;data.<br>
+Definition&nbsp;is&nbsp;given&nbsp;in&nbsp;ontology&nbsp;node&nbsp;table.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Node-__init__"><strong>__init__</strong></a>(self, *args, **kwargs)</dt><dd><tt>x.<a href="#Node-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;x.__class__.__doc__&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Node' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>c</strong> = &lt;sqlalchemy.orm.mapper.LOrderedProp object&gt;</dl>
+
+<dl><dt><strong>leftIdx</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>level</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>name</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>node_id</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+<dl><dt><strong>rightIdx</strong> = &lt;sqlalchemy.orm.unitofwork.UOWProperty object&gt;<dd><tt>Override&nbsp;``InstrumentedAttribute``&nbsp;to&nbsp;provide&nbsp;an&nbsp;extra<br>
+``AttributeExtension``&nbsp;to&nbsp;all&nbsp;managed&nbsp;attributes&nbsp;as&nbsp;well&nbsp;as&nbsp;the<br>
+`property`&nbsp;property.</tt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-create_tables"><strong>create_tables</strong></a>()</dt><dd><tt>Creates&nbsp;the&nbsp;appropriate&nbsp;database&nbsp;tables.</tt></dd></dl>
+ <dl><dt><a name="-getLeavesForBow"><strong>getLeavesForBow</strong></a>(bow, alpha<font color="#909090">=1000</font>)</dt><dd><tt>Classifies&nbsp;the&nbsp;bag&nbsp;of&nbsp;words&nbsp;to&nbsp;a&nbsp;subtree,&nbsp;but&nbsp;retain&nbsp;only&nbsp;leave&nbsp;nodes.<br>
+&nbsp;<br>
+@param&nbsp;bow:&nbsp;the&nbsp;bag&nbsp;of&nbsp;words<br>
+@param&nbsp;alpha:&nbsp;factor&nbsp;that&nbsp;regulates&nbsp;branching<br>
+@return:&nbsp;A&nbsp;list&nbsp;of&nbsp;leave&nbsp;node&nbsp;instances&nbsp;the&nbsp;bag&nbsp;of&nbsp;word&nbsp;was&nbsp;classified&nbsp;into</tt></dd></dl>
+ <dl><dt><a name="-getNodeNames"><strong>getNodeNames</strong></a>(nodeIds)</dt><dd><tt>Converts&nbsp;a&nbsp;list&nbsp;of&nbsp;node&nbsp;ids&nbsp;to&nbsp;a&nbsp;list&nbsp;of&nbsp;node&nbsp;names.<br>
+&nbsp;<br>
+@param&nbsp;nodeIds:&nbsp;list&nbsp;of&nbsp;node&nbsp;ids<br>
+@return:&nbsp;list&nbsp;of&nbsp;node&nbsp;names</tt></dd></dl>
+ <dl><dt><a name="-getNodesOnPath"><strong>getNodesOnPath</strong></a>(node_id)</dt><dd><tt>Given&nbsp;a&nbsp;node&nbsp;id&nbsp;forms&nbsp;a&nbsp;list&nbsp;of&nbsp;the&nbsp;node&nbsp;objects&nbsp;on&nbsp;the&nbsp;path&nbsp;<br>
+from&nbsp;the&nbsp;given&nbsp;node&nbsp;to&nbsp;the&nbsp;root.<br>
+&nbsp;<br>
+@param&nbsp;node_id:&nbsp;identifying&nbsp;the&nbsp;node<br>
+@return:&nbsp;list&nbsp;of&nbsp;node&nbsp;objects</tt></dd></dl>
+ <dl><dt><a name="-getSubtreeForBow"><strong>getSubtreeForBow</strong></a>(bow, alpha<font color="#909090">=1000</font>)</dt><dd><tt>Classifies&nbsp;the&nbsp;bag&nbsp;of&nbsp;words&nbsp;to&nbsp;a&nbsp;subtree.<br>
+&nbsp;<br>
+@param&nbsp;bow:&nbsp;the&nbsp;bag&nbsp;of&nbsp;words<br>
+@param&nbsp;alpha:&nbsp;factor&nbsp;that&nbsp;regulates&nbsp;branching<br>
+@return:&nbsp;a&nbsp;list&nbsp;of&nbsp;node&nbsp;instances&nbsp;representing&nbsp;a&nbsp;subgraph&nbsp;of&nbsp;the&nbsp;tree</tt></dd></dl>
+ <dl><dt><a name="-getSubtreeForText"><strong>getSubtreeForText</strong></a>(text, alpha<font color="#909090">=1000</font>)</dt><dd><tt>Extract&nbsp;the&nbsp;terms&nbsp;from&nbsp;a&nbsp;given&nbsp;text&nbsp;and&nbsp;classifies&nbsp;them&nbsp;to&nbsp;a&nbsp;subtree.<br>
+&nbsp;<br>
+@param&nbsp;alfa:&nbsp;factor&nbsp;that&nbsp;regulates&nbsp;branching<br>
+@return:&nbsp;list&nbsp;of&nbsp;nodes&nbsp;contained&nbsp;in&nbsp;a&nbsp;subtree</tt></dd></dl>
+ <dl><dt><a name="-getTree"><strong>getTree</strong></a>()</dt><dd><tt>@return:&nbsp;the&nbsp;tree&nbsp;<a href="__builtin__.html#object">object</a></tt></dd></dl>
+ <dl><dt><a name="-load_dict"><strong>load_dict</strong></a>(filename)</dt><dd><tt>Loads&nbsp;data&nbsp;from&nbsp;cpickle&nbsp;file&nbsp;into&nbsp;a&nbsp;dictionary&nbsp;table.<br>
+&nbsp;<br>
+@param&nbsp;filename:&nbsp;file&nbsp;containing&nbsp;cpickled&nbsp;data</tt></dd></dl>
+ <dl><dt><a name="-load_tree"><strong>load_tree</strong></a>(filename)</dt><dd><tt>Loads&nbsp;data&nbsp;from&nbsp;cpickle&nbsp;file&nbsp;into&nbsp;ontologynode&nbsp;table.<br>
+&nbsp;<br>
+@param&nbsp;filename:&nbsp;file&nbsp;containing&nbsp;cpickled&nbsp;data</tt></dd></dl>
+ <dl><dt><a name="-makeTreePerm"><strong>makeTreePerm</strong></a>()</dt><dd><tt>Makes&nbsp;tree&nbsp;easily&nbsp;and&nbsp;rapidly&nbsp;reachable.</tt></dd></dl>
+ <dl><dt><a name="-wordsScore"><strong>wordsScore</strong></a>(terms)</dt><dd><tt>Calculates&nbsp;score&nbsp;for&nbsp;a&nbsp;given&nbsp;words.<br>
+&nbsp;<br>
+@param&nbsp;terms:&nbsp;list&nbsp;that&nbsp;contains&nbsp;words<br>
+@return:&nbsp;list&nbsp;of&nbsp;node&nbsp;ids&nbsp;of&nbsp;all&nbsp;the&nbsp;nodes&nbsp;where&nbsp;any&nbsp;of&nbsp;the&nbsp;word&nbsp;appeared</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()<br>
+<strong>dictionary</strong> = Table('dictionary',DynamicMetaData(),Column('ter...t(0.0)),Column('nodes',MSLongText()),schema=None)<br>
+<strong>dictionary_file</strong> = 'spree/data/ontology/terms.cpkl'<br>
+<strong>dictionary_file_prod</strong> = 'spree/data/ontology/terms_prod.cpkl'<br>
+<strong>metadata</strong> = DynamicMetaData()<br>
+<strong>ontologynode</strong> = Table('ontologynode',DynamicMetaData(),Column('n...'rightIdx',Integer(),nullable=False),schema=None)<br>
+<strong>tree</strong> = None<br>
+<strong>tree_file</strong> = 'spree/data/ontology/nodes.cpkl'<br>
+<strong>tree_file_prod</strong> = 'spree/data/ontology/nodes_prod.cpkl'</td></tr></table>
+</body></html>

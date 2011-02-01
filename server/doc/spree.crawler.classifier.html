@@ -1,0 +1,116 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module spree.crawler.classifier</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="spree.html"><font color="#ffffff">spree</font></a>.<a href="spree.crawler.html"><font color="#ffffff">crawler</font></a>.classifier</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C|/studium/spree/opensource/spree/crawler/classifier.py">c:\studium\spree\opensource\spree\crawler\classifier.py</a></font></td></tr></table>
+    <p><tt>clasifier.py<br>
+&nbsp;<br>
+Class&nbsp;offering&nbsp;methods&nbsp;for&nbsp;web-site&nbsp;classification</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sqlalchemy.ansisql.html">sqlalchemy.ansisql</a><br>
+<a href="cPickle.html">cPickle</a><br>
+<a href="sqlalchemy.databases.html">sqlalchemy.databases</a><br>
+<a href="sqlalchemy.engine.html">sqlalchemy.engine</a><br>
+<a href="sqlalchemy.exceptions.html">sqlalchemy.exceptions</a><br>
+<a href="sqlalchemy.ext.html">sqlalchemy.ext</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.logging.html">sqlalchemy.logging</a><br>
+<a href="sqlalchemy.databases.mysql.html">sqlalchemy.databases.mysql</a><br>
+<a href="spree.util.matching.normalization.html">spree.util.matching.normalization</a><br>
+<a href="sqlalchemy.orm.html">sqlalchemy.orm</a><br>
+<a href="sqlalchemy.pool.html">sqlalchemy.pool</a><br>
+<a href="sqlalchemy.queue.html">sqlalchemy.queue</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+<a href="sqlalchemy.schema.html">sqlalchemy.schema</a><br>
+<a href="sqlalchemy.sql.html">sqlalchemy.sql</a><br>
+<a href="sqlalchemy.sql_util.html">sqlalchemy.sql_util</a><br>
+<a href="spree.util.nlp.stemmer.html">spree.util.nlp.stemmer</a><br>
+<a href="nltk_lite.tokenize.html">nltk_lite.tokenize</a><br>
+</td><td width="25%" valign=top><a href="sqlalchemy.topological.html">sqlalchemy.topological</a><br>
+<a href="sqlalchemy.types.html">sqlalchemy.types</a><br>
+<a href="sqlalchemy.util.html">sqlalchemy.util</a><br>
+<a href="spree.util.list.wordlist.html">spree.util.list.wordlist</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="spree.crawler.classifier.html#Classifier">Classifier</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Classifier">class <strong>Classifier</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>the&nbsp;main&nbsp;class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Classifier-__init__"><strong>__init__</strong></a>(self, connect_string)</dt><dd><tt>load&nbsp;stopwords&nbsp;once<br>
+&nbsp;<br>
+create&nbsp;persistent&nbsp;tree&nbsp;for&nbsp;later&nbsp;classification</tt></dd></dl>
+
+<dl><dt><a name="Classifier-classify"><strong>classify</strong></a>(self, text)</dt><dd><tt>classify&nbsp;a&nbsp;given&nbsp;text&nbsp;using&nbsp;the&nbsp;category&nbsp;tree</tt></dd></dl>
+
+<dl><dt><a name="Classifier-createDictionaryFromText"><strong>createDictionaryFromText</strong></a>(self, text, word_limit<font color="#909090">=-1</font>)</dt><dd><tt>created&nbsp;a&nbsp;bag-of-words&nbsp;from&nbsp;a&nbsp;given&nbsp;text<br>
+&nbsp;<br>
+includes&nbsp;stopword&nbsp;removal,&nbsp;stemming,&nbsp;term&nbsp;frequency</tt></dd></dl>
+
+<dl><dt><a name="Classifier-extractWords"><strong>extractWords</strong></a>(self, text)</dt><dd><tt>get&nbsp;words&nbsp;from&nbsp;a&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="Classifier-getWeightedNodes"><strong>getWeightedNodes</strong></a>(self, terms)</dt><dd><tt>returns&nbsp;calculated&nbsp;score&nbsp;(all&nbsp;nodes&nbsp;where&nbsp;any&nbsp;of&nbsp;the&nbsp;word&nbsp;appears)&nbsp;for&nbsp;given&nbsp;words<br>
+terms&nbsp;is&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;words</tt></dd></dl>
+
+<dl><dt><a name="Classifier-loadStopwords"><strong>loadStopwords</strong></a>(self)</dt><dd><tt>load&nbsp;the&nbsp;stopwords&nbsp;from&nbsp;the&nbsp;db&nbsp;and&nbsp;store&nbsp;them&nbsp;persistently</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__dict__</strong> = &lt;dictproxy object&gt;<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>__weakref__</strong> = &lt;attribute '__weakref__' of 'Classifier' objects&gt;<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;(if&nbsp;defined)</tt></dl>
+
+<dl><dt><strong>alpha</strong> = 1.5</dl>
+
+<dl><dt><strong>connect_string</strong> = None</dl>
+
+<dl><dt><strong>maxterms</strong> = 2000</dl>
+
+<dl><dt><strong>pattern</strong> = &lt;_sre.SRE_Pattern object&gt;</dl>
+
+<dl><dt><strong>stopwords</strong> = None</dl>
+
+<dl><dt><strong>term_table</strong> = None</dl>
+
+<dl><dt><strong>tree</strong> = None</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>EXT_PASS</strong> = &lt;object object&gt;<br>
+<strong>NULLTYPE</strong> = NullTypeEngine()<br>
+<strong>default_metadata</strong> = DynamicMetaData()</td></tr></table>
+</body></html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:py="http://genshi.edgewall.org/"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<script type="text/javascript" src='${tg.url("/static/javascript/content/registration.js")}'></script>
+
+<div id="statusline" py:match="status"> ${message}</div>
+
+<div id="main_menu" py:match="main_menu">
+	<ul>
+		<li><a href='${tg.url("/")}' title="Home" style="cursor:pointer; text-decoration:underline;" ><span>Home</span></a></li>
+		<li><a href='${tg.url("/about")}' title="About SPREE" style="cursor:pointer;" ><span>About spree</span></a></li>
+		<li><a href='${tg.url("/help")}' title="Help" style="cursor:pointer;"><span>Help</span></a></li>
+		<li><a href='${tg.url("/registration/register")}' title="Become a SPREE member." style="cursor:pointer;" ><span>Registration</span></a></li>
+	</ul>
+</div>
+
+<div id="login" py:match="login"  style="margin-left:-20px; margin-right: 20px;">
+	<div id="loginBox" class="planbox">
+		<div class="box_right">
+			<div id="loginForm" class="box_login">
+				<h1>Login</h1>
+	            <form action='${tg.url("/login")}' method="post" id="loginform">
+	                <p>Username:</p>
+					<input type="text" id="user_name" name="user_name" style="width:95%"/>
+	                <p>Password:</p>
+					<input type="password" id="password" name="password" style="width:95%"/>
+					<input type="checkbox" id="rememberme" name="rememberme" py:attrs="rememberme"/>
+					<p style="display:inline;">Remember me</p>
+					<button class="btn fr" type="submit" value="" name="login">
+						<div class="btn">
+						<p class="btn">Login</p>
+						</div>
+					</button>
+		            <ul>
+		            	<li><a href='${tg.url("/registration/register")}' style="cursor:pointer">Register</a></li>
+		            	<li><a href='${tg.url("/registration/lost_password")}' style="cursor:pointer">I lost my password</a></li>
+		            </ul>	            
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="spacer" py:match="spacer_right" class="planbox" style="border:none; text-align:center; height:140px"></div>
+
+<xi:include href="master.html"/>
+
+<script TYPE="text/javascript">
+
+	myAddLoadEvent(focusUserName);
+	
+	/**
+	 * Adds a function to the loading "list" when page is loaded the first time
+	 * @param {Object} func
+	 */
+	function myAddLoadEvent(func){
+		var oldonload = window.onload;
+		if (typeof window.onload != 'function') {
+			window.onload = func;
+		} else {
+		    window.onload = function() {
+		      	if (oldonload) {
+		        	oldonload();
+		    	}
+		    	func();
+			}
+  		}
+	}
+	
+	/**
+	 * Focuses the user_name input field
+	 * 
+	 */
+	function focusUserName(){
+		var un = document.getElementById('user_name');
+		if(un){
+			un.focus();
+		}
+	}
+</script>
+
+</html>

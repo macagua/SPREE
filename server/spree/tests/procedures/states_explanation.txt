@@ -1,0 +1,12 @@
+When the question is posed for the first time initial state is entered, and depending on a transition another state is reached:
+
+- Nobody available if there are no experts who can answer the question
+- All offline if there are experts but they are all offline
+- At least one online
+
+After that following transitions are possible:
+
+- from At least one online to Accepted if one expert accepts the question
+- from At least one online to All declined if all experts decline
+- from At least one online to if all experts go offline and special case if all online experts decline but there are still experts who can answer the question but they are offline
+- from All offline to At least one online when expert(s) come back online 
