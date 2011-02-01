@@ -28,7 +28,12 @@ More than a long speech, here the list of the main features :
 Tested 
 ======
 
-  * Python2.4
+  * Python2.4, TurboGears 10.1
+
+Install
+=======
+
+  Check out the follow file ./server/doc/INSTALL.txt
 
 TODO
 ====
